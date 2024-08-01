@@ -9,7 +9,7 @@ namespace Entidades
     public class EntidadPrestatario : EntidadPersona 
     {
         public int IdPrestatario { get; set; }
-        public int? IdSeccion { get; set; }
+        public int? IdSección { get; set; }
         public int? IdDepartamento { get; set; }
         public int IdEspecialidad { get; set; }
     }

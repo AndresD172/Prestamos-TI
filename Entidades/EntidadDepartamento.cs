@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Entidades
+﻿namespace Entidades
 {
     public class EntidadDepartamento
     {
-
         public int IdDepartamento { get; set; }
         public string Nombre { get; set; }
-
     }
 }

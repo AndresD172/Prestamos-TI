@@ -10,6 +10,6 @@ namespace Entidades
     {
         public int IdTipoMulta { get; set; }
         public string Nombre { get; set; }
-        public string Descripcion { get; set; }
+        public string Descripción { get; set; }
     }
 }
