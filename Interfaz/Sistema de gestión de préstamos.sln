@@ -5,9 +5,9 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaz Gráfica", "Interfaz Gráfica.csproj", "{21C8A2C1-C0CA-4C17-8032-254B0DE0E55B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "..\Entidades\Entidades.csproj", "{16F7C234-A5D0-4CD5-A4D7-DAE5FF815876}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ET", "..\Entidades\ET.csproj", "{16F7C234-A5D0-4CD5-A4D7-DAE5FF815876}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{AFF2243F-6B1D-43CC-B4C9-203226B0820F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "..\DAL\DAL.csproj", "{AFF2243F-6B1D-43CC-B4C9-203226B0820F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

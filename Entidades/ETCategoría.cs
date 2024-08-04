@@ -1,6 +1,6 @@
 ﻿namespace Entidades
 {
-    public class EntidadCategoría
+    public class ETCategoría
     {
         public int IdCategoría { get; set; }
         public string Nombre { get; set; }

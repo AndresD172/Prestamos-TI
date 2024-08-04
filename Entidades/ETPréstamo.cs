@@ -1,6 +1,6 @@
 ﻿namespace Entidades
 {
-    public class EntidadPréstamo
+    public class ETPréstamo
     {
         public int IdPréstamo { get; set; }
         public int IdPrestatario { get; set; }
