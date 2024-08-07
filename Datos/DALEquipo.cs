@@ -7,11 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Entidades;
 
+
 namespace DAL
 {
-    public class DALEstadoPréstamo
+    public class DALEquipo
     {
-        public Respuesta RegistrarEstadoPrestamo(EntidadEstadoPréstamo estadoPrestamo)
+        public Respuesta RegistrarEquipo(EntidadEquipo equipo)
         {
             // Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
@@ -22,12 +23,17 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_registrar_estado_prestamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_registrar_equipo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
-                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = estadoPrestamo.Nombre;
-               
+                comando.Parameters.Add("@IdCategoría", SqlDbType.Int).Value = equipo.IdCategoría;
+                comando.Parameters.Add("@IdEstadoEquipo", SqlDbType.Int).Value = equipo.IdEstadoEquipo;
+                comando.Parameters.Add("@Marca", SqlDbType.NVarChar).Value = equipo.Marca;
+                comando.Parameters.Add("@Modelo", SqlDbType.NVarChar).Value = equipo.Modelo;
+                comando.Parameters.Add("@NúmeroSerie", SqlDbType.NVarChar).Value = equipo.NúmeroSerie;
+                comando.Parameters.Add("@Descripción", SqlDbType.NVarChar).Value = equipo.Descripción;
+
                 // Se abre la conexion con la BD
                 SqlCon.Open();
 
@@ -46,7 +52,7 @@ namespace DAL
             }
         }
 
-        public Respuesta ListarEstadoPrestamo(string cTexto)
+        public Respuesta ListarEquipo(string cTexto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -58,7 +64,7 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_listar_estados_prestamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_listar_equipos", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
@@ -84,7 +90,7 @@ namespace DAL
             }
         }
 
-        public Respuesta EliminarEstadoPrestamo(int IdEstadoPrestamo)
+        public Respuesta EliminarEquipo(int IdEquipo)
         {
             // Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
@@ -95,11 +101,11 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_eliminar_estado_prestamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_eliminar_equipo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
-                comando.Parameters.Add("@IdEstadoPrestamo", SqlDbType.Int).Value = IdEstadoPrestamo;
+                comando.Parameters.Add("@IdEquipo", SqlDbType.Int).Value = IdEquipo;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();
@@ -118,7 +124,7 @@ namespace DAL
             }
         }
 
-        public Respuesta ActualizarEstadoPrestamo(EntidadEstadoPréstamo estadoPrestamo)
+        public Respuesta ActualizarEquipo(EntidadEquipo equipo)
         {
             // Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
@@ -129,13 +135,17 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_actualizar_estado_prestamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_actualizar_equipo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
-                comando.Parameters.Add("@id", SqlDbType.Int).Value = estadoPrestamo.IdEstadosPréstamo;
-                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = estadoPrestamo.Nombre;
-                comando.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = estadoPrestamo.Descripción;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = equipo.IdEquipo;
+                comando.Parameters.Add("@IdCategoría", SqlDbType.Int).Value = equipo.IdCategoría;
+                comando.Parameters.Add("@IdEstadoEquipo", SqlDbType.Int).Value = equipo.IdEstadoEquipo;
+                comando.Parameters.Add("@Marca", SqlDbType.NVarChar).Value = equipo.Marca;
+                comando.Parameters.Add("@Modelo", SqlDbType.NVarChar).Value = equipo.Modelo;
+                comando.Parameters.Add("@NúmeroSerie", SqlDbType.NVarChar).Value = equipo.NúmeroSerie;
+                comando.Parameters.Add("@Descripción", SqlDbType.NVarChar).Value = equipo.Descripción;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();

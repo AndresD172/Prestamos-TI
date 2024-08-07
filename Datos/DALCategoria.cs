@@ -77,9 +77,6 @@ namespace DAL
                 Tabla.Load(Resultado);
 
                 return new Respuesta(0, Tabla);
-
-
-
             }
             catch (Exception ex)
             {
