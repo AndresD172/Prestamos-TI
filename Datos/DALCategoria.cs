@@ -111,12 +111,12 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
-                comando.Parameters.Add("@IdCategoria", SqlDbType.Int).Value = IdCategoria;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdCategoria;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
 
-                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos."
+                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
 
             }
             catch (Exception ex)
@@ -143,7 +143,7 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_registrar_categoria", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_actualizar_categoria", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
@@ -155,7 +155,7 @@ namespace DAL
                 SqlCon.Open();
 
                 //Si la ejecucion del comando es 1 indica que se guardo el dato, sino no
-                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos."
+                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
 
 
             }
