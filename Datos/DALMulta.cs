@@ -9,9 +9,9 @@ using Entidades;
 
 namespace DAL
 {
-    public class DALCategoria
+    public class DALMulta
     {
-        public Respuesta RegistrarCategoria(EntidadCategoría categoria)
+        public Respuesta RegistrarMulta(EntidadMulta multa)
         {
             //Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
@@ -22,12 +22,15 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_registrar_categoria", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_registrar_multa", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
                 //metodo get
-                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = categoria.Nombre;
+                comando.Parameters.Add("@id_tipo_multa", SqlDbType.Int).Value = multa.IdTipoMulta;
+                comando.Parameters.Add("@id_prestatario", SqlDbType.Int).Value = multa.IdPrestatario;
+                comando.Parameters.Add("@id_tecnico", SqlDbType.Int).Value = multa.IdTécnico;
+                comando.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = multa.Descripción;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
@@ -50,7 +53,7 @@ namespace DAL
         }
 
 
-        public Respuesta ListarCategoria(string cTexto)
+        public Respuesta ListarMulta(string cTexto)
         {
 
             SqlDataReader Resultado;
@@ -64,7 +67,7 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_listar_categorias", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_listar_multa", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
@@ -94,7 +97,7 @@ namespace DAL
         }
 
 
-        public Respuesta EliminarCategoria(int IdCategoria)
+        public Respuesta EliminarMulta(int IdMulta)
         {
 
             //Conexion de la BD
@@ -107,11 +110,11 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_eliminar_categoria", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_eliminar_multa", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
-                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdCategoria;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdMulta;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
@@ -129,11 +132,11 @@ namespace DAL
                 //Cierra la conexion con la BD
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
-           
+
         }
-        public Respuesta ActualizarCategoria(EntidadCategoría categoria)
+        public Respuesta ActualizarMulta(EntidadMulta multa)
         {
-            
+
             //Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
 
@@ -143,14 +146,14 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_actualizar_categoria", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_actualizar_multa", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
                 //mEntidadodo gEntidad
-                comando.Parameters.Add("id", SqlDbType.Int).Value = categoria.IdCategoría;
-                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = categoria.Nombre;
-
+                comando.Parameters.Add("id", SqlDbType.Int).Value = multa.IdMulta;
+                comando.Parameters.Add("@id_tipo_multa", SqlDbType.Int).Value = multa.IdTipoMulta;
+                comando.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = multa.Descripción;
                 //Se abre la conexion con la BD
                 SqlCon.Open();
 
@@ -169,9 +172,6 @@ namespace DAL
                 //Cierra la conexion con la BD
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
-            
-
-
         }
     }
 }

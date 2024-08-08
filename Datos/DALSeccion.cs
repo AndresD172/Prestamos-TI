@@ -9,9 +9,9 @@ using Entidades;
 
 namespace DAL
 {
-    public class DALCategoria
+    public class DALSeccion
     {
-        public Respuesta RegistrarCategoria(EntidadCategoría categoria)
+        public Respuesta RegistrarSeccion(EntidadSección seccion)
         {
             //Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
@@ -22,12 +22,12 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_registrar_categoria", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_registrar_seccion", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
                 //metodo get
-                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = categoria.Nombre;
+                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = seccion.Nombre;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
@@ -50,7 +50,7 @@ namespace DAL
         }
 
 
-        public Respuesta ListarCategoria(string cTexto)
+        public Respuesta ListarSeccion(string cTexto)
         {
 
             SqlDataReader Resultado;
@@ -64,7 +64,7 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_listar_categorias", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_listar_seccion", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
@@ -94,7 +94,7 @@ namespace DAL
         }
 
 
-        public Respuesta EliminarCategoria(int IdCategoria)
+        public Respuesta EliminarSeccion(int IdSeccion)
         {
 
             //Conexion de la BD
@@ -107,11 +107,11 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_eliminar_categoria", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_eliminar_seccion", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
-                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdCategoria;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdSeccion;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
@@ -129,11 +129,11 @@ namespace DAL
                 //Cierra la conexion con la BD
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
-           
+
         }
-        public Respuesta ActualizarCategoria(EntidadCategoría categoria)
+        public Respuesta ActualizarSeccion(EntidadSección seccion)
         {
-            
+
             //Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
 
@@ -143,13 +143,13 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_actualizar_categoria", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_actualizar_seccion", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
                 //mEntidadodo gEntidad
-                comando.Parameters.Add("id", SqlDbType.Int).Value = categoria.IdCategoría;
-                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = categoria.Nombre;
+                comando.Parameters.Add("id", SqlDbType.Int).Value = seccion.IdSección;
+                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = seccion.Nombre;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
@@ -169,9 +169,6 @@ namespace DAL
                 //Cierra la conexion con la BD
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
-            
-
-
         }
     }
 }

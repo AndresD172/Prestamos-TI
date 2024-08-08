@@ -56,7 +56,7 @@ namespace DAL
         }
 
 
-        public Respuesta ListarCategoria(EntidadPréstamo préstamo)
+        public Respuesta ListarCategoria(string cTexto)
         {
 
             SqlDataReader Resultado;
@@ -75,7 +75,7 @@ namespace DAL
 
                 //Paramentros
 
-                comando.Parameters.Add("@id_préstamo", SqlDbType.Int).Value = préstamo.IdPréstamo;
+                comando.Parameters.Add("@cTexto", SqlDbType.NVarChar).Value = cTexto;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
@@ -117,7 +117,7 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
-                comando.Parameters.Add("@IdPréstamo", SqlDbType.Int).Value = IdPréstamo;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdPréstamo;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
@@ -139,7 +139,7 @@ namespace DAL
         }
         public Respuesta ActualizarCategoria(EntidadPréstamo préstamo)
         {
-            string Respuesta = "";
+
             //Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
 
