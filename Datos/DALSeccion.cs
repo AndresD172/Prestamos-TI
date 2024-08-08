@@ -117,7 +117,7 @@ namespace DAL
                 SqlCon.Open();
 
                 return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos."
-
+            
             }
             catch (Exception ex)
             {
@@ -148,7 +148,7 @@ namespace DAL
 
                 //Paramentros
                 //mEntidadodo gEntidad
-                comando.Parameters.Add("id", SqlDbType.Int).Value = seccion.IdSección;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = seccion.IdSección;
                 comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = seccion.Nombre;
 
                 //Se abre la conexion con la BD

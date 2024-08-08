@@ -151,7 +151,7 @@ namespace DAL
 
                 //Paramentros
                 //mEntidadodo gEntidad
-                comando.Parameters.Add("id", SqlDbType.Int).Value = multa.IdMulta;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = multa.IdMulta;
                 comando.Parameters.Add("@id_tipo_multa", SqlDbType.Int).Value = multa.IdTipoMulta;
                 comando.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = multa.Descripción;
                 //Se abre la conexion con la BD

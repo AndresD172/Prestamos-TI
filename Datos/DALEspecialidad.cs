@@ -147,8 +147,8 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
-                //mEntidadodo gEntidad
-                comando.Parameters.Add("id", SqlDbType.Int).Value = especialidad.IdEspecialidad;
+
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = especialidad.IdEspecialidad;
                 comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = especialidad.Nombre;
 
                 //Se abre la conexion con la BD
