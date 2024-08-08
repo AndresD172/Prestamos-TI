@@ -99,6 +99,49 @@ namespace DAL
             }
         }
 
+        public Respuesta ListarPrestamoEspecifico(string cTexto)
+        {
+
+            SqlDataReader Resultado;
+            DataTable Tabla = new DataTable();
+            SqlConnection SqlCon = new SqlConnection();
+
+            try
+            {
+
+                //Se establece la conexion a la BD
+                SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
+
+                //Se indica el SP a usar y el tipo de comando
+                SqlCommand comando = new SqlCommand("usp_listar_préstamo_especifico", SqlCon);
+                comando.CommandType = CommandType.StoredProcedure;
+
+                //Paramentros
+
+                comando.Parameters.Add("@cTexto", SqlDbType.NVarChar).Value = cTexto;
+
+                //Se abre la conexion con la BD
+                SqlCon.Open();
+
+                Resultado = comando.ExecuteReader();
+                Tabla.Load(Resultado);
+
+                return new Respuesta(0, Tabla);
+
+
+            }
+            catch (Exception ex)
+            {
+                // Establece el código de error dentro del mensaje como ex.HResult y ex.Message como el mensaje de error.
+                return new Respuesta(ex.HResult, ex.Message);
+            }
+            finally
+            {
+                //Cierra la conexion con la BD
+                if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
+            }
+        }
+
 
         public Respuesta EliminarPréstamo(int IdPréstamo)
         {

@@ -147,7 +147,7 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
-                //mEntidadodo gEntidad
+
                 comando.Parameters.Add("@id", SqlDbType.Int).Value = seccion.IdSección;
                 comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = seccion.Nombre;
 
