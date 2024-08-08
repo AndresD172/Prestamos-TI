@@ -99,7 +99,7 @@ namespace DAL
             }
         }
 
-        public Respuesta ListarPrestamoEspecifico(string cTexto)
+        public Respuesta ListarPrestamoEspecifico(int Id)
         {
 
             SqlDataReader Resultado;
@@ -118,7 +118,7 @@ namespace DAL
 
                 //Paramentros
 
-                comando.Parameters.Add("@cTexto", SqlDbType.NVarChar).Value = cTexto;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = Id;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
@@ -165,7 +165,7 @@ namespace DAL
                 //Se abre la conexion con la BD
                 SqlCon.Open();
 
-                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos."
+                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
 
             }
             catch (Exception ex)
@@ -207,7 +207,7 @@ namespace DAL
                 SqlCon.Open();
 
                 //Si la ejecucion del comando es 1 indica que se guardo el dato, sino no
-                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos."
+                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
 
 
             }
