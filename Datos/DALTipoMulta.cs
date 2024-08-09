@@ -79,7 +79,7 @@ namespace DAL
                 SqlCommand comando = new SqlCommand("usp_eliminar_tipo_multa", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                comando.Parameters.Add("@IdTipoMulta", SqlDbType.Int).Value = IdTipoMulta;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdTipoMulta;
 
                 SqlCon.Open();
 
@@ -105,7 +105,7 @@ namespace DAL
                 SqlCommand comando = new SqlCommand("usp_actualizar_tipo_multa", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                comando.Parameters.Add("@id", SqlDbType.Int).Value = tipoMulta.IdTipoMulta;
+                
                 comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = tipoMulta.Nombre;
                 comando.Parameters.Add("@descripción", SqlDbType.NVarChar).Value = tipoMulta.Descripción;
 

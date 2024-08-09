@@ -27,12 +27,12 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
-                comando.Parameters.Add("@IdCategoría", SqlDbType.Int).Value = equipo.IdCategoría;
-                comando.Parameters.Add("@IdEstadoEquipo", SqlDbType.Int).Value = equipo.IdEstadoEquipo;
-                comando.Parameters.Add("@Marca", SqlDbType.NVarChar).Value = equipo.Marca;
-                comando.Parameters.Add("@Modelo", SqlDbType.NVarChar).Value = equipo.Modelo;
-                comando.Parameters.Add("@NúmeroSerie", SqlDbType.NVarChar).Value = equipo.NúmeroSerie;
-                comando.Parameters.Add("@Descripción", SqlDbType.NVarChar).Value = equipo.Descripción;
+                comando.Parameters.Add("@id_categoría", SqlDbType.Int).Value = equipo.IdCategoría;
+                comando.Parameters.Add("@id_estado_equipo", SqlDbType.Int).Value = equipo.IdEstadoEquipo;
+                comando.Parameters.Add("@marca", SqlDbType.NVarChar).Value = equipo.Marca;
+                comando.Parameters.Add("@modelo", SqlDbType.NVarChar).Value = equipo.Modelo;
+                comando.Parameters.Add("@número_serie", SqlDbType.NVarChar).Value = equipo.NúmeroSerie;
+                comando.Parameters.Add("@descripción", SqlDbType.NVarChar).Value = equipo.Descripción;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();
@@ -64,7 +64,7 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_listar_equipos", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_listar_equipo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
@@ -105,7 +105,7 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
-                comando.Parameters.Add("@IdEquipo", SqlDbType.Int).Value = IdEquipo;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdEquipo;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();
@@ -140,12 +140,12 @@ namespace DAL
 
                 // Paramentros
                 comando.Parameters.Add("@id", SqlDbType.Int).Value = equipo.IdEquipo;
-                comando.Parameters.Add("@IdCategoría", SqlDbType.Int).Value = equipo.IdCategoría;
-                comando.Parameters.Add("@IdEstadoEquipo", SqlDbType.Int).Value = equipo.IdEstadoEquipo;
-                comando.Parameters.Add("@Marca", SqlDbType.NVarChar).Value = equipo.Marca;
-                comando.Parameters.Add("@Modelo", SqlDbType.NVarChar).Value = equipo.Modelo;
-                comando.Parameters.Add("@NúmeroSerie", SqlDbType.NVarChar).Value = equipo.NúmeroSerie;
-                comando.Parameters.Add("@Descripción", SqlDbType.NVarChar).Value = equipo.Descripción;
+                comando.Parameters.Add("@id_categoría", SqlDbType.Int).Value = equipo.IdCategoría;
+                comando.Parameters.Add("@id_estado_equipo", SqlDbType.Int).Value = equipo.IdEstadoEquipo;
+                comando.Parameters.Add("@marca", SqlDbType.NVarChar).Value = equipo.Marca;
+                comando.Parameters.Add("@modelo", SqlDbType.NVarChar).Value = equipo.Modelo;
+                comando.Parameters.Add("@número_serie", SqlDbType.NVarChar).Value = equipo.NúmeroSerie;
+                comando.Parameters.Add("@descripción", SqlDbType.NVarChar).Value = equipo.Descripción;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();

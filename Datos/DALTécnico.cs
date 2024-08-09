@@ -82,7 +82,7 @@ namespace DAL
                 SqlCommand comando = new SqlCommand("usp_eliminar_tecnico", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                comando.Parameters.Add("@IdTécnico", SqlDbType.Int).Value = IdTécnico;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdTécnico;
 
                 SqlCon.Open();
 

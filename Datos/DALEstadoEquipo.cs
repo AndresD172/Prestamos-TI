@@ -99,7 +99,7 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
-                comando.Parameters.Add("@IdEstadoPrestamo", SqlDbType.Int).Value = IdEstadoPrestamo;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdEstadoPrestamo;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();
