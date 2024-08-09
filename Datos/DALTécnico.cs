@@ -23,8 +23,8 @@ namespace DAL
 
                 comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = técnico.Nombre;
                 comando.Parameters.Add("@apellidos", SqlDbType.NVarChar).Value = técnico.Apellidos;
-                comando.Parameters.Add("@númeroCarnet", SqlDbType.NVarChar).Value = técnico.NúmeroCarnet;
-                comando.Parameters.Add("@correoElectrónico", SqlDbType.NVarChar).Value = técnico.CorreoElectrónico;
+                comando.Parameters.Add("@número_carnet", SqlDbType.NVarChar).Value = técnico.NúmeroCarnet;
+                comando.Parameters.Add("@correo_electrónico", SqlDbType.NVarChar).Value = técnico.CorreoElectrónico;
                 comando.Parameters.Add("@contraseña", SqlDbType.NVarChar).Value = técnico.Contraseña;
 
                 SqlCon.Open();
@@ -110,8 +110,8 @@ namespace DAL
                 comando.Parameters.Add("@id", SqlDbType.Int).Value = técnico.IdTécnico;
                 comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = técnico.Nombre;
                 comando.Parameters.Add("@apellidos", SqlDbType.NVarChar).Value = técnico.Apellidos;
-                comando.Parameters.Add("@númeroCarnet", SqlDbType.NVarChar).Value = técnico.NúmeroCarnet;
-                comando.Parameters.Add("@correoElectrónico", SqlDbType.NVarChar).Value = técnico.CorreoElectrónico;
+                comando.Parameters.Add("@número_carnet", SqlDbType.NVarChar).Value = técnico.NúmeroCarnet;
+                comando.Parameters.Add("@correo_electrónico", SqlDbType.NVarChar).Value = técnico.CorreoElectrónico;
                 comando.Parameters.Add("@contraseña", SqlDbType.NVarChar).Value = técnico.Contraseña;
 
                 SqlCon.Open();

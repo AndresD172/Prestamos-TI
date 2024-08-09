@@ -9,44 +9,36 @@ using Entidades;
 
 namespace DAL
 {
-    public class DALEstadoPréstamo
+    public class DALEstadoEquipo
     {
-        public Respuesta RegistrarEstadoPrestamo(EntidadEstadoPréstamo estadoPrestamo)
+        public Respuesta RegistrarEstadoEquipo(EntidadEstadoEquipo estadoEquipo)
         {
-            // Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
 
             try
             {
-                // Se establece la conexion a la BD
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
-
-                // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_registrar_estado_prestamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_registrar_estado_equipo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                // Paramentros
-                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = estadoPrestamo.Nombre;
-               
-                // Se abre la conexion con la BD
-                SqlCon.Open();
+                // Parámetros
+                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = estadoEquipo.Nombre;
 
-                // Si la ejecucion del comando es 1 indica que se guardo el dato, sino no.
+                // Abrir conexión y ejecutar comando
+                SqlCon.Open();
                 return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
             }
             catch (Exception ex)
             {
-                // Establece el código de error dentro del mensaje como ex.HResult y ex.Message como el mensaje de error.
                 return new Respuesta(ex.HResult, ex.Message);
             }
             finally
             {
-                // Cierra la conexion con la BD
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
         }
 
-        public Respuesta ListarEstadoPrestamo(string cTexto)
+        public Respuesta ListarEstadoEquipo(string cTexto)
         {
             SqlDataReader Resultado;
             DataTable Tabla = new DataTable();
@@ -54,19 +46,15 @@ namespace DAL
 
             try
             {
-                // Se establece la conexion a la BD
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
-
-                // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_listar_estados_prestamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_listar_estados_equipo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                // Paramentros
+                // Parámetros
                 comando.Parameters.Add("@cTexto", SqlDbType.NVarChar).Value = cTexto;
 
-                // Se abre la conexion con la BD
+                // Abrir conexión y ejecutar comando
                 SqlCon.Open();
-
                 Resultado = comando.ExecuteReader();
                 Tabla.Load(Resultado);
 
@@ -74,85 +62,68 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                // Establece el código de error dentro del mensaje como ex.HResult y ex.Message como el mensaje de error.
                 return new Respuesta(ex.HResult, ex.Message);
             }
             finally
             {
-                // Cierra la conexion con la BD
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
         }
 
-        public Respuesta EliminarEstadoPrestamo(int IdEstadoPrestamo)
+        public Respuesta EliminarEstadoEquipo(int IdEstadoEquipo)
         {
-            // Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
 
             try
             {
-                // Se establece la conexion a la BD
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
-
-                // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_eliminar_estado_prestamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_eliminar_estado_equipo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                // Paramentros
-                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdEstadoPrestamo;
+                // Parámetros
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = IdEstadoEquipo;
 
-                // Se abre la conexion con la BD
+                // Abrir conexión y ejecutar comando
                 SqlCon.Open();
-
                 return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
             }
             catch (Exception ex)
             {
-                // Establece el código de error dentro del mensaje como ex.HResult y ex.Message como el mensaje de error.
                 return new Respuesta(ex.HResult, ex.Message);
             }
             finally
             {
-                // Cierra la conexion con la BD
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
         }
 
-        public Respuesta ActualizarEstadoPrestamo(EntidadEstadoPréstamo estadoPrestamo)
+        public Respuesta ActualizarEstadoEquipo(EntidadEstadoEquipo estadoEquipo)
         {
-            // Conexion de la BD
             SqlConnection SqlCon = new SqlConnection();
 
             try
             {
-                // Se establece la conexion a la BD
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
-
-                // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_actualizar_estado_prestamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_actualizar_estado_equipo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                // Paramentros
-                comando.Parameters.Add("@id", SqlDbType.Int).Value = estadoPrestamo.IdEstadosPréstamo;
-                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = estadoPrestamo.Nombre;
-                comando.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = estadoPrestamo.Descripción;
+                // Parámetros
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = estadoEquipo.IdEstadoEquipo;
+                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = estadoEquipo.Nombre;
 
-                // Se abre la conexion con la BD
+                // Abrir conexión y ejecutar comando
                 SqlCon.Open();
-
-                // Si la ejecucion del comando es 1 indica que se guardo el dato, sino no
                 return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
             }
             catch (Exception ex)
             {
-                // Establece el código de error dentro del mensaje como ex.HResult y ex.Message como el mensaje de error.
                 return new Respuesta(ex.HResult, ex.Message);
             }
             finally
             {
-                // Cierra la conexion con la BD
                 if (SqlCon.State == ConnectionState.Open) SqlCon.Close();
             }
         }
     }
 }
+

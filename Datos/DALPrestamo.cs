@@ -154,9 +154,9 @@ namespace DAL
 
                 //Paramentros
                 //metodo get
-                comando.Parameters.Add("id_préstamo", SqlDbType.Int).Value = préstamo.IdPréstamo;
+                comando.Parameters.Add("@id_préstamo", SqlDbType.Int).Value = préstamo.IdPréstamo;
                 comando.Parameters.Add("@id_técnico", SqlDbType.Int).Value = préstamo.IdTécnico;
-                comando.Parameters.Add("id_prestatario", SqlDbType.Int).Value = préstamo.IdPrestatario;
+                comando.Parameters.Add("@id_prestatario", SqlDbType.Int).Value = préstamo.IdPrestatario;
                 comando.Parameters.Add("@id_estado_préstamo", SqlDbType.Int).Value = préstamo.IdEstadoCreación;
                 comando.Parameters.Add("@fecha_devolución", SqlDbType.NVarChar).Value = préstamo.FechaDevolución;
 

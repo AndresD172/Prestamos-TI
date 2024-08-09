@@ -26,9 +26,9 @@ namespace DAL
 
                 // Paramentros
                
-                comando.Parameters.Add("@IdSección", SqlDbType.Int).Value = prestatario.IdSección ?? (object)DBNull.Value;
-                comando.Parameters.Add("@IdDepartamento", SqlDbType.Int).Value = prestatario.IdDepartamento ?? (object)DBNull.Value;
-                comando.Parameters.Add("@IdEspecialidad", SqlDbType.Int).Value = prestatario.IdEspecialidad;
+                comando.Parameters.Add("@id_sección", SqlDbType.Int).Value = prestatario.IdSección ?? (object)DBNull.Value;
+                comando.Parameters.Add("@id_departamento", SqlDbType.Int).Value = prestatario.IdDepartamento ?? (object)DBNull.Value;
+                comando.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = prestatario.IdEspecialidad;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();
@@ -136,9 +136,9 @@ namespace DAL
 
                 // Paramentros
                 comando.Parameters.Add("@id", SqlDbType.Int).Value = prestatario.IdPrestatario;
-                comando.Parameters.Add("@IdSección", SqlDbType.Int).Value = prestatario.IdSección ?? (object)DBNull.Value;
-                comando.Parameters.Add("@IdDepartamento", SqlDbType.Int).Value = prestatario.IdDepartamento ?? (object)DBNull.Value;
-                comando.Parameters.Add("@IdEspecialidad", SqlDbType.Int).Value = prestatario.IdEspecialidad;
+                comando.Parameters.Add("@id_sección", SqlDbType.Int).Value = prestatario.IdSección ?? (object)DBNull.Value;
+                comando.Parameters.Add("@id_departamento", SqlDbType.Int).Value = prestatario.IdDepartamento ?? (object)DBNull.Value;
+                comando.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = prestatario.IdEspecialidad;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();
