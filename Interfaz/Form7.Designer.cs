@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
             textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
+            dataGridView = new DataGridView();
             label2 = new Label();
             label4 = new Label();
             btnPrestatariosLogo = new Button();
@@ -42,7 +42,7 @@
             panel1 = new Panel();
             txtNombreUsuario = new TextBox();
             label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // textBox1
@@ -54,15 +54,15 @@
             textBox1.Size = new Size(911, 35);
             textBox1.TabIndex = 44;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            dataGridView1.BackgroundColor = Color.FromArgb(246, 236, 255);
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(350, 222);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(998, 501);
-            dataGridView1.TabIndex = 43;
+            dataGridView.BackgroundColor = Color.FromArgb(246, 236, 255);
+            dataGridView.BorderStyle = BorderStyle.Fixed3D;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.Location = new Point(350, 222);
+            dataGridView.Name = "dataGridView";
+            dataGridView.Size = new Size(998, 501);
+            dataGridView.TabIndex = 43;
             // 
             // label2
             // 
@@ -181,7 +181,7 @@
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
             Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView);
             Controls.Add(label2);
             Controls.Add(label4);
             Controls.Add(btnPrestatariosLogo);
@@ -195,7 +195,7 @@
             Controls.Add(label3);
             Name = "Form7";
             Text = "Form7";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -203,7 +203,7 @@
         #endregion
 
         private TextBox textBox1;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridView;
         private Label label2;
         private Label label4;
         private Button btnPrestatariosLogo;
