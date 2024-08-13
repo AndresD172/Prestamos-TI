@@ -148,60 +148,60 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
-            label1.Location = new Point(133, 39);
+            label1.Font = new Font("Franklin Gothic Medium Cond", 36F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(117, 30);
             label1.Name = "label1";
-            label1.Size = new Size(119, 43);
+            label1.Size = new Size(130, 61);
             label1.TabIndex = 9;
             label1.Text = "Home";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
-            label2.Location = new Point(133, 172);
+            label2.Font = new Font("Franklin Gothic Medium Cond", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(137, 174);
             label2.Name = "label2";
-            label2.Size = new Size(157, 43);
+            label2.Size = new Size(138, 43);
             label2.TabIndex = 10;
             label2.Text = "Usuarios";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
-            label3.Location = new Point(133, 269);
+            label3.Font = new Font("Franklin Gothic Medium Cond", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(133, 266);
             label3.Name = "label3";
-            label3.Size = new Size(201, 43);
+            label3.Size = new Size(182, 43);
             label3.TabIndex = 11;
             label3.Text = "Prestatarios";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
-            label4.Location = new Point(133, 368);
+            label4.Font = new Font("Franklin Gothic Medium Cond", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(138, 364);
             label4.Name = "label4";
-            label4.Size = new Size(147, 43);
+            label4.Size = new Size(129, 43);
             label4.TabIndex = 12;
             label4.Text = "Equipos";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
-            label5.Location = new Point(133, 460);
+            label5.Font = new Font("Franklin Gothic Medium Cond", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(133, 458);
             label5.Name = "label5";
-            label5.Size = new Size(180, 43);
+            label5.Size = new Size(163, 43);
             label5.TabIndex = 13;
             label5.Text = "Prestamos";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
+            label6.Font = new Font("Franklin Gothic Medium Cond", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label6.Location = new Point(133, 554);
             label6.Name = "label6";
-            label6.Size = new Size(125, 43);
+            label6.Size = new Size(112, 43);
             label6.TabIndex = 14;
             label6.Text = "Multas";
             // 

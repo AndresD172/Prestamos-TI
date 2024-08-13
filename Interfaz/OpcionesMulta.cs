@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InterfazGráfica
 {
-    public partial class Form5 : Form
+    public partial class OpcionesMulta : Form
     {
-        public Form5()
+        public OpcionesMulta()
         {
             InitializeComponent();
         }

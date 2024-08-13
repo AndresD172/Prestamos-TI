@@ -1,6 +1,6 @@
 ﻿namespace InterfazGráfica
 {
-    partial class Form7
+    partial class BuscarEquipo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form7));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarEquipo));
             textBox1 = new TextBox();
             dataGridView = new DataGridView();
             label2 = new Label();

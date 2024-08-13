@@ -1,6 +1,6 @@
 ﻿namespace InterfazGráfica
 {
-    partial class Form5
+    partial class OpcionesPrestatario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // Form5
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(251, 246, 255);
-            ClientSize = new Size(1350, 729);
-            Name = "Form5";
-            Text = "Form5";
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "OpcionesPrestatario";
         }
 
         #endregion
