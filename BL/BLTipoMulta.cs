@@ -10,32 +10,32 @@ namespace BL
 {
     public class BLMulta
     {
-        public static Respuesta RegistrarMulta(EntidadMulta multa)
+        public static Respuesta RegistrarTipoMulta(EntidadMulta multa)
         {
-            DALMulta dalmulta = new DALMulta();
+            DALMulta DalTipoMulta = new DALMulta();
 
-            return dalmulta.RegistrarMulta(multa);
+            return DalTipoMulta.RegistrarMulta(multa);
 
         }
-        public static Respuesta ListarMulta(string cTexto)
+        public static Respuesta ListarTipoMulta(string cTexto)
         {
-            DALMulta dalmulta = new DALMulta();
+            DALMulta DalTipoMulta = new DALMulta();
 
-            return dalMulta.ListarMulta(cTexto);
+            return DalTipoMulta.ListarMulta(cTexto);
 
         }
         public static Respuesta EliminarMulta(int IdMulta)
         {
-            DALMulta dalmulta = new DALMulta();
+            DALMulta DalTipoMulta = new DALMulta();
 
-            return dalmulta.EliminarMulta(IdMulta);
+            return DalTipoMulta.EliminarMulta(IdMulta);
 
         }
         public static Respuesta ActualizarMulta(EntidadMulta multa)
         {
-            DALMulta dalmulta = new DALMulta();
+            DALMulta DalTipoMulta = new DALMulta();
 
-            return dalmulta.ActualizarMulta(multa);
+            return DalTipoMulta.ActualizarMulta(multa);
 
         }
     }

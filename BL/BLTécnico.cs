@@ -7,30 +7,30 @@ namespace BL
     {
         public static Respuesta RegistrarTécnico(EntidadTécnico técnico)
         {
-            DALTécnico daltécnico = new DALTécnico();
+            DALTécnico DalTecnico = new DALTécnico();
 
-            return daltécnico.RegistrarTécnico(técnico);
+            return DalTecnico.RegistrarTécnico(técnico);
 
         }
         public static Respuesta ListarTécnico(string cTexto)
         {
-            DALTécnico daltécnico = new DALTécnico();
+            DALTécnico DalTecnico = new DALTécnico();
 
-            return daltécnico.ListarTécnico(cTexto);
+            return DalTecnico.ListarTécnico(cTexto);
 
         }
         public static Respuesta EliminarTécnico(int IdTécnico)
         {
-            DALTécnico daltécnico = new DALTécnico();
+            DALTécnico DalTecnico = new DALTécnico();
 
-            return daltécnico.EliminarTécnico(IdTécnico);
+            return DalTecnico.EliminarTécnico(IdTécnico);
 
         }
         public static Respuesta ActualizarTécnico(EntidadTécnico técnico)
         {
-            DALTécnico daltécnico = new DALTécnico();
+            DALTécnico DalTecnico = new DALTécnico();
 
-            return daltécnico.ActualizarTécnico(técnico);
+            return DalTecnico.ActualizarTécnico(técnico);
 
         }
     }

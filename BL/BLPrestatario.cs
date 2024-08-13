@@ -14,31 +14,31 @@ namespace BL
     {
         public static Respuesta RegistrarPrestatario(EntidadPrestatario prestatario)
         {
-            DALPrestatario dalprestatario = new DALPrestatario();
+            DALPrestatario DalPrestatario = new DALPrestatario();
 
-            return dalprestatario.RegistrarPrestatario(prestatario);
+            return DalPrestatario.RegistrarPrestatario(prestatario);
 
         }
         public static Respuesta ListarPrestatario(string cTexto)
         {
-            DALPrestatario dalprestatario = new DALPrestatario();
+            DALPrestatario DalPrestatario = new DALPrestatario();
 
-            return dalprestatario.ListarPrestatario(cTexto);
+            return DalPrestatario.ListarPrestatario(cTexto);
 
         }
         public static Respuesta EliminarPrestatario(int IdPrestatario)
         {
-            DALPrestatario dalprestatario = new DALPrestatario();
+            DALPrestatario DalPrestatario = new DALPrestatario();
 
-            return dalprestatario.EliminarPrestatario(IdPrestatario);
+            return DalPrestatario.EliminarPrestatario(IdPrestatario);
 
         }
         public static Respuesta ActualizarPrestatario(EntidadPrestatario prestatario)
         {
-            DALPrestatario dalprestatario = new DALPrestatario();
+            DALPrestatario DalPrestatario = new DALPrestatario();
 
-            return dalprestatario.ActualizarPrestatario(prestatario);
+            return DalPrestatario.ActualizarPrestatario(prestatario);
 
         }
-    }
+    }   
 }
