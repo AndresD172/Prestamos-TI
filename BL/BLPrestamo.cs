@@ -12,33 +12,33 @@ namespace BL
     {
         public Respuesta RegistrarPrestamo(EntidadPréstamo prestamo)
         {
-            DALPrestamo dalprestamo = new DALPrestamo();
+            DALPrestamo DalPrestamo = new DALPrestamo();
 
-            return dalprestamo.RegistrarPrestamo(prestamo);
+            return DalPrestamo.RegistrarPrestamo(prestamo);
         }
         public Respuesta ListarPrestamo(string cTexto)
         {
-            DALPrestamo dalprestamo = new DALPrestamo();
+            DALPrestamo DalPrestamo = new DALPrestamo();
 
-            return dalprestamo.ListarPrestamo(cTexto);
+            return DalPrestamo.ListarPrestamo(cTexto);
         }
         public Respuesta ListarPrestamoEspecifico(int Id)
         {
-            DALPrestamo dalprestamo = new DALPrestamo();
+            DALPrestamo DalPrestamo = new DALPrestamo();
 
-            return dalprestamo.ListarPrestamoEspecifico(Id);
+            return DalPrestamo.ListarPrestamoEspecifico(Id);
         }
         public Respuesta EliminarPrestamo(int IdPrestamo)
         {
-            DALPrestamo dalprestamo = new DALPrestamo();
+            DALPrestamo DalPrestamo = new DALPrestamo();
 
-            return dalprestamo.EliminarPréstamo(IdPrestamo);
+            return DalPrestamo.EliminarPréstamo(IdPrestamo);
         }
         public Respuesta ActualizarPrestamo(EntidadPréstamo prestamo)
         {
-            DALPrestamo dalprestamo = new DALPrestamo();
+            DALPrestamo DalPrestamo = new DALPrestamo();
 
-            return dalprestamo.ActualizarPrestamo(prestamo);
+            return DalPrestamo.ActualizarPrestamo(prestamo);
         }
     }
 }
