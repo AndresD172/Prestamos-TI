@@ -185,6 +185,7 @@
             btnEditarEquipo.TabIndex = 11;
             btnEditarEquipo.Text = "Editar Equipo";
             btnEditarEquipo.UseVisualStyleBackColor = false;
+            btnEditarEquipo.Click += btnEditarEquipo_Click;
             // 
             // label2
             // 

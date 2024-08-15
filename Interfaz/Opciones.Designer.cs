@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Opciones));
             panel1 = new Panel();
-            btnOpciónNuevo = new Button();
-            btnOpciónBuscar = new Button();
+            btnOpcionNuevo = new Button();
+            btnOpcionBuscar = new Button();
             SuspendLayout();
             // 
             // panel1
@@ -42,40 +42,42 @@
             panel1.Size = new Size(289, 10);
             panel1.TabIndex = 0;
             // 
-            // btnOpciónNuevo
+            // btnOpcionNuevo
             // 
-            btnOpciónNuevo.BackColor = Color.FromArgb(244, 229, 255);
-            btnOpciónNuevo.Font = new Font("Baskerville Old Face", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnOpciónNuevo.Image = (Image)resources.GetObject("btnOpciónNuevo.Image");
-            btnOpciónNuevo.ImageAlign = ContentAlignment.MiddleLeft;
-            btnOpciónNuevo.Location = new Point(2, 1);
-            btnOpciónNuevo.Name = "btnOpciónNuevo";
-            btnOpciónNuevo.Size = new Size(273, 57);
-            btnOpciónNuevo.TabIndex = 1;
-            btnOpciónNuevo.Text = "Nuevo";
-            btnOpciónNuevo.UseVisualStyleBackColor = false;
+            btnOpcionNuevo.BackColor = Color.FromArgb(244, 229, 255);
+            btnOpcionNuevo.Font = new Font("Baskerville Old Face", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnOpcionNuevo.Image = (Image)resources.GetObject("btnOpcionNuevo.Image");
+            btnOpcionNuevo.ImageAlign = ContentAlignment.MiddleLeft;
+            btnOpcionNuevo.Location = new Point(2, 1);
+            btnOpcionNuevo.Name = "btnOpcionNuevo";
+            btnOpcionNuevo.Size = new Size(215, 57);
+            btnOpcionNuevo.TabIndex = 1;
+            btnOpcionNuevo.Text = "Nuevo";
+            btnOpcionNuevo.UseVisualStyleBackColor = false;
+            btnOpcionNuevo.Click += btnOpcionNuevo_Click;
             // 
-            // btnOpciónBuscar
+            // btnOpcionBuscar
             // 
-            btnOpciónBuscar.BackColor = Color.FromArgb(244, 229, 255);
-            btnOpciónBuscar.Font = new Font("Baskerville Old Face", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnOpciónBuscar.Image = (Image)resources.GetObject("btnOpciónBuscar.Image");
-            btnOpciónBuscar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnOpciónBuscar.Location = new Point(2, 64);
-            btnOpciónBuscar.Name = "btnOpciónBuscar";
-            btnOpciónBuscar.Size = new Size(273, 66);
-            btnOpciónBuscar.TabIndex = 2;
-            btnOpciónBuscar.Text = "Buscar";
-            btnOpciónBuscar.UseVisualStyleBackColor = false;
+            btnOpcionBuscar.BackColor = Color.FromArgb(244, 229, 255);
+            btnOpcionBuscar.Font = new Font("Baskerville Old Face", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnOpcionBuscar.Image = (Image)resources.GetObject("btnOpcionBuscar.Image");
+            btnOpcionBuscar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnOpcionBuscar.Location = new Point(2, 64);
+            btnOpcionBuscar.Name = "btnOpcionBuscar";
+            btnOpcionBuscar.Size = new Size(215, 55);
+            btnOpcionBuscar.TabIndex = 2;
+            btnOpcionBuscar.Text = "Buscar";
+            btnOpcionBuscar.UseVisualStyleBackColor = false;
+            btnOpcionBuscar.Click += btnOpcionBuscar_Click;
             // 
             // Opciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(244, 229, 255);
-            ClientSize = new Size(277, 131);
-            Controls.Add(btnOpciónBuscar);
-            Controls.Add(btnOpciónNuevo);
+            ClientSize = new Size(220, 124);
+            Controls.Add(btnOpcionBuscar);
+            Controls.Add(btnOpcionNuevo);
             Controls.Add(panel1);
             Name = "Opciones";
             Text = "Opciones";
@@ -85,7 +87,7 @@
         #endregion
 
         private Panel panel1;
-        private Button btnOpciónNuevo;
-        private Button btnOpciónBuscar;
+        private Button btnOpcionNuevo;
+        private Button btnOpcionBuscar;
     }
 }

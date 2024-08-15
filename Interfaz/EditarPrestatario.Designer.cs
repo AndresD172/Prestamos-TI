@@ -229,6 +229,7 @@
             btnEditarPrestatario.TabIndex = 7;
             btnEditarPrestatario.Text = "Editar Prestatario";
             btnEditarPrestatario.UseVisualStyleBackColor = false;
+            btnEditarPrestatario.Click += btnEditarPrestatario_Click;
             // 
             // label2
             // 
@@ -240,7 +241,7 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
-            // ModificarPrestatario
+            // EditarPrestatario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -248,7 +249,7 @@
             ClientSize = new Size(1350, 729);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Name = "ModificarPrestatario";
+            Name = "EditarPrestatario";
             Text = "Editar Prestatario";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
