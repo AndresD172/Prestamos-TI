@@ -207,6 +207,7 @@
             btnEditarPrestamo.TabIndex = 2;
             btnEditarPrestamo.Text = "Editar Prestamo";
             btnEditarPrestamo.UseVisualStyleBackColor = false;
+            btnEditarPrestamo.Click += btnEditarPrestamo_Click;
             // 
             // label2
             // 

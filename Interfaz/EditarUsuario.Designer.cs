@@ -163,6 +163,7 @@
             btnEditarUsuario.TabIndex = 11;
             btnEditarUsuario.Text = "Editar Usuario";
             btnEditarUsuario.UseVisualStyleBackColor = false;
+            btnEditarUsuario.Click += btnEditarUsuario_Click;
             // 
             // label2
             // 
@@ -174,7 +175,7 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
-            // ModificarUsuario
+            // EditarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -182,7 +183,7 @@
             ClientSize = new Size(1350, 729);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Name = "ModificarUsuario";
+            Name = "EditarUsuario";
             Text = "Editar Usuario";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

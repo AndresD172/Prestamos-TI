@@ -46,6 +46,7 @@
             label6 = new Label();
             Usuario = new Label();
             txtNombreUsuario = new TextBox();
+            label7 = new Label();
             SuspendLayout();
             // 
             // btnHome
@@ -90,6 +91,7 @@
             btnUsuarioLogo.Size = new Size(99, 90);
             btnUsuarioLogo.TabIndex = 3;
             btnUsuarioLogo.UseVisualStyleBackColor = false;
+            btnUsuarioLogo.Click += btnUsuarioLogo_Click;
             // 
             // btnPrestatariosLogo
             // 
@@ -100,6 +102,7 @@
             btnPrestatariosLogo.Size = new Size(99, 90);
             btnPrestatariosLogo.TabIndex = 4;
             btnPrestatariosLogo.UseVisualStyleBackColor = false;
+            btnPrestatariosLogo.Click += btnPrestatariosLogo_Click;
             // 
             // btnPrestamosLogo
             // 
@@ -110,6 +113,7 @@
             btnPrestamosLogo.Size = new Size(99, 90);
             btnPrestamosLogo.TabIndex = 6;
             btnPrestamosLogo.UseVisualStyleBackColor = false;
+            btnPrestamosLogo.Click += btnPrestamosLogo_Click;
             // 
             // btnEquipoLogo
             // 
@@ -120,6 +124,7 @@
             btnEquipoLogo.Size = new Size(99, 90);
             btnEquipoLogo.TabIndex = 5;
             btnEquipoLogo.UseVisualStyleBackColor = false;
+            btnEquipoLogo.Click += btnEquipoLogo_Click;
             // 
             // btnMultasLogo
             // 
@@ -131,6 +136,7 @@
             btnMultasLogo.Size = new Size(99, 90);
             btnMultasLogo.TabIndex = 7;
             btnMultasLogo.UseVisualStyleBackColor = false;
+            btnMultasLogo.Click += btnMultasLogo_Click;
             // 
             // btnAtrasLogo
             // 
@@ -139,7 +145,7 @@
             btnAtrasLogo.Location = new Point(12, 655);
             btnAtrasLogo.Margin = new Padding(0);
             btnAtrasLogo.Name = "btnAtrasLogo";
-            btnAtrasLogo.Size = new Size(137, 69);
+            btnAtrasLogo.Size = new Size(120, 65);
             btnAtrasLogo.TabIndex = 8;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
@@ -224,12 +230,25 @@
             txtNombreUsuario.Text = "Nombre del usuario";
             txtNombreUsuario.TextAlign = HorizontalAlignment.Center;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
+            label7.Location = new Point(144, 668);
+            label7.Name = "label7";
+            label7.RightToLeft = RightToLeft.Yes;
+            label7.Size = new Size(90, 43);
+            label7.TabIndex = 17;
+            label7.Text = "Salir";
+            label7.Click += label7_Click;
+            // 
             // Home
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(label7);
             Controls.Add(txtNombreUsuario);
             Controls.Add(Usuario);
             Controls.Add(label6);
@@ -274,5 +293,6 @@
         private Label label6;
         private Label Usuario;
         private TextBox txtNombreUsuario;
+        private Label label7;
     }
 }
