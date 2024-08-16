@@ -118,17 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnNuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAAZtJREFUeF7t0bFtBEEQA8GLRQkqj09actqgQbxJ7GG7AHo0BsNHkiRJkiRJkiRJ
-        kt7n8/P79y3UtNJGyFDTShshQ00rbYQMNa20ETLUtNJGyFDTShshQ00rbYQMNa20ETLUtNJGyFDTShsh
-        Q00rbYQMNa20ETLUtNJGyFDTShshQ00rbYQMNa20ETLUtNJGyFDTShshQ00rbYQMNa20ETLUtNJGyFDT
-        ShshQ00rbYQMNa20ETLUtNJGyFDTShshQ00rbYQMtXu1p9wU3nCOduRN4Q3naEfeFN5wjnbkTeEN52hH
-        3hTecI525E3hDedoR94U3nCOduRN4Q33ak/JUNNKGyFDTStthAw1rbQRMtS00kbIUNNKGyFDTStthAw1
-        rbQRMtS00kbIUNNKGyFDTStthAw1rbQRMtS00kbIUNNKGyFDTStthAw1rbQRMtS00kbIUNNKGyFDTStt
-        hAw1rbQRMtS00kbIUNNKGyFDTStthAw1rbQRMtS00kbIUNNKGyFDTStthAw1rbQRMtQkSZIkSZIkSZIk
-        6TWe5x/hiOHqXf2CNgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABzSURBVGhD7c+xCcAwDABBz5IFs0eWThoVIUhdzEvwB2oM
+        wvolaY/rOO/3xPMcBtAMoBlAM4BmAM0AmgE0A2hYwPfjbhNn1rKlThNn1rKlThNn1rKlThNn7od9/BcD
+        aAbQDKAZQDOAZgDNAJoBtPEB0ghrPXB3fv/WbEx/AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAMlSURBVGhD7Zi7bhNBFIYNLYgSCiTsXTuAqLiIiot4BgQS
+        mDeIkpmNXdDFoSFeryl4CnLhFZJQRLR0SYAnQFCRFESKFP7fPkbH641ke2cdR+wnHSneM3Muu2fOzKSQ
+        k5MzOmE5uNvyzJvQM1uhb3dD3xx0xe62PLsZenapXZm/I8Ong+NC4VzTC561fLPX8u3xMMKEmr59yrli
+        5nSIrs15eNufk4IcRjB3OyrNFsXcZGn5wQME8CMpsJHEs7+isn0iZidDVLKPUeuH8WBQ438gHyLfvAhL
+        9kZ0pX6B0vkbzzBn5aR5Td88FPPZImXzcyAI364uF21Jhp0I52P82sB8fM1h5qeCiy5e8wj8CJ3GypCh
+        wdyAc/tsYU2IOhtQr8+1w47TMYLvAXu1uD12J1G7hW8/3ipZNqIeG9hc1zbxe0dUbmmXzb0+R1iMyzOB
+        L+qxYd1zEffZLtrbonYHd1jthN1GVKnhl9S28RUaonIHFtiWdsK2KKrUIOCqtg1fG6JyBxbcN+3kbXmh
+        IqrUcJ/QtrnWROUOJLCvnTRuzV4UVWpoS9umL1G5A2vgt3biMoH3lflL2jZ9icod6PdftZO2V7suqtS0
+        i3M3tW2Wq6jcAaOb2gk6x0tRpSb0gld9ttEwROUOtM0l7QSfeUVUqYm3UfxeFJU7eJPSTriR8WAm6rHh
+        Zkhb2nbkmfuidkfnIMeroXIEWRP12MDmR20Ta+1LZjc1HrS0M5FA1CODWq/H7WV2mCNynN7WDvEGj/Bs
+        QYYMDZpCjXO1LTaKRqFxXoZkA++wCDjhKmnWhznccUy8bDqCq+W7mYWrMixb0PYeDZwgO0GYQwSHjmKq
+        7O3c7CjdPm+qHV3ClbIrZi/y65fFRfbwDpv8JUYUvHkGH3/Oti2usqN7lu9fEyMJap5lwzefpJ9IEqTb
+        ncxOUhBJwlbJOXrBJo2jTCwJwpsUEmngq2yg3vnvxH0Ee4C6/45gPuHZIjeppD4fD1zLRJMYFyT3Oin4
+        f+KZpgydXvIkpoU8iWkhT2Ja+A+SyOA/eVmQnMQZCb5HfxJnLPgePBudifNRTs6pUSj8Bbfhu2qHca78
+        AAAAAElFTkSuQmCC
 </value>
   </data>
 </root>

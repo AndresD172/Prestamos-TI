@@ -1,6 +1,6 @@
 ﻿namespace InterfazGráfica
 {
-    partial class Form4
+    partial class OpcionesEquipo
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             SuspendLayout();
             // 
-            // Form4
+            // Form6
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
-            Name = "Form4";
-            Text = "Form4";
+            Name = "Form6";
+            Text = "1366, 768";
             ResumeLayout(false);
         }
 
