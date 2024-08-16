@@ -38,11 +38,12 @@
             label3 = new Label();
             label2 = new Label();
             label4 = new Label();
-            btnPrestatariosLogo = new Button();
-            btnUsuarioLogo = new Button();
-            dataGridView1 = new DataGridView();
-            textBox1 = new TextBox();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnEditarUsuario = new Button();
+            btnEliminarUsuario = new Button();
+            dataGridViewUsuarios = new DataGridView();
+            txtBusqueda = new TextBox();
+            btnBuscarUsuario = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).BeginInit();
             SuspendLayout();
             // 
             // txtNombreUsuario
@@ -134,45 +135,55 @@
             label4.TabIndex = 28;
             label4.Text = "Eliminar";
             // 
-            // btnPrestatariosLogo
+            // btnEditarUsuario
             // 
-            btnPrestatariosLogo.BackColor = Color.FromArgb(251, 246, 255);
-            btnPrestatariosLogo.Image = (Image)resources.GetObject("btnPrestatariosLogo.Image");
-            btnPrestatariosLogo.Location = new Point(12, 253);
-            btnPrestatariosLogo.Name = "btnPrestatariosLogo";
-            btnPrestatariosLogo.Size = new Size(99, 90);
-            btnPrestatariosLogo.TabIndex = 27;
-            btnPrestatariosLogo.UseVisualStyleBackColor = false;
+            btnEditarUsuario.BackColor = Color.FromArgb(251, 246, 255);
+            btnEditarUsuario.Image = (Image)resources.GetObject("btnEditarUsuario.Image");
+            btnEditarUsuario.Location = new Point(12, 253);
+            btnEditarUsuario.Name = "btnEditarUsuario";
+            btnEditarUsuario.Size = new Size(99, 90);
+            btnEditarUsuario.TabIndex = 27;
+            btnEditarUsuario.UseVisualStyleBackColor = false;
             // 
-            // btnUsuarioLogo
+            // btnEliminarUsuario
             // 
-            btnUsuarioLogo.BackColor = Color.FromArgb(251, 246, 255);
-            btnUsuarioLogo.ForeColor = Color.FromArgb(251, 246, 255);
-            btnUsuarioLogo.Image = (Image)resources.GetObject("btnUsuarioLogo.Image");
-            btnUsuarioLogo.Location = new Point(12, 157);
-            btnUsuarioLogo.Name = "btnUsuarioLogo";
-            btnUsuarioLogo.Size = new Size(99, 90);
-            btnUsuarioLogo.TabIndex = 26;
-            btnUsuarioLogo.UseVisualStyleBackColor = false;
+            btnEliminarUsuario.BackColor = Color.FromArgb(251, 246, 255);
+            btnEliminarUsuario.ForeColor = Color.FromArgb(251, 246, 255);
+            btnEliminarUsuario.Image = (Image)resources.GetObject("btnEliminarUsuario.Image");
+            btnEliminarUsuario.Location = new Point(12, 157);
+            btnEliminarUsuario.Name = "btnEliminarUsuario";
+            btnEliminarUsuario.Size = new Size(99, 90);
+            btnEliminarUsuario.TabIndex = 26;
+            btnEliminarUsuario.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dataGridViewUsuarios
             // 
-            dataGridView1.BackgroundColor = Color.FromArgb(246, 236, 255);
-            dataGridView1.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(350, 219);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(998, 501);
-            dataGridView1.TabIndex = 30;
+            dataGridViewUsuarios.BackgroundColor = Color.FromArgb(246, 236, 255);
+            dataGridViewUsuarios.BorderStyle = BorderStyle.Fixed3D;
+            dataGridViewUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewUsuarios.Location = new Point(350, 219);
+            dataGridViewUsuarios.Name = "dataGridViewUsuarios";
+            dataGridViewUsuarios.Size = new Size(998, 501);
+            dataGridViewUsuarios.TabIndex = 30;
             // 
-            // textBox1
+            // txtBusqueda
             // 
-            textBox1.BackColor = Color.FromArgb(229, 220, 252);
-            textBox1.Font = new Font("Baskerville Old Face", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(392, 125);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(911, 35);
-            textBox1.TabIndex = 31;
+            txtBusqueda.BackColor = Color.FromArgb(229, 220, 252);
+            txtBusqueda.Font = new Font("Baskerville Old Face", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBusqueda.Location = new Point(350, 123);
+            txtBusqueda.Name = "txtBusqueda";
+            txtBusqueda.Size = new Size(911, 35);
+            txtBusqueda.TabIndex = 31;
+            // 
+            // btnBuscarUsuario
+            // 
+            btnBuscarUsuario.BackColor = Color.FromArgb(255, 192, 255);
+            btnBuscarUsuario.ForeColor = Color.FromArgb(251, 246, 255);
+            btnBuscarUsuario.Location = new Point(1267, 126);
+            btnBuscarUsuario.Name = "btnBuscarUsuario";
+            btnBuscarUsuario.Size = new Size(71, 33);
+            btnBuscarUsuario.TabIndex = 46;
+            btnBuscarUsuario.UseVisualStyleBackColor = false;
             // 
             // BuscarUsuario
             // 
@@ -180,12 +191,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
-            Controls.Add(textBox1);
-            Controls.Add(dataGridView1);
+            Controls.Add(btnBuscarUsuario);
+            Controls.Add(txtBusqueda);
+            Controls.Add(dataGridViewUsuarios);
             Controls.Add(label2);
             Controls.Add(label4);
-            Controls.Add(btnPrestatariosLogo);
-            Controls.Add(btnUsuarioLogo);
+            Controls.Add(btnEditarUsuario);
+            Controls.Add(btnEliminarUsuario);
             Controls.Add(btnAtrasLogo);
             Controls.Add(Usuario);
             Controls.Add(label1);
@@ -195,7 +207,7 @@
             Controls.Add(label3);
             Name = "BuscarUsuario";
             Text = "Buscar Usuario";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -211,9 +223,10 @@
         private Label label3;
         private Label label2;
         private Label label4;
-        private Button btnPrestatariosLogo;
-        private Button btnUsuarioLogo;
-        private DataGridView dataGridView1;
-        private TextBox textBox1;
+        private Button btnEditarUsuario;
+        private Button btnEliminarUsuario;
+        private DataGridView dataGridViewUsuarios;
+        private TextBox txtBusqueda;
+        private Button btnBuscarUsuario;
     }
 }
