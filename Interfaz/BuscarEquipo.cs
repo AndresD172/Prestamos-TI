@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InterfazGráfica
 {
-    public partial class Form4 : Form
+    public partial class BuscarEquipo : Form
     {
-        public Form4()
+        public BuscarEquipo()
         {
             InitializeComponent();
         }

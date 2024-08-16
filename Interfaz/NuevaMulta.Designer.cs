@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevaMulta));
             panel1 = new Panel();
+            btnTecnico = new Button();
+            btnTipoMulta = new Button();
+            btnPrestatario = new Button();
             txtDescripciónMulta = new TextBox();
             txtTipoMulta = new TextBox();
             txtTécnicoMulta = new TextBox();
@@ -42,13 +45,37 @@
             panel2 = new Panel();
             btnGuardarMulta = new Button();
             label2 = new Label();
+            dataGridViewTecnico = new DataGridView();
+            dataGridViewPrestatarios = new DataGridView();
+            panelPrestatario = new Panel();
+            btnCerrarPrestatarios = new Button();
+            btnBuscarPrestatario = new Button();
+            txtBuscarPrestatario = new TextBox();
+            panelTecnico = new Panel();
+            btnBuscarTecnico = new Button();
+            btnCerrarTecnico = new Button();
+            txtBuscarTecnico = new TextBox();
+            panelTipoMulta = new Panel();
+            btnBuscarTipoMulta = new Button();
+            btnCerrarTipoMulta = new Button();
+            txtBuscarTipoMulta = new TextBox();
+            dataGridViewTipoMulta = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTecnico).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPrestatarios).BeginInit();
+            panelPrestatario.SuspendLayout();
+            panelTecnico.SuspendLayout();
+            panelTipoMulta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTipoMulta).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(btnTecnico);
+            panel1.Controls.Add(btnTipoMulta);
+            panel1.Controls.Add(btnPrestatario);
             panel1.Controls.Add(txtDescripciónMulta);
             panel1.Controls.Add(txtTipoMulta);
             panel1.Controls.Add(txtTécnicoMulta);
@@ -62,6 +89,30 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
+            // 
+            // btnTecnico
+            // 
+            btnTecnico.Location = new Point(419, 161);
+            btnTecnico.Name = "btnTecnico";
+            btnTecnico.Size = new Size(27, 23);
+            btnTecnico.TabIndex = 15;
+            btnTecnico.UseVisualStyleBackColor = true;
+            // 
+            // btnTipoMulta
+            // 
+            btnTipoMulta.Location = new Point(291, 270);
+            btnTipoMulta.Name = "btnTipoMulta";
+            btnTipoMulta.Size = new Size(27, 23);
+            btnTipoMulta.TabIndex = 12;
+            btnTipoMulta.UseVisualStyleBackColor = true;
+            // 
+            // btnPrestatario
+            // 
+            btnPrestatario.Location = new Point(291, 157);
+            btnPrestatario.Name = "btnPrestatario";
+            btnPrestatario.Size = new Size(27, 23);
+            btnPrestatario.TabIndex = 10;
+            btnPrestatario.UseVisualStyleBackColor = true;
             // 
             // txtDescripciónMulta
             // 
@@ -174,12 +225,151 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
+            // dataGridViewTecnico
+            // 
+            dataGridViewTecnico.AllowUserToAddRows = false;
+            dataGridViewTecnico.AllowUserToDeleteRows = false;
+            dataGridViewTecnico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTecnico.Location = new Point(0, 60);
+            dataGridViewTecnico.Name = "dataGridViewTecnico";
+            dataGridViewTecnico.ReadOnly = true;
+            dataGridViewTecnico.Size = new Size(276, 177);
+            dataGridViewTecnico.TabIndex = 16;
+            dataGridViewTecnico.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // dataGridViewPrestatarios
+            // 
+            dataGridViewPrestatarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPrestatarios.Location = new Point(3, 60);
+            dataGridViewPrestatarios.Name = "dataGridViewPrestatarios";
+            dataGridViewPrestatarios.Size = new Size(273, 177);
+            dataGridViewPrestatarios.TabIndex = 7;
+            dataGridViewPrestatarios.CellContentClick += dataGridView2_CellContentClick;
+            // 
+            // panelPrestatario
+            // 
+            panelPrestatario.Controls.Add(btnCerrarPrestatarios);
+            panelPrestatario.Controls.Add(btnBuscarPrestatario);
+            panelPrestatario.Controls.Add(dataGridViewPrestatarios);
+            panelPrestatario.Controls.Add(txtBuscarPrestatario);
+            panelPrestatario.Location = new Point(1042, 3);
+            panelPrestatario.Name = "panelPrestatario";
+            panelPrestatario.Size = new Size(276, 235);
+            panelPrestatario.TabIndex = 7;
+            // 
+            // btnCerrarPrestatarios
+            // 
+            btnCerrarPrestatarios.Location = new Point(236, 13);
+            btnCerrarPrestatarios.Name = "btnCerrarPrestatarios";
+            btnCerrarPrestatarios.Size = new Size(26, 23);
+            btnCerrarPrestatarios.TabIndex = 19;
+            btnCerrarPrestatarios.UseVisualStyleBackColor = true;
+            btnCerrarPrestatarios.Click += button1_Click;
+            // 
+            // btnBuscarPrestatario
+            // 
+            btnBuscarPrestatario.Location = new Point(211, 13);
+            btnBuscarPrestatario.Name = "btnBuscarPrestatario";
+            btnBuscarPrestatario.Size = new Size(22, 23);
+            btnBuscarPrestatario.TabIndex = 10;
+            btnBuscarPrestatario.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscarPrestatario
+            // 
+            txtBuscarPrestatario.Font = new Font("Segoe UI", 12F);
+            txtBuscarPrestatario.Location = new Point(3, 9);
+            txtBuscarPrestatario.Name = "txtBuscarPrestatario";
+            txtBuscarPrestatario.Size = new Size(202, 29);
+            txtBuscarPrestatario.TabIndex = 10;
+            // 
+            // panelTecnico
+            // 
+            panelTecnico.Controls.Add(btnBuscarTecnico);
+            panelTecnico.Controls.Add(btnCerrarTecnico);
+            panelTecnico.Controls.Add(dataGridViewTecnico);
+            panelTecnico.Controls.Add(txtBuscarTecnico);
+            panelTecnico.Location = new Point(1042, 246);
+            panelTecnico.Name = "panelTecnico";
+            panelTecnico.Size = new Size(276, 235);
+            panelTecnico.TabIndex = 8;
+            // 
+            // btnBuscarTecnico
+            // 
+            btnBuscarTecnico.Location = new Point(208, 12);
+            btnBuscarTecnico.Name = "btnBuscarTecnico";
+            btnBuscarTecnico.Size = new Size(25, 23);
+            btnBuscarTecnico.TabIndex = 17;
+            btnBuscarTecnico.UseVisualStyleBackColor = true;
+            // 
+            // btnCerrarTecnico
+            // 
+            btnCerrarTecnico.Location = new Point(237, 12);
+            btnCerrarTecnico.Name = "btnCerrarTecnico";
+            btnCerrarTecnico.Size = new Size(25, 23);
+            btnCerrarTecnico.TabIndex = 20;
+            btnCerrarTecnico.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscarTecnico
+            // 
+            txtBuscarTecnico.Font = new Font("Segoe UI", 12F);
+            txtBuscarTecnico.Location = new Point(3, 8);
+            txtBuscarTecnico.Name = "txtBuscarTecnico";
+            txtBuscarTecnico.Size = new Size(202, 29);
+            txtBuscarTecnico.TabIndex = 11;
+            // 
+            // panelTipoMulta
+            // 
+            panelTipoMulta.Controls.Add(btnBuscarTipoMulta);
+            panelTipoMulta.Controls.Add(btnCerrarTipoMulta);
+            panelTipoMulta.Controls.Add(txtBuscarTipoMulta);
+            panelTipoMulta.Controls.Add(dataGridViewTipoMulta);
+            panelTipoMulta.Location = new Point(1042, 487);
+            panelTipoMulta.Name = "panelTipoMulta";
+            panelTipoMulta.Size = new Size(276, 237);
+            panelTipoMulta.TabIndex = 9;
+            // 
+            // btnBuscarTipoMulta
+            // 
+            btnBuscarTipoMulta.Location = new Point(208, 7);
+            btnBuscarTipoMulta.Name = "btnBuscarTipoMulta";
+            btnBuscarTipoMulta.Size = new Size(26, 23);
+            btnBuscarTipoMulta.TabIndex = 13;
+            btnBuscarTipoMulta.UseVisualStyleBackColor = true;
+            // 
+            // btnCerrarTipoMulta
+            // 
+            btnCerrarTipoMulta.Location = new Point(240, 7);
+            btnCerrarTipoMulta.Name = "btnCerrarTipoMulta";
+            btnCerrarTipoMulta.Size = new Size(22, 23);
+            btnCerrarTipoMulta.TabIndex = 18;
+            btnCerrarTipoMulta.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscarTipoMulta
+            // 
+            txtBuscarTipoMulta.Font = new Font("Segoe UI", 12F);
+            txtBuscarTipoMulta.Location = new Point(3, 3);
+            txtBuscarTipoMulta.Name = "txtBuscarTipoMulta";
+            txtBuscarTipoMulta.Size = new Size(202, 29);
+            txtBuscarTipoMulta.TabIndex = 12;
+            txtBuscarTipoMulta.TextChanged += textBox3_TextChanged;
+            // 
+            // dataGridViewTipoMulta
+            // 
+            dataGridViewTipoMulta.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTipoMulta.Location = new Point(0, 60);
+            dataGridViewTipoMulta.Name = "dataGridViewTipoMulta";
+            dataGridViewTipoMulta.Size = new Size(276, 177);
+            dataGridViewTipoMulta.TabIndex = 0;
+            // 
             // FormNuevaMulta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(panelTipoMulta);
+            Controls.Add(panelTecnico);
+            Controls.Add(panelPrestatario);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormNuevaMulta";
@@ -188,6 +378,15 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTecnico).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPrestatarios).EndInit();
+            panelPrestatario.ResumeLayout(false);
+            panelPrestatario.PerformLayout();
+            panelTecnico.ResumeLayout(false);
+            panelTecnico.PerformLayout();
+            panelTipoMulta.ResumeLayout(false);
+            panelTipoMulta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTipoMulta).EndInit();
             ResumeLayout(false);
         }
 
@@ -195,9 +394,6 @@
 
         private Panel panel1;
         private TextBox txtDescripciónMulta;
-        private TextBox txtTipoMulta;
-        private TextBox txtTécnicoMulta;
-        private TextBox txtPrestatarioMulta;
         private Label label7;
         private Label label1;
         private Label label6;
@@ -206,5 +402,26 @@
         private Panel panel2;
         private Label label2;
         private Button btnGuardarMulta;
+        private TextBox txtTipoMulta;
+        private TextBox txtTécnicoMulta;
+        private TextBox txtPrestatarioMulta;
+        private Button btnPrestatario;
+        private Button btnTecnico;
+        private Button btnTipoMulta;
+        private DataGridView dataGridViewTecnico;
+        private DataGridView dataGridViewPrestatarios;
+        private Panel panelPrestatario;
+        private Panel panelTecnico;
+        private Panel panelTipoMulta;
+        private TextBox txtBuscarTecnico;
+        private TextBox txtBuscarPrestatario;
+        private DataGridView dataGridViewTipoMulta;
+        private TextBox txtBuscarTipoMulta;
+        private Button btnBuscarPrestatario;
+        private Button btnBuscarTecnico;
+        private Button btnBuscarTipoMulta;
+        private Button btnCerrarPrestatarios;
+        private Button btnCerrarTecnico;
+        private Button btnCerrarTipoMulta;
     }
 }

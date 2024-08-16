@@ -1,6 +1,6 @@
 ﻿namespace InterfazGráfica
 {
-    partial class Form6
+    partial class OpcionesTecnico
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            SuspendLayout();
-            // 
-            // Form6
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(251, 246, 255);
-            ClientSize = new Size(1350, 729);
-            Name = "Form6";
-            Text = "1366, 768";
-            ResumeLayout(false);
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "OpcionesTecnico";
         }
 
         #endregion
