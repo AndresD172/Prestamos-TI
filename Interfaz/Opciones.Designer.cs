@@ -69,7 +69,7 @@
             Controls.Add(btnNuevo);
             Controls.Add(btnBuscar);
             Name = "Opciones";
-            Text = "OpcionesPrestatario";
+            Text = "Opciones";
             ResumeLayout(false);
         }
 
