@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPrestatario));
             panel1 = new Panel();
+            btnEspecialidad = new Button();
+            btnSeccion = new Button();
+            btnDepartamento = new Button();
             txtDepartamentoPrestatario = new TextBox();
             label10 = new Label();
             txtSecciónPrestatario = new TextBox();
@@ -53,19 +56,16 @@
             btnCerrarSeccion = new Button();
             dataGridViewSeccion = new DataGridView();
             txtBuscarSeccion = new TextBox();
-            btnDepartamento = new Button();
-            btnSeccion = new Button();
-            btnEspecialidad = new Button();
             panelDepartamento = new Panel();
-            btnBuscarDepartamento = new Button();
-            btnCerrarDepartamento = new Button();
-            dataGridViewDepartamento = new DataGridView();
-            txtBuscarDepartamento = new TextBox();
             panel3 = new Panel();
             button2 = new Button();
             button4 = new Button();
             dataGridView1 = new DataGridView();
             textBox1 = new TextBox();
+            btnBuscarDepartamento = new Button();
+            btnCerrarDepartamento = new Button();
+            dataGridViewDepartamento = new DataGridView();
+            txtBuscarDepartamento = new TextBox();
             panelEspecialidad = new Panel();
             btnBuscarEspecialidad = new Button();
             btnCerrarEspecialidad = new Button();
@@ -76,9 +76,9 @@
             panelSeccion.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewSeccion).BeginInit();
             panelDepartamento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewDepartamento).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDepartamento).BeginInit();
             panelEspecialidad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEspecialidad).BeginInit();
             SuspendLayout();
@@ -108,6 +108,33 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
+            // 
+            // btnEspecialidad
+            // 
+            btnEspecialidad.Location = new Point(497, 328);
+            btnEspecialidad.Name = "btnEspecialidad";
+            btnEspecialidad.Size = new Size(25, 23);
+            btnEspecialidad.TabIndex = 23;
+            btnEspecialidad.UseVisualStyleBackColor = true;
+            btnEspecialidad.Click += btnEspecialidad_Click;
+            // 
+            // btnSeccion
+            // 
+            btnSeccion.Location = new Point(288, 264);
+            btnSeccion.Name = "btnSeccion";
+            btnSeccion.Size = new Size(25, 23);
+            btnSeccion.TabIndex = 22;
+            btnSeccion.UseVisualStyleBackColor = true;
+            btnSeccion.Click += btnSeccion_Click;
+            // 
+            // btnDepartamento
+            // 
+            btnDepartamento.Location = new Point(418, 260);
+            btnDepartamento.Name = "btnDepartamento";
+            btnDepartamento.Size = new Size(25, 23);
+            btnDepartamento.TabIndex = 21;
+            btnDepartamento.UseVisualStyleBackColor = true;
+            btnDepartamento.Click += btnDepartamento_Click;
             // 
             // txtDepartamentoPrestatario
             // 
@@ -263,6 +290,7 @@
             btnGuardarPrestatario.TabIndex = 7;
             btnGuardarPrestatario.Text = "Nuevo Prestatario";
             btnGuardarPrestatario.UseVisualStyleBackColor = false;
+            btnGuardarPrestatario.Click += btnGuardarPrestatario_Click;
             // 
             // label2
             // 
@@ -292,6 +320,7 @@
             btnBuscarSeccion.Size = new Size(25, 23);
             btnBuscarSeccion.TabIndex = 17;
             btnBuscarSeccion.UseVisualStyleBackColor = true;
+            btnBuscarSeccion.Click += btnBuscarSeccion_Click;
             // 
             // btnCerrarSeccion
             // 
@@ -300,6 +329,7 @@
             btnCerrarSeccion.Size = new Size(25, 23);
             btnCerrarSeccion.TabIndex = 20;
             btnCerrarSeccion.UseVisualStyleBackColor = true;
+            btnCerrarSeccion.Click += btnCerrarSeccion_Click;
             // 
             // dataGridViewSeccion
             // 
@@ -311,6 +341,7 @@
             dataGridViewSeccion.ReadOnly = true;
             dataGridViewSeccion.Size = new Size(276, 177);
             dataGridViewSeccion.TabIndex = 16;
+            dataGridViewSeccion.DoubleClick += dataGridViewSeccion_DoubleClick;
             // 
             // txtBuscarSeccion
             // 
@@ -319,30 +350,6 @@
             txtBuscarSeccion.Name = "txtBuscarSeccion";
             txtBuscarSeccion.Size = new Size(202, 29);
             txtBuscarSeccion.TabIndex = 11;
-            // 
-            // btnDepartamento
-            // 
-            btnDepartamento.Location = new Point(418, 260);
-            btnDepartamento.Name = "btnDepartamento";
-            btnDepartamento.Size = new Size(25, 23);
-            btnDepartamento.TabIndex = 21;
-            btnDepartamento.UseVisualStyleBackColor = true;
-            // 
-            // btnSeccion
-            // 
-            btnSeccion.Location = new Point(288, 264);
-            btnSeccion.Name = "btnSeccion";
-            btnSeccion.Size = new Size(25, 23);
-            btnSeccion.TabIndex = 22;
-            btnSeccion.UseVisualStyleBackColor = true;
-            // 
-            // btnEspecialidad
-            // 
-            btnEspecialidad.Location = new Point(497, 328);
-            btnEspecialidad.Name = "btnEspecialidad";
-            btnEspecialidad.Size = new Size(25, 23);
-            btnEspecialidad.TabIndex = 23;
-            btnEspecialidad.UseVisualStyleBackColor = true;
             // 
             // panelDepartamento
             // 
@@ -355,41 +362,6 @@
             panelDepartamento.Name = "panelDepartamento";
             panelDepartamento.Size = new Size(276, 235);
             panelDepartamento.TabIndex = 21;
-            // 
-            // btnBuscarDepartamento
-            // 
-            btnBuscarDepartamento.Location = new Point(208, 12);
-            btnBuscarDepartamento.Name = "btnBuscarDepartamento";
-            btnBuscarDepartamento.Size = new Size(25, 23);
-            btnBuscarDepartamento.TabIndex = 17;
-            btnBuscarDepartamento.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrarDepartamento
-            // 
-            btnCerrarDepartamento.Location = new Point(237, 12);
-            btnCerrarDepartamento.Name = "btnCerrarDepartamento";
-            btnCerrarDepartamento.Size = new Size(25, 23);
-            btnCerrarDepartamento.TabIndex = 20;
-            btnCerrarDepartamento.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewDepartamento
-            // 
-            dataGridViewDepartamento.AllowUserToAddRows = false;
-            dataGridViewDepartamento.AllowUserToDeleteRows = false;
-            dataGridViewDepartamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDepartamento.Location = new Point(0, 60);
-            dataGridViewDepartamento.Name = "dataGridViewDepartamento";
-            dataGridViewDepartamento.ReadOnly = true;
-            dataGridViewDepartamento.Size = new Size(276, 177);
-            dataGridViewDepartamento.TabIndex = 16;
-            // 
-            // txtBuscarDepartamento
-            // 
-            txtBuscarDepartamento.Font = new Font("Segoe UI", 12F);
-            txtBuscarDepartamento.Location = new Point(3, 8);
-            txtBuscarDepartamento.Name = "txtBuscarDepartamento";
-            txtBuscarDepartamento.Size = new Size(202, 29);
-            txtBuscarDepartamento.TabIndex = 11;
             // 
             // panel3
             // 
@@ -437,6 +409,44 @@
             textBox1.Size = new Size(202, 29);
             textBox1.TabIndex = 11;
             // 
+            // btnBuscarDepartamento
+            // 
+            btnBuscarDepartamento.Location = new Point(208, 12);
+            btnBuscarDepartamento.Name = "btnBuscarDepartamento";
+            btnBuscarDepartamento.Size = new Size(25, 23);
+            btnBuscarDepartamento.TabIndex = 17;
+            btnBuscarDepartamento.UseVisualStyleBackColor = true;
+            btnBuscarDepartamento.Click += btnBuscarDepartamento_Click;
+            // 
+            // btnCerrarDepartamento
+            // 
+            btnCerrarDepartamento.Location = new Point(237, 12);
+            btnCerrarDepartamento.Name = "btnCerrarDepartamento";
+            btnCerrarDepartamento.Size = new Size(25, 23);
+            btnCerrarDepartamento.TabIndex = 20;
+            btnCerrarDepartamento.UseVisualStyleBackColor = true;
+            btnCerrarDepartamento.Click += btnCerrarDepartamento_Click;
+            // 
+            // dataGridViewDepartamento
+            // 
+            dataGridViewDepartamento.AllowUserToAddRows = false;
+            dataGridViewDepartamento.AllowUserToDeleteRows = false;
+            dataGridViewDepartamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDepartamento.Location = new Point(0, 60);
+            dataGridViewDepartamento.Name = "dataGridViewDepartamento";
+            dataGridViewDepartamento.ReadOnly = true;
+            dataGridViewDepartamento.Size = new Size(276, 177);
+            dataGridViewDepartamento.TabIndex = 16;
+            dataGridViewDepartamento.DoubleClick += dataGridViewDepartamento_DoubleClick;
+            // 
+            // txtBuscarDepartamento
+            // 
+            txtBuscarDepartamento.Font = new Font("Segoe UI", 12F);
+            txtBuscarDepartamento.Location = new Point(3, 8);
+            txtBuscarDepartamento.Name = "txtBuscarDepartamento";
+            txtBuscarDepartamento.Size = new Size(202, 29);
+            txtBuscarDepartamento.TabIndex = 11;
+            // 
             // panelEspecialidad
             // 
             panelEspecialidad.Controls.Add(btnBuscarEspecialidad);
@@ -455,6 +465,7 @@
             btnBuscarEspecialidad.Size = new Size(25, 23);
             btnBuscarEspecialidad.TabIndex = 17;
             btnBuscarEspecialidad.UseVisualStyleBackColor = true;
+            btnBuscarEspecialidad.Click += btnBuscarEspecialidad_Click;
             // 
             // btnCerrarEspecialidad
             // 
@@ -463,6 +474,7 @@
             btnCerrarEspecialidad.Size = new Size(25, 23);
             btnCerrarEspecialidad.TabIndex = 20;
             btnCerrarEspecialidad.UseVisualStyleBackColor = true;
+            btnCerrarEspecialidad.Click += btnCerrarEspecialidad_Click;
             // 
             // dataGridViewEspecialidad
             // 
@@ -474,6 +486,7 @@
             dataGridViewEspecialidad.ReadOnly = true;
             dataGridViewEspecialidad.Size = new Size(276, 177);
             dataGridViewEspecialidad.TabIndex = 16;
+            dataGridViewEspecialidad.DoubleClick += dataGridViewEspecialidad_DoubleClick;
             // 
             // txtBuscarEspecialidad
             // 
@@ -505,10 +518,10 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewSeccion).EndInit();
             panelDepartamento.ResumeLayout(false);
             panelDepartamento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewDepartamento).EndInit();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDepartamento).EndInit();
             panelEspecialidad.ResumeLayout(false);
             panelEspecialidad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEspecialidad).EndInit();

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interfaz Gráfica", "Interfaz Gráfica.csproj", "{21C8A2C1-C0CA-4C17-8032-254B0DE0E55B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D2E0CAA1-5F90-406B-AD43-646F450DFED2} = {D2E0CAA1-5F90-406B-AD43-646F450DFED2}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entidades", "..\Entidades\Entidades.csproj", "{16F7C234-A5D0-4CD5-A4D7-DAE5FF815876}"
 EndProject
