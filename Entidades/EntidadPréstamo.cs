@@ -8,5 +8,6 @@
         public int IdEstadoCreación { get; set; }
         public DateTime FechaCreación { get; set; }
         public DateTime FechaDevolución { get; set; }
+        public int[] EquiposAPrestar { get; set; }
     }
 }
