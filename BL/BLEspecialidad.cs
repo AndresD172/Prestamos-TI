@@ -10,25 +10,25 @@ namespace BL
 {
     public class BLEspecialidad
     {
-        public Respuesta RegistrarEspecialidad(EntidadEspecialidad especialidad) 
+        public static  Respuesta RegistrarEspecialidad(EntidadEspecialidad especialidad) 
         {
             DALEspecialidad dalespecialidad = new DALEspecialidad();
 
             return dalespecialidad.RegistrarEspecialidad(especialidad);
         }
-        public Respuesta ListarEspecialidad(string cTexto)
+        public static Respuesta ListarEspecialidad(string cTexto)
         {
             DALEspecialidad dalespecialidad = new DALEspecialidad();
 
             return dalespecialidad.ListarEspecialidad(cTexto);
         }
-        public Respuesta EliminarEspecialidad(int IdEspecialidad)
+        public static Respuesta EliminarEspecialidad(int IdEspecialidad)
         {
             DALEspecialidad dalespecialidad = new DALEspecialidad();
 
             return dalespecialidad.EliminarEspecialidad(IdEspecialidad);
         }
-        public Respuesta ActualizarEspecialidad(EntidadEspecialidad especialidad)
+        public static Respuesta ActualizarEspecialidad(EntidadEspecialidad especialidad)
         {
             DALEspecialidad dalespecialidad = new DALEspecialidad();
 

@@ -46,7 +46,7 @@ namespace InterfazGráfica
                 }
                 else
                 {
-                    MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

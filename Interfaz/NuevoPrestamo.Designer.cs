@@ -35,7 +35,7 @@
             btnPrestamista = new Button();
             txtEstadoPréstamo = new TextBox();
             label9 = new Label();
-            txtContraseñaUsuario = new TextBox();
+            txtPrestamistaPréstamo = new TextBox();
             txtDevolucionPréstamo = new TextBox();
             txtFechaPréstamo = new TextBox();
             txtPrestatarioPréstamo = new TextBox();
@@ -82,7 +82,7 @@
             panel1.Controls.Add(btnPrestamista);
             panel1.Controls.Add(txtEstadoPréstamo);
             panel1.Controls.Add(label9);
-            panel1.Controls.Add(txtContraseñaUsuario);
+            panel1.Controls.Add(txtPrestamistaPréstamo);
             panel1.Controls.Add(txtDevolucionPréstamo);
             panel1.Controls.Add(txtFechaPréstamo);
             panel1.Controls.Add(txtPrestatarioPréstamo);
@@ -105,6 +105,7 @@
             btnEstado.Size = new Size(25, 23);
             btnEstado.TabIndex = 15;
             btnEstado.UseVisualStyleBackColor = true;
+            btnEstado.Click += btnEstado_Click;
             // 
             // btnPrestatario
             // 
@@ -113,6 +114,7 @@
             btnPrestatario.Size = new Size(25, 23);
             btnPrestatario.TabIndex = 14;
             btnPrestatario.UseVisualStyleBackColor = true;
+            btnPrestatario.Click += btnPrestatario_Click;
             // 
             // btnPrestamista
             // 
@@ -121,6 +123,7 @@
             btnPrestamista.Size = new Size(25, 23);
             btnPrestamista.TabIndex = 13;
             btnPrestamista.UseVisualStyleBackColor = true;
+            btnPrestamista.Click += btnPrestamista_Click;
             // 
             // txtEstadoPréstamo
             // 
@@ -140,13 +143,13 @@
             label9.TabIndex = 11;
             label9.Text = "Estado";
             // 
-            // txtContraseñaUsuario
+            // txtPrestamistaPréstamo
             // 
-            txtContraseñaUsuario.Font = new Font("Segoe UI", 12F);
-            txtContraseñaUsuario.Location = new Point(51, 301);
-            txtContraseñaUsuario.Name = "txtContraseñaUsuario";
-            txtContraseñaUsuario.Size = new Size(233, 29);
-            txtContraseñaUsuario.TabIndex = 10;
+            txtPrestamistaPréstamo.Font = new Font("Segoe UI", 12F);
+            txtPrestamistaPréstamo.Location = new Point(51, 301);
+            txtPrestamistaPréstamo.Name = "txtPrestamistaPréstamo";
+            txtPrestamistaPréstamo.Size = new Size(233, 29);
+            txtPrestamistaPréstamo.TabIndex = 10;
             // 
             // txtDevolucionPréstamo
             // 
@@ -258,6 +261,7 @@
             btnNuevoPrestamo.TabIndex = 2;
             btnNuevoPrestamo.Text = "Nuevo Prestamo";
             btnNuevoPrestamo.UseVisualStyleBackColor = false;
+            btnNuevoPrestamo.Click += btnNuevoPrestamo_Click;
             // 
             // label2
             // 
@@ -276,6 +280,7 @@
             btnBuscarPrestatario.Size = new Size(25, 23);
             btnBuscarPrestatario.TabIndex = 17;
             btnBuscarPrestatario.UseVisualStyleBackColor = true;
+            btnBuscarPrestatario.Click += btnBuscarPrestatario_Click;
             // 
             // txtBuscarPrestatario
             // 
@@ -303,6 +308,7 @@
             btnCerrarPrestatario.Size = new Size(25, 23);
             btnCerrarPrestatario.TabIndex = 20;
             btnCerrarPrestatario.UseVisualStyleBackColor = true;
+            btnCerrarPrestatario.Click += btnCerrarPrestatario_Click;
             // 
             // dataGridViewPrestatario
             // 
@@ -314,6 +320,7 @@
             dataGridViewPrestatario.ReadOnly = true;
             dataGridViewPrestatario.Size = new Size(276, 177);
             dataGridViewPrestatario.TabIndex = 16;
+            dataGridViewPrestatario.DoubleClick += dataGridViewPrestatario_DoubleClick;
             // 
             // panelPrestamista
             // 
@@ -333,6 +340,7 @@
             btnBuscarPrestamista.Size = new Size(25, 23);
             btnBuscarPrestamista.TabIndex = 17;
             btnBuscarPrestamista.UseVisualStyleBackColor = true;
+            btnBuscarPrestamista.Click += btnBuscarPrestamista_Click;
             // 
             // btnCerrarPrestamista
             // 
@@ -341,6 +349,7 @@
             btnCerrarPrestamista.Size = new Size(25, 23);
             btnCerrarPrestamista.TabIndex = 20;
             btnCerrarPrestamista.UseVisualStyleBackColor = true;
+            btnCerrarPrestamista.Click += btnCerrarPrestamista_Click;
             // 
             // dataGridViewPrestamista
             // 
@@ -352,6 +361,7 @@
             dataGridViewPrestamista.ReadOnly = true;
             dataGridViewPrestamista.Size = new Size(276, 177);
             dataGridViewPrestamista.TabIndex = 16;
+            dataGridViewPrestamista.DoubleClick += dataGridViewPrestamista_DoubleClick;
             // 
             // txtBuscarPrestamista
             // 
@@ -379,6 +389,7 @@
             btnBuscarEstado.Size = new Size(25, 23);
             btnBuscarEstado.TabIndex = 17;
             btnBuscarEstado.UseVisualStyleBackColor = true;
+            btnBuscarEstado.Click += btnBuscarEstado_Click;
             // 
             // btnCerrarEstado
             // 
@@ -387,6 +398,7 @@
             btnCerrarEstado.Size = new Size(25, 23);
             btnCerrarEstado.TabIndex = 20;
             btnCerrarEstado.UseVisualStyleBackColor = true;
+            btnCerrarEstado.Click += btnCerrarEstado_Click;
             // 
             // dataGridViewEstado
             // 
@@ -398,6 +410,7 @@
             dataGridViewEstado.ReadOnly = true;
             dataGridViewEstado.Size = new Size(276, 177);
             dataGridViewEstado.TabIndex = 16;
+            dataGridViewEstado.DoubleClick += dataGridViewEstado_DoubleClick;
             // 
             // txtBuscarEstado
             // 
@@ -452,7 +465,7 @@
         private Label label9;
         private Button btnNuevoPrestamo;
         private TextBox txtEstadoPréstamo;
-        private TextBox txtContraseñaUsuario;
+        private TextBox txtPrestamistaPréstamo;
         private TextBox txtPrestatarioPréstamo;
         private TextBox txEquipoPréstamo;
         private Button btnEstado;
