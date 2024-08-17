@@ -10,25 +10,25 @@ namespace BL
 {
     public class BLEquipo
     {
-        public Respuesta RegistrarEquipo(EntidadEquipo equipo)
+        public static Respuesta RegistrarEquipo(EntidadEquipo equipo)
         {
             DALEquipo DalEquipo = new DALEquipo();
 
             return DalEquipo.RegistrarEquipo(equipo);
         }
-        public Respuesta ListarEquipo(string cTexto)
+        public static Respuesta ListarEquipo(string cTexto)
         {
             DALEquipo DalEquipo = new DALEquipo();
 
             return DalEquipo.ListarEquipo(cTexto);
         }
-        public Respuesta EliminarEquipo(int IdEquipo)
+        public static Respuesta EliminarEquipo(int IdEquipo)
         {
             DALEquipo DalEquipo = new DALEquipo();
 
             return DalEquipo.EliminarEquipo(IdEquipo);
         }
-        public Respuesta ActualizarEquipo(EntidadEquipo equipo)
+        public static Respuesta ActualizarEquipo(EntidadEquipo equipo)
         {
             DALEquipo DalEquipo = new DALEquipo();
 

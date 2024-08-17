@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoEquipo));
             panel1 = new Panel();
+            btnCategoria = new Button();
+            btnEstadoEquipo = new Button();
             txtDescripciónEquipo = new TextBox();
             txtCategoríaEquipo = new TextBox();
             txtEstadoEquipo = new TextBox();
@@ -44,23 +46,21 @@
             panel2 = new Panel();
             btnGuardarEquipo = new Button();
             label2 = new Label();
-            btnModelo = new Button();
-            btnCategoria = new Button();
-            panelModelo = new Panel();
+            panelEstadoEquipo = new Panel();
+            btnCerrarEstadoEquipo = new Button();
+            btnBuscarEstadoEquipo = new Button();
+            txtBuscarEstadoEquipo = new TextBox();
+            dataGridViewEstadoEquipo = new DataGridView();
             panelCategoria = new Panel();
-            dataGridViewModelo = new DataGridView();
-            dataGridViewCategoria = new DataGridView();
-            txtBuscarModelo = new TextBox();
-            txtBuscarCategoria = new TextBox();
-            btnBuscarModelo = new Button();
-            btnBuscarCategoria = new Button();
             btnCerrarCategoria = new Button();
-            btnCerrarModelo = new Button();
+            btnBuscarCategoria = new Button();
+            txtBuscarCategoria = new TextBox();
+            dataGridViewCategoria = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panelModelo.SuspendLayout();
+            panelEstadoEquipo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEstadoEquipo).BeginInit();
             panelCategoria.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewModelo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCategoria).BeginInit();
             SuspendLayout();
             // 
@@ -68,7 +68,7 @@
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
             panel1.Controls.Add(btnCategoria);
-            panel1.Controls.Add(btnModelo);
+            panel1.Controls.Add(btnEstadoEquipo);
             panel1.Controls.Add(txtDescripciónEquipo);
             panel1.Controls.Add(txtCategoríaEquipo);
             panel1.Controls.Add(txtEstadoEquipo);
@@ -84,6 +84,24 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
+            // 
+            // btnCategoria
+            // 
+            btnCategoria.Location = new Point(417, 222);
+            btnCategoria.Name = "btnCategoria";
+            btnCategoria.Size = new Size(28, 23);
+            btnCategoria.TabIndex = 12;
+            btnCategoria.UseVisualStyleBackColor = true;
+            btnCategoria.Click += btnCategoria_Click;
+            // 
+            // btnEstadoEquipo
+            // 
+            btnEstadoEquipo.Location = new Point(290, 222);
+            btnEstadoEquipo.Name = "btnEstadoEquipo";
+            btnEstadoEquipo.Size = new Size(28, 23);
+            btnEstadoEquipo.TabIndex = 11;
+            btnEstadoEquipo.UseVisualStyleBackColor = true;
+            btnEstadoEquipo.Click += btnEstadoEquipo_Click;
             // 
             // txtDescripciónEquipo
             // 
@@ -120,7 +138,7 @@
             // txSerieEquipo
             // 
             txSerieEquipo.Font = new Font("Segoe UI", 12F);
-            txSerieEquipo.Location = new Point(51, 139);
+            txSerieEquipo.Location = new Point(51, 131);
             txSerieEquipo.Name = "txSerieEquipo";
             txSerieEquipo.Size = new Size(233, 29);
             txSerieEquipo.TabIndex = 6;
@@ -151,9 +169,9 @@
             label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.Location = new Point(51, 173);
             label1.Name = "label1";
-            label1.Size = new Size(244, 28);
+            label1.Size = new Size(214, 28);
             label1.TabIndex = 3;
-            label1.Text = "Estado de Prestamo";
+            label1.Text = "Estado de Equipo";
             // 
             // label6
             // 
@@ -203,6 +221,7 @@
             btnGuardarEquipo.TabIndex = 11;
             btnGuardarEquipo.Text = "Nuevo Equipo";
             btnGuardarEquipo.UseVisualStyleBackColor = false;
+            btnGuardarEquipo.Click += btnGuardarEquipo_Click;
             // 
             // label2
             // 
@@ -214,32 +233,53 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
-            // btnModelo
+            // panelEstadoEquipo
             // 
-            btnModelo.Location = new Point(417, 143);
-            btnModelo.Name = "btnModelo";
-            btnModelo.Size = new Size(28, 23);
-            btnModelo.TabIndex = 11;
-            btnModelo.UseVisualStyleBackColor = true;
+            panelEstadoEquipo.Controls.Add(btnCerrarEstadoEquipo);
+            panelEstadoEquipo.Controls.Add(btnBuscarEstadoEquipo);
+            panelEstadoEquipo.Controls.Add(txtBuscarEstadoEquipo);
+            panelEstadoEquipo.Controls.Add(dataGridViewEstadoEquipo);
+            panelEstadoEquipo.Location = new Point(1048, 101);
+            panelEstadoEquipo.Name = "panelEstadoEquipo";
+            panelEstadoEquipo.Size = new Size(276, 235);
+            panelEstadoEquipo.TabIndex = 7;
             // 
-            // btnCategoria
+            // btnCerrarEstadoEquipo
             // 
-            btnCategoria.Location = new Point(417, 222);
-            btnCategoria.Name = "btnCategoria";
-            btnCategoria.Size = new Size(28, 23);
-            btnCategoria.TabIndex = 12;
-            btnCategoria.UseVisualStyleBackColor = true;
+            btnCerrarEstadoEquipo.Location = new Point(239, 16);
+            btnCerrarEstadoEquipo.Name = "btnCerrarEstadoEquipo";
+            btnCerrarEstadoEquipo.Size = new Size(28, 23);
+            btnCerrarEstadoEquipo.TabIndex = 21;
+            btnCerrarEstadoEquipo.UseVisualStyleBackColor = true;
+            btnCerrarEstadoEquipo.Click += btnCerrarEstadoEquipo_Click;
             // 
-            // panelModelo
+            // btnBuscarEstadoEquipo
             // 
-            panelModelo.Controls.Add(btnCerrarModelo);
-            panelModelo.Controls.Add(btnBuscarModelo);
-            panelModelo.Controls.Add(txtBuscarModelo);
-            panelModelo.Controls.Add(dataGridViewModelo);
-            panelModelo.Location = new Point(1048, 101);
-            panelModelo.Name = "panelModelo";
-            panelModelo.Size = new Size(276, 235);
-            panelModelo.TabIndex = 7;
+            btnBuscarEstadoEquipo.Location = new Point(205, 15);
+            btnBuscarEstadoEquipo.Name = "btnBuscarEstadoEquipo";
+            btnBuscarEstadoEquipo.Size = new Size(28, 23);
+            btnBuscarEstadoEquipo.TabIndex = 13;
+            btnBuscarEstadoEquipo.UseVisualStyleBackColor = true;
+            btnBuscarEstadoEquipo.Click += btnBuscarEstadoEquipo_Click;
+            // 
+            // txtBuscarEstadoEquipo
+            // 
+            txtBuscarEstadoEquipo.Location = new Point(11, 16);
+            txtBuscarEstadoEquipo.Name = "txtBuscarEstadoEquipo";
+            txtBuscarEstadoEquipo.Size = new Size(188, 23);
+            txtBuscarEstadoEquipo.TabIndex = 18;
+            // 
+            // dataGridViewEstadoEquipo
+            // 
+            dataGridViewEstadoEquipo.AllowUserToAddRows = false;
+            dataGridViewEstadoEquipo.AllowUserToDeleteRows = false;
+            dataGridViewEstadoEquipo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEstadoEquipo.Location = new Point(0, 55);
+            dataGridViewEstadoEquipo.Name = "dataGridViewEstadoEquipo";
+            dataGridViewEstadoEquipo.ReadOnly = true;
+            dataGridViewEstadoEquipo.Size = new Size(276, 177);
+            dataGridViewEstadoEquipo.TabIndex = 17;
+            dataGridViewEstadoEquipo.DoubleClick += dataGridViewEstadoEquipo_DoubleClick;
             // 
             // panelCategoria
             // 
@@ -252,16 +292,30 @@
             panelCategoria.Size = new Size(276, 235);
             panelCategoria.TabIndex = 8;
             // 
-            // dataGridViewModelo
+            // btnCerrarCategoria
             // 
-            dataGridViewModelo.AllowUserToAddRows = false;
-            dataGridViewModelo.AllowUserToDeleteRows = false;
-            dataGridViewModelo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewModelo.Location = new Point(0, 55);
-            dataGridViewModelo.Name = "dataGridViewModelo";
-            dataGridViewModelo.ReadOnly = true;
-            dataGridViewModelo.Size = new Size(276, 177);
-            dataGridViewModelo.TabIndex = 17;
+            btnCerrarCategoria.Location = new Point(239, 17);
+            btnCerrarCategoria.Name = "btnCerrarCategoria";
+            btnCerrarCategoria.Size = new Size(28, 23);
+            btnCerrarCategoria.TabIndex = 20;
+            btnCerrarCategoria.UseVisualStyleBackColor = true;
+            btnCerrarCategoria.Click += btnCerrarCategoria_Click;
+            // 
+            // btnBuscarCategoria
+            // 
+            btnBuscarCategoria.Location = new Point(205, 17);
+            btnBuscarCategoria.Name = "btnBuscarCategoria";
+            btnBuscarCategoria.Size = new Size(28, 23);
+            btnBuscarCategoria.TabIndex = 19;
+            btnBuscarCategoria.UseVisualStyleBackColor = true;
+            btnBuscarCategoria.Click += btnBuscarCategoria_Click;
+            // 
+            // txtBuscarCategoria
+            // 
+            txtBuscarCategoria.Location = new Point(11, 17);
+            txtBuscarCategoria.Name = "txtBuscarCategoria";
+            txtBuscarCategoria.Size = new Size(188, 23);
+            txtBuscarCategoria.TabIndex = 19;
             // 
             // dataGridViewCategoria
             // 
@@ -273,52 +327,7 @@
             dataGridViewCategoria.ReadOnly = true;
             dataGridViewCategoria.Size = new Size(276, 177);
             dataGridViewCategoria.TabIndex = 18;
-            // 
-            // txtBuscarModelo
-            // 
-            txtBuscarModelo.Location = new Point(11, 16);
-            txtBuscarModelo.Name = "txtBuscarModelo";
-            txtBuscarModelo.Size = new Size(188, 23);
-            txtBuscarModelo.TabIndex = 18;
-            // 
-            // txtBuscarCategoria
-            // 
-            txtBuscarCategoria.Location = new Point(11, 17);
-            txtBuscarCategoria.Name = "txtBuscarCategoria";
-            txtBuscarCategoria.Size = new Size(188, 23);
-            txtBuscarCategoria.TabIndex = 19;
-            // 
-            // btnBuscarModelo
-            // 
-            btnBuscarModelo.Location = new Point(205, 15);
-            btnBuscarModelo.Name = "btnBuscarModelo";
-            btnBuscarModelo.Size = new Size(28, 23);
-            btnBuscarModelo.TabIndex = 13;
-            btnBuscarModelo.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarCategoria
-            // 
-            btnBuscarCategoria.Location = new Point(205, 17);
-            btnBuscarCategoria.Name = "btnBuscarCategoria";
-            btnBuscarCategoria.Size = new Size(28, 23);
-            btnBuscarCategoria.TabIndex = 19;
-            btnBuscarCategoria.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrarCategoria
-            // 
-            btnCerrarCategoria.Location = new Point(239, 17);
-            btnCerrarCategoria.Name = "btnCerrarCategoria";
-            btnCerrarCategoria.Size = new Size(28, 23);
-            btnCerrarCategoria.TabIndex = 20;
-            btnCerrarCategoria.UseVisualStyleBackColor = true;
-            // 
-            // btnCerrarModelo
-            // 
-            btnCerrarModelo.Location = new Point(239, 16);
-            btnCerrarModelo.Name = "btnCerrarModelo";
-            btnCerrarModelo.Size = new Size(28, 23);
-            btnCerrarModelo.TabIndex = 21;
-            btnCerrarModelo.UseVisualStyleBackColor = true;
+            dataGridViewCategoria.DoubleClick += dataGridViewCategoria_DoubleClick;
             // 
             // NuevoEquipo
             // 
@@ -327,7 +336,7 @@
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
             Controls.Add(panelCategoria);
-            Controls.Add(panelModelo);
+            Controls.Add(panelEstadoEquipo);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "NuevoEquipo";
@@ -336,11 +345,11 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            panelModelo.ResumeLayout(false);
-            panelModelo.PerformLayout();
+            panelEstadoEquipo.ResumeLayout(false);
+            panelEstadoEquipo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEstadoEquipo).EndInit();
             panelCategoria.ResumeLayout(false);
             panelCategoria.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewModelo).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCategoria).EndInit();
             ResumeLayout(false);
         }
@@ -363,14 +372,14 @@
         private TextBox txtEstadoEquipo;
         private TextBox txtModeloEquipo;
         private Button btnCategoria;
-        private Button btnModelo;
-        private Panel panelModelo;
+        private Button btnEstadoEquipo;
+        private Panel panelEstadoEquipo;
         private Panel panelCategoria;
-        private DataGridView dataGridViewModelo;
+        private DataGridView dataGridViewEstadoEquipo;
         private DataGridView dataGridViewCategoria;
-        private Button btnCerrarModelo;
-        private Button btnBuscarModelo;
-        private TextBox txtBuscarModelo;
+        private Button btnCerrarEstadoEquipo;
+        private Button btnBuscarEstadoEquipo;
+        private TextBox txtBuscarEstadoEquipo;
         private Button btnCerrarCategoria;
         private Button btnBuscarCategoria;
         private TextBox txtBuscarCategoria;

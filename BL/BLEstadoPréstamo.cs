@@ -10,25 +10,25 @@ namespace BL
 {
     public class BLEstadoPrestamo
     {
-        public Respuesta RegistrarEstadoPrestamo(EntidadEstadoPréstamo estadoprestamo)
+        public static Respuesta RegistrarEstadoPrestamo(EntidadEstadoPréstamo estadoprestamo)
         {
             DALEstadoPrestamo DalEstadoPrestamo = new DALEstadoPrestamo();
 
             return DalEstadoPrestamo.RegistrarEstadoPrestamo(estadoprestamo);
         }
-        public Respuesta ListarEstadoPrestamo(string cTexto)
+        public static Respuesta ListarEstadoPrestamo(string cTexto)
         {
             DALEstadoPrestamo DalEstadoPrestamo = new DALEstadoPrestamo();
 
             return DalEstadoPrestamo.ListarEstadoPrestamo(cTexto);
         }
-        public Respuesta EliminarEstadoPrestamo(int IdEstadoPrestamo)
+        public static Respuesta EliminarEstadoPrestamo(int IdEstadoPrestamo)
         {
             DALEstadoPrestamo DalEstadoPrestamo = new DALEstadoPrestamo();
 
             return DalEstadoPrestamo.EliminarEstadoPrestamo(IdEstadoPrestamo);
         }
-        public Respuesta ActualizarEstadoPrestamo(EntidadEstadoPréstamo estadoprestamo)
+        public static Respuesta ActualizarEstadoPrestamo(EntidadEstadoPréstamo estadoprestamo)
         {
             DALEstadoPrestamo DalEstadoPrestamo = new DALEstadoPrestamo();
 
