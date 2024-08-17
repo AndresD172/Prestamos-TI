@@ -44,13 +44,31 @@
             panel2 = new Panel();
             btnEditarEquipo = new Button();
             label2 = new Label();
+            btnCategoria = new Button();
+            btnModelo = new Button();
+            panelCategoria = new Panel();
+            btnCerrarCategoria = new Button();
+            btnBuscarCategoria = new Button();
+            txtBuscarCategoria = new TextBox();
+            dataGridViewCategoria = new DataGridView();
+            panelModelo = new Panel();
+            btnCerrarModelo = new Button();
+            btnBuscarModelo = new Button();
+            txtBuscarModelo = new TextBox();
+            dataGridViewModelo = new DataGridView();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panelCategoria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCategoria).BeginInit();
+            panelModelo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewModelo).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(btnCategoria);
+            panel1.Controls.Add(btnModelo);
             panel1.Controls.Add(txtDescripciónEquipo);
             panel1.Controls.Add(txtCategoríaEquipo);
             panel1.Controls.Add(txtEstadoEquipo);
@@ -197,12 +215,120 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
+            // btnCategoria
+            // 
+            btnCategoria.Location = new Point(417, 220);
+            btnCategoria.Name = "btnCategoria";
+            btnCategoria.Size = new Size(28, 23);
+            btnCategoria.TabIndex = 16;
+            btnCategoria.UseVisualStyleBackColor = true;
+            // 
+            // btnModelo
+            // 
+            btnModelo.Location = new Point(417, 141);
+            btnModelo.Name = "btnModelo";
+            btnModelo.Size = new Size(28, 23);
+            btnModelo.TabIndex = 15;
+            btnModelo.UseVisualStyleBackColor = true;
+            // 
+            // panelCategoria
+            // 
+            panelCategoria.Controls.Add(btnCerrarCategoria);
+            panelCategoria.Controls.Add(btnBuscarCategoria);
+            panelCategoria.Controls.Add(txtBuscarCategoria);
+            panelCategoria.Controls.Add(dataGridViewCategoria);
+            panelCategoria.Location = new Point(1062, 344);
+            panelCategoria.Name = "panelCategoria";
+            panelCategoria.Size = new Size(276, 235);
+            panelCategoria.TabIndex = 14;
+            // 
+            // btnCerrarCategoria
+            // 
+            btnCerrarCategoria.Location = new Point(239, 17);
+            btnCerrarCategoria.Name = "btnCerrarCategoria";
+            btnCerrarCategoria.Size = new Size(28, 23);
+            btnCerrarCategoria.TabIndex = 20;
+            btnCerrarCategoria.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarCategoria
+            // 
+            btnBuscarCategoria.Location = new Point(205, 17);
+            btnBuscarCategoria.Name = "btnBuscarCategoria";
+            btnBuscarCategoria.Size = new Size(28, 23);
+            btnBuscarCategoria.TabIndex = 19;
+            btnBuscarCategoria.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscarCategoria
+            // 
+            txtBuscarCategoria.Location = new Point(11, 17);
+            txtBuscarCategoria.Name = "txtBuscarCategoria";
+            txtBuscarCategoria.Size = new Size(188, 23);
+            txtBuscarCategoria.TabIndex = 19;
+            // 
+            // dataGridViewCategoria
+            // 
+            dataGridViewCategoria.AllowUserToAddRows = false;
+            dataGridViewCategoria.AllowUserToDeleteRows = false;
+            dataGridViewCategoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCategoria.Location = new Point(0, 58);
+            dataGridViewCategoria.Name = "dataGridViewCategoria";
+            dataGridViewCategoria.ReadOnly = true;
+            dataGridViewCategoria.Size = new Size(276, 177);
+            dataGridViewCategoria.TabIndex = 18;
+            // 
+            // panelModelo
+            // 
+            panelModelo.Controls.Add(btnCerrarModelo);
+            panelModelo.Controls.Add(btnBuscarModelo);
+            panelModelo.Controls.Add(txtBuscarModelo);
+            panelModelo.Controls.Add(dataGridViewModelo);
+            panelModelo.Location = new Point(1062, 92);
+            panelModelo.Name = "panelModelo";
+            panelModelo.Size = new Size(276, 235);
+            panelModelo.TabIndex = 13;
+            // 
+            // btnCerrarModelo
+            // 
+            btnCerrarModelo.Location = new Point(239, 16);
+            btnCerrarModelo.Name = "btnCerrarModelo";
+            btnCerrarModelo.Size = new Size(28, 23);
+            btnCerrarModelo.TabIndex = 21;
+            btnCerrarModelo.UseVisualStyleBackColor = true;
+            // 
+            // btnBuscarModelo
+            // 
+            btnBuscarModelo.Location = new Point(205, 15);
+            btnBuscarModelo.Name = "btnBuscarModelo";
+            btnBuscarModelo.Size = new Size(28, 23);
+            btnBuscarModelo.TabIndex = 13;
+            btnBuscarModelo.UseVisualStyleBackColor = true;
+            // 
+            // txtBuscarModelo
+            // 
+            txtBuscarModelo.Location = new Point(11, 16);
+            txtBuscarModelo.Name = "txtBuscarModelo";
+            txtBuscarModelo.Size = new Size(188, 23);
+            txtBuscarModelo.TabIndex = 18;
+            // 
+            // dataGridViewModelo
+            // 
+            dataGridViewModelo.AllowUserToAddRows = false;
+            dataGridViewModelo.AllowUserToDeleteRows = false;
+            dataGridViewModelo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewModelo.Location = new Point(0, 55);
+            dataGridViewModelo.Name = "dataGridViewModelo";
+            dataGridViewModelo.ReadOnly = true;
+            dataGridViewModelo.Size = new Size(276, 177);
+            dataGridViewModelo.TabIndex = 17;
+            // 
             // ModificarEquipo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(panelCategoria);
+            Controls.Add(panelModelo);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "ModificarEquipo";
@@ -211,6 +337,12 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panelCategoria.ResumeLayout(false);
+            panelCategoria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCategoria).EndInit();
+            panelModelo.ResumeLayout(false);
+            panelModelo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewModelo).EndInit();
             ResumeLayout(false);
         }
 
@@ -231,5 +363,17 @@
         private Panel panel2;
         private Button btnEditarEquipo;
         private Label label2;
+        private Button btnCategoria;
+        private Button btnModelo;
+        private Panel panelCategoria;
+        private Button btnCerrarCategoria;
+        private Button btnBuscarCategoria;
+        private TextBox txtBuscarCategoria;
+        private DataGridView dataGridViewCategoria;
+        private Panel panelModelo;
+        private Button btnCerrarModelo;
+        private Button btnBuscarModelo;
+        private TextBox txtBuscarModelo;
+        private DataGridView dataGridViewModelo;
     }
 }

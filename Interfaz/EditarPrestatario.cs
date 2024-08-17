@@ -24,5 +24,10 @@ namespace InterfazGráfica
             verificar.ShowDialog();
 
         }
+
+        private void btnSeccion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -24,5 +24,10 @@ namespace InterfazGráfica
             verificar.ShowDialog();
 
         }
+
+        private void panelTipoMulta_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

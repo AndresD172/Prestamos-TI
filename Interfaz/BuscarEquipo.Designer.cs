@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarEquipo));
-            textBox1 = new TextBox();
-            dataGridView = new DataGridView();
+            txtBusqueda = new TextBox();
+            dataGridViewEquipos = new DataGridView();
             label2 = new Label();
             label4 = new Label();
-            btnPrestatariosLogo = new Button();
-            btnUsuarioLogo = new Button();
+            btnEditarEquipo = new Button();
+            btnEliminarEquipo = new Button();
             btnAtrasLogo = new Button();
             Usuario = new Label();
             label1 = new Label();
@@ -42,27 +42,28 @@
             panel1 = new Panel();
             txtNombreUsuario = new TextBox();
             label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
+            btnBuscarEquipo = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEquipos).BeginInit();
             SuspendLayout();
             // 
-            // textBox1
+            // txtBusqueda
             // 
-            textBox1.BackColor = Color.FromArgb(229, 220, 252);
-            textBox1.Font = new Font("Baskerville Old Face", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(392, 128);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(911, 35);
-            textBox1.TabIndex = 44;
+            txtBusqueda.BackColor = Color.FromArgb(229, 220, 252);
+            txtBusqueda.Font = new Font("Baskerville Old Face", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBusqueda.Location = new Point(350, 128);
+            txtBusqueda.Name = "txtBusqueda";
+            txtBusqueda.Size = new Size(911, 35);
+            txtBusqueda.TabIndex = 44;
             // 
-            // dataGridView
+            // dataGridViewEquipos
             // 
-            dataGridView.BackgroundColor = Color.FromArgb(246, 236, 255);
-            dataGridView.BorderStyle = BorderStyle.Fixed3D;
-            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView.Location = new Point(350, 222);
-            dataGridView.Name = "dataGridView";
-            dataGridView.Size = new Size(998, 501);
-            dataGridView.TabIndex = 43;
+            dataGridViewEquipos.BackgroundColor = Color.FromArgb(246, 236, 255);
+            dataGridViewEquipos.BorderStyle = BorderStyle.Fixed3D;
+            dataGridViewEquipos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEquipos.Location = new Point(350, 222);
+            dataGridViewEquipos.Name = "dataGridViewEquipos";
+            dataGridViewEquipos.Size = new Size(998, 501);
+            dataGridViewEquipos.TabIndex = 43;
             // 
             // label2
             // 
@@ -84,26 +85,26 @@
             label4.TabIndex = 41;
             label4.Text = "Eliminar";
             // 
-            // btnPrestatariosLogo
+            // btnEditarEquipo
             // 
-            btnPrestatariosLogo.BackColor = Color.FromArgb(251, 246, 255);
-            btnPrestatariosLogo.Image = (Image)resources.GetObject("btnPrestatariosLogo.Image");
-            btnPrestatariosLogo.Location = new Point(12, 256);
-            btnPrestatariosLogo.Name = "btnPrestatariosLogo";
-            btnPrestatariosLogo.Size = new Size(99, 90);
-            btnPrestatariosLogo.TabIndex = 40;
-            btnPrestatariosLogo.UseVisualStyleBackColor = false;
+            btnEditarEquipo.BackColor = Color.FromArgb(251, 246, 255);
+            btnEditarEquipo.Image = (Image)resources.GetObject("btnEditarEquipo.Image");
+            btnEditarEquipo.Location = new Point(12, 256);
+            btnEditarEquipo.Name = "btnEditarEquipo";
+            btnEditarEquipo.Size = new Size(99, 90);
+            btnEditarEquipo.TabIndex = 40;
+            btnEditarEquipo.UseVisualStyleBackColor = false;
             // 
-            // btnUsuarioLogo
+            // btnEliminarEquipo
             // 
-            btnUsuarioLogo.BackColor = Color.FromArgb(251, 246, 255);
-            btnUsuarioLogo.ForeColor = Color.FromArgb(251, 246, 255);
-            btnUsuarioLogo.Image = (Image)resources.GetObject("btnUsuarioLogo.Image");
-            btnUsuarioLogo.Location = new Point(12, 160);
-            btnUsuarioLogo.Name = "btnUsuarioLogo";
-            btnUsuarioLogo.Size = new Size(99, 90);
-            btnUsuarioLogo.TabIndex = 39;
-            btnUsuarioLogo.UseVisualStyleBackColor = false;
+            btnEliminarEquipo.BackColor = Color.FromArgb(251, 246, 255);
+            btnEliminarEquipo.ForeColor = Color.FromArgb(251, 246, 255);
+            btnEliminarEquipo.Image = (Image)resources.GetObject("btnEliminarEquipo.Image");
+            btnEliminarEquipo.Location = new Point(12, 160);
+            btnEliminarEquipo.Name = "btnEliminarEquipo";
+            btnEliminarEquipo.Size = new Size(99, 90);
+            btnEliminarEquipo.TabIndex = 39;
+            btnEliminarEquipo.UseVisualStyleBackColor = false;
             // 
             // btnAtrasLogo
             // 
@@ -174,18 +175,29 @@
             label3.Size = new Size(141, 89);
             label3.TabIndex = 38;
             // 
-            // Form7
+            // btnBuscarEquipo
+            // 
+            btnBuscarEquipo.BackColor = Color.FromArgb(255, 192, 255);
+            btnBuscarEquipo.ForeColor = Color.FromArgb(251, 246, 255);
+            btnBuscarEquipo.Location = new Point(1267, 128);
+            btnBuscarEquipo.Name = "btnBuscarEquipo";
+            btnBuscarEquipo.Size = new Size(71, 33);
+            btnBuscarEquipo.TabIndex = 45;
+            btnBuscarEquipo.UseVisualStyleBackColor = false;
+            // 
+            // BuscarEquipo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
-            Controls.Add(textBox1);
-            Controls.Add(dataGridView);
+            Controls.Add(btnBuscarEquipo);
+            Controls.Add(txtBusqueda);
+            Controls.Add(dataGridViewEquipos);
             Controls.Add(label2);
             Controls.Add(label4);
-            Controls.Add(btnPrestatariosLogo);
-            Controls.Add(btnUsuarioLogo);
+            Controls.Add(btnEditarEquipo);
+            Controls.Add(btnEliminarEquipo);
             Controls.Add(btnAtrasLogo);
             Controls.Add(Usuario);
             Controls.Add(label1);
@@ -193,21 +205,21 @@
             Controls.Add(panel1);
             Controls.Add(txtNombreUsuario);
             Controls.Add(label3);
-            Name = "Form7";
-            Text = "Form7";
-            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
+            Name = "BuscarEquipo";
+            Text = "Buscar Equipo";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEquipos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
-        private DataGridView dataGridView;
+        private TextBox txtBusqueda;
+        private DataGridView dataGridViewEquipos;
         private Label label2;
         private Label label4;
-        private Button btnPrestatariosLogo;
-        private Button btnUsuarioLogo;
+        private Button btnEditarEquipo;
+        private Button btnEliminarEquipo;
         private Button btnAtrasLogo;
         private Label Usuario;
         private Label label1;
@@ -215,5 +227,6 @@
         private Panel panel1;
         private TextBox txtNombreUsuario;
         private Label label3;
+        private Button btnBuscarEquipo;
     }
 }
