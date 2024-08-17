@@ -24,7 +24,7 @@ namespace InterfazGráfica
 
         private void btnUsuarioLogo_Click(object sender, EventArgs e)
         {
-            OpcionesTecnico formOpciones = new OpcionesTecnico();
+            Opciones formOpciones = new Opciones("Usuario");
             formOpciones.StartPosition = FormStartPosition.Manual;
             formOpciones.Left = 125;
             formOpciones.Top = 140;
@@ -35,49 +35,60 @@ namespace InterfazGráfica
         private void btnPrestatariosLogo_Click(object sender, EventArgs e)
         {
 
-            //Opciones formOpciones = new Opciones("Prestatario");
-            //formOpciones.StartPosition = FormStartPosition.Manual;
-            //formOpciones.Left = 125;
-            //formOpciones.Top = 230;
-            //formOpciones.ShowDialog();
+            Opciones formOpciones = new Opciones("Prestatario");
+            formOpciones.StartPosition = FormStartPosition.Manual;
+            formOpciones.Left = 125;
+            formOpciones.Top = 230;
+            formOpciones.ShowDialog();
 
         }
 
         private void btnEquipoLogo_Click(object sender, EventArgs e)
         {
 
-            //Opciones formOpciones = new Opciones("Equipo");
-            //formOpciones.StartPosition = FormStartPosition.Manual;
-            //formOpciones.Left = 125;
-            //formOpciones.Top = 330;
-            //formOpciones.ShowDialog();
+            Opciones formOpciones = new Opciones("Equipo");
+            formOpciones.StartPosition = FormStartPosition.Manual;
+            formOpciones.Left = 125;
+            formOpciones.Top = 330;
+            formOpciones.ShowDialog();
 
         }
 
         private void btnPrestamosLogo_Click(object sender, EventArgs e)
         {
 
-            //Opciones formOpciones = new Opciones("Prestamos");
-            //formOpciones.StartPosition = FormStartPosition.Manual;
-            //formOpciones.Left = 125;
-            //formOpciones.Top = 422;
-            //formOpciones.ShowDialog();
+            Opciones formOpciones = new Opciones("Prestamos");
+            formOpciones.StartPosition = FormStartPosition.Manual;
+            formOpciones.Left = 125;
+            formOpciones.Top = 422;
+            formOpciones.ShowDialog();
 
         }
 
         private void btnMultasLogo_Click(object sender, EventArgs e)
         {
 
-            //Opciones formOpciones = new Opciones("Multas");
-            //formOpciones.StartPosition = FormStartPosition.Manual;
-            //formOpciones.Left = 125;
-            //formOpciones.Top = 520;
-            //formOpciones.ShowDialog();
+            Opciones formOpciones = new Opciones("Multas");
+            formOpciones.StartPosition = FormStartPosition.Manual;
+            formOpciones.Left = 125;
+            formOpciones.Top = 520;
+            formOpciones.ShowDialog();
 
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+            OtrasOpciones opciones=new OtrasOpciones();
+            opciones.StartPosition = FormStartPosition.Manual;
+            opciones.Left = 1;
+            opciones.Top = 145;
+            opciones.ShowDialog();
 
         }
     }

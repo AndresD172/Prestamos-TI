@@ -97,6 +97,7 @@
             btnEditarEspecialidad.TabIndex = 11;
             btnEditarEspecialidad.Text = "Editar Especialidad";
             btnEditarEspecialidad.UseVisualStyleBackColor = false;
+            btnEditarEspecialidad.Click += btnEditarEspecialidad_Click;
             // 
             // label2
             // 

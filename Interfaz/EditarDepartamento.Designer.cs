@@ -97,6 +97,7 @@
             btnEditarDepartamento.TabIndex = 11;
             btnEditarDepartamento.Text = "Editar Departamento";
             btnEditarDepartamento.UseVisualStyleBackColor = false;
+            btnEditarDepartamento.Click += btnEditarDepartamento_Click;
             // 
             // label2
             // 

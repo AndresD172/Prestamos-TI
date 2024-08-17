@@ -104,6 +104,7 @@
             btnEditarEstado.Size = new Size(99, 90);
             btnEditarEstado.TabIndex = 55;
             btnEditarEstado.UseVisualStyleBackColor = false;
+            btnEditarEstado.Click += btnEditarEstado_Click;
             // 
             // btnEliminarEstado
             // 
@@ -127,6 +128,7 @@
             btnAtrasLogo.TabIndex = 52;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // Usuario
             // 

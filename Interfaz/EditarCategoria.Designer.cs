@@ -97,6 +97,7 @@
             btnEditarCategoria.TabIndex = 11;
             btnEditarCategoria.Text = "Editar Categoria";
             btnEditarCategoria.UseVisualStyleBackColor = false;
+            btnEditarCategoria.Click += btnEditarCategoria_Click;
             // 
             // label2
             // 
