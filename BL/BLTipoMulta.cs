@@ -8,34 +8,34 @@ using DAL;
 
 namespace BL
 {
-    public class BLMulta
+    public class BLTipoMulta
     {
-        public static Respuesta RegistrarTipoMulta(EntidadMulta multa)
+        public static Respuesta RegistrarTipoMulta(EntidadTipoMulta multa)
         {
-            DALMulta DalTipoMulta = new DALMulta();
+            DALTipoMulta DalTipoMulta = new DALTipoMulta();
 
-            return DalTipoMulta.RegistrarMulta(multa);
+            return DalTipoMulta.RegistrarTipoMulta(multa);
 
         }
         public static Respuesta ListarTipoMulta(string cTexto)
         {
-            DALMulta DalTipoMulta = new DALMulta();
+            DALTipoMulta DalTipoMulta = new DALTipoMulta();
 
-            return DalTipoMulta.ListarMulta(cTexto);
+            return DalTipoMulta.ListarTipoMulta(cTexto);
 
         }
         public static Respuesta EliminarMulta(int IdMulta)
         {
-            DALMulta DalTipoMulta = new DALMulta();
+            DALTipoMulta DalTipoMulta = new DALTipoMulta();
 
-            return DalTipoMulta.EliminarMulta(IdMulta);
+            return DalTipoMulta.EliminarTipoMulta(IdMulta);
 
         }
-        public static Respuesta ActualizarMulta(EntidadMulta multa)
+        public static Respuesta ActualizarMulta(EntidadTipoMulta multa)
         {
-            DALMulta DalTipoMulta = new DALMulta();
+            DALTipoMulta DalTipoMulta = new DALTipoMulta();
 
-            return DalTipoMulta.ActualizarMulta(multa);
+            return DalTipoMulta.ActualizarTipoMulta(multa);
 
         }
     }
