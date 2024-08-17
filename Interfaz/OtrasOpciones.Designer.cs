@@ -53,7 +53,7 @@
             btnUsuarioLogo.Size = new Size(75, 71);
             btnUsuarioLogo.TabIndex = 5;
             btnUsuarioLogo.UseVisualStyleBackColor = false;
-            btnUsuarioLogo.Click += this.btnUsuarioLogo_Click_1;
+            //btnUsuarioLogo.Click += this.btnUsuarioLogo_Click_1;
             // 
             // button1
             // 
@@ -65,7 +65,7 @@
             button1.Size = new Size(75, 71);
             button1.TabIndex = 6;
             button1.UseVisualStyleBackColor = false;
-            button1.Click += this.button1_Click_1;
+            //button1.Click += this.button1_Click_1;
             // 
             // button2
             // 
@@ -77,7 +77,7 @@
             button2.Size = new Size(75, 71);
             button2.TabIndex = 7;
             button2.UseVisualStyleBackColor = false;
-            button2.Click += this.button2_Click_1;
+            //button2.Click += this.button2_Click_1;
             // 
             // button3
             // 
@@ -89,7 +89,7 @@
             button3.Size = new Size(75, 71);
             button3.TabIndex = 10;
             button3.UseVisualStyleBackColor = false;
-            button3.Click += this.button3_Click_1;
+            //button3.Click += this.button3_Click_1;
             // 
             // button4
             // 
@@ -101,7 +101,7 @@
             button4.Size = new Size(75, 71);
             button4.TabIndex = 9;
             button4.UseVisualStyleBackColor = false;
-            button4.Click += this.button4_Click_1;
+            //button4.Click += this.button4_Click_1;
             // 
             // button5
             // 
@@ -113,7 +113,7 @@
             button5.Size = new Size(75, 71);
             button5.TabIndex = 8;
             button5.UseVisualStyleBackColor = false;
-            button5.Click += this.button5_Click;
+            //button5.Click += this.button5_Click;
             // 
             // label2
             // 
@@ -193,7 +193,7 @@
             Controls.Add(button1);
             Controls.Add(btnUsuarioLogo);
             Name = "OtrasOpciones";
-            Load += this.OtrasOpciones_Load;
+            //Load += this.OtrasOpciones_Load;
             ResumeLayout(false);
             PerformLayout();
         }
