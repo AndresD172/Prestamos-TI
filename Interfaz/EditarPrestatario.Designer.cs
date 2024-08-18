@@ -33,6 +33,9 @@
             txtDepartamentoPrestatario = new TextBox();
             label10 = new Label();
             txtSecciónPrestatario = new TextBox();
+            btnSeccion = new Button();
+            btnEspecialidad = new Button();
+            btnDepartamento = new Button();
             label9 = new Label();
             txtEspecialidadPrestatario = new TextBox();
             txtCarnetPrestatario = new TextBox();
@@ -68,9 +71,7 @@
             btnCerrarSeccion = new Button();
             dataGridViewSeccion = new DataGridView();
             txtBuscarSeccion = new TextBox();
-            btnEspecialidad = new Button();
-            btnSeccion = new Button();
-            btnDepartamento = new Button();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panelEspecialidad.SuspendLayout();
@@ -134,6 +135,31 @@
             txtSecciónPrestatario.Name = "txtSecciónPrestatario";
             txtSecciónPrestatario.Size = new Size(233, 29);
             txtSecciónPrestatario.TabIndex = 12;
+            // 
+            // btnSeccion
+            // 
+            btnSeccion.Location = new Point(288, 265);
+            btnSeccion.Name = "btnSeccion";
+            btnSeccion.Size = new Size(25, 23);
+            btnSeccion.TabIndex = 28;
+            btnSeccion.UseVisualStyleBackColor = true;
+            btnSeccion.Click += btnSeccion_Click;
+            // 
+            // btnEspecialidad
+            // 
+            btnEspecialidad.Location = new Point(497, 326);
+            btnEspecialidad.Name = "btnEspecialidad";
+            btnEspecialidad.Size = new Size(25, 23);
+            btnEspecialidad.TabIndex = 29;
+            btnEspecialidad.UseVisualStyleBackColor = true;
+            // 
+            // btnDepartamento
+            // 
+            btnDepartamento.Location = new Point(418, 260);
+            btnDepartamento.Name = "btnDepartamento";
+            btnDepartamento.Size = new Size(25, 23);
+            btnDepartamento.TabIndex = 26;
+            btnDepartamento.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -460,30 +486,16 @@
             txtBuscarSeccion.Size = new Size(202, 29);
             txtBuscarSeccion.TabIndex = 11;
             // 
-            // btnEspecialidad
+            // btnCancelar
             // 
-            btnEspecialidad.Location = new Point(497, 326);
-            btnEspecialidad.Name = "btnEspecialidad";
-            btnEspecialidad.Size = new Size(25, 23);
-            btnEspecialidad.TabIndex = 29;
-            btnEspecialidad.UseVisualStyleBackColor = true;
-            // 
-            // btnSeccion
-            // 
-            btnSeccion.Location = new Point(288, 265);
-            btnSeccion.Name = "btnSeccion";
-            btnSeccion.Size = new Size(25, 23);
-            btnSeccion.TabIndex = 28;
-            btnSeccion.UseVisualStyleBackColor = true;
-            btnSeccion.Click += btnSeccion_Click;
-            // 
-            // btnDepartamento
-            // 
-            btnDepartamento.Location = new Point(418, 260);
-            btnDepartamento.Name = "btnDepartamento";
-            btnDepartamento.Size = new Size(25, 23);
-            btnDepartamento.TabIndex = 26;
-            btnDepartamento.UseVisualStyleBackColor = true;
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
             // EditarPrestatario
             // 
@@ -491,6 +503,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panelEspecialidad);
             Controls.Add(panelDepartamento);
             Controls.Add(panelSeccion);
@@ -561,5 +574,6 @@
         private DataGridView dataGridViewSeccion;
         private TextBox txtBuscarSeccion;
         private Button btnSeccion;
+        private Button btnCancelar;
     }
 }

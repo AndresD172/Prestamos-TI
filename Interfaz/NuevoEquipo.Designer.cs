@@ -56,6 +56,9 @@
             btnBuscarCategoria = new Button();
             txtBuscarCategoria = new TextBox();
             dataGridViewCategoria = new DataGridView();
+            txtMarca = new TextBox();
+            label3 = new Label();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panelEstadoEquipo.SuspendLayout();
@@ -67,6 +70,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(txtMarca);
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(btnCategoria);
             panel1.Controls.Add(btnEstadoEquipo);
             panel1.Controls.Add(txtDescripciónEquipo);
@@ -106,7 +111,7 @@
             // txtDescripciónEquipo
             // 
             txtDescripciónEquipo.Font = new Font("Segoe UI", 12F);
-            txtDescripciónEquipo.Location = new Point(258, 288);
+            txtDescripciónEquipo.Location = new Point(451, 310);
             txtDescripciónEquipo.Name = "txtDescripciónEquipo";
             txtDescripciónEquipo.Size = new Size(233, 29);
             txtDescripciónEquipo.TabIndex = 10;
@@ -147,11 +152,12 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(295, 248);
+            label8.Location = new Point(451, 266);
             label8.Name = "label8";
             label8.Size = new Size(153, 28);
             label8.TabIndex = 5;
             label8.Text = "Descripción";
+            label8.Click += label8_Click;
             // 
             // label7
             // 
@@ -329,12 +335,42 @@
             dataGridViewCategoria.TabIndex = 18;
             dataGridViewCategoria.DoubleClick += dataGridViewCategoria_DoubleClick;
             // 
+            // txtMarca
+            // 
+            txtMarca.Font = new Font("Segoe UI", 12F);
+            txtMarca.Location = new Point(51, 310);
+            txtMarca.Name = "txtMarca";
+            txtMarca.Size = new Size(233, 29);
+            txtMarca.TabIndex = 14;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Location = new Point(51, 266);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 28);
+            label3.TabIndex = 13;
+            label3.Text = "Marca";
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // NuevoEquipo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panelCategoria);
             Controls.Add(panelEstadoEquipo);
             Controls.Add(panel1);
@@ -383,5 +419,8 @@
         private Button btnCerrarCategoria;
         private Button btnBuscarCategoria;
         private TextBox txtBuscarCategoria;
+        private TextBox txtMarca;
+        private Label label3;
+        private Button btnCancelar;
     }
 }

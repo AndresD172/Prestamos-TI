@@ -44,6 +44,7 @@
             panel2 = new Panel();
             btnGuardarUsuario = new Button();
             label2 = new Label();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -197,12 +198,24 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // NuevoUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "NuevoUsuario";
@@ -231,5 +244,6 @@
         private TextBox txtNombreUsuario;
         private Label label8;
         private Button btnGuardarUsuario;
+        private Button btnCancelar;
     }
 }

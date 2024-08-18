@@ -64,6 +64,7 @@
             btnCerrarEstado = new Button();
             dataGridViewEstado = new DataGridView();
             txtBuscarEstado = new TextBox();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panelPrestatario.SuspendLayout();
@@ -420,12 +421,24 @@
             txtBuscarEstado.Size = new Size(202, 29);
             txtBuscarEstado.TabIndex = 11;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // FormNuevoPréstamo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panelEstado);
             Controls.Add(panelPrestamista);
             Controls.Add(panelPrestatario);
@@ -486,5 +499,6 @@
         private Button btnCerrarEstado;
         private DataGridView dataGridViewEstado;
         private TextBox txtBuscarEstado;
+        private Button btnCancelar;
     }
 }
