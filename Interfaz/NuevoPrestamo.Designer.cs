@@ -30,9 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoPréstamo));
             panel1 = new Panel();
+            btnEstado = new Button();
+            btnPrestatario = new Button();
+            btnPrestamista = new Button();
             txtEstadoPréstamo = new TextBox();
             label9 = new Label();
-            txtContraseñaUsuario = new TextBox();
+            txtPrestamistaPréstamo = new TextBox();
             txtDevolucionPréstamo = new TextBox();
             txtFechaPréstamo = new TextBox();
             txtPrestatarioPréstamo = new TextBox();
@@ -46,16 +49,41 @@
             panel2 = new Panel();
             btnNuevoPrestamo = new Button();
             label2 = new Label();
+            btnBuscarPrestatario = new Button();
+            txtBuscarPrestatario = new TextBox();
+            panelPrestatario = new Panel();
+            btnCerrarPrestatario = new Button();
+            dataGridViewPrestatario = new DataGridView();
+            panelPrestamista = new Panel();
+            btnBuscarPrestamista = new Button();
+            btnCerrarPrestamista = new Button();
+            dataGridViewPrestamista = new DataGridView();
+            txtBuscarPrestamista = new TextBox();
+            panelEstado = new Panel();
+            btnBuscarEstado = new Button();
+            btnCerrarEstado = new Button();
+            dataGridViewEstado = new DataGridView();
+            txtBuscarEstado = new TextBox();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panelPrestatario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPrestatario).BeginInit();
+            panelPrestamista.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPrestamista).BeginInit();
+            panelEstado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEstado).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(btnEstado);
+            panel1.Controls.Add(btnPrestatario);
+            panel1.Controls.Add(btnPrestamista);
             panel1.Controls.Add(txtEstadoPréstamo);
             panel1.Controls.Add(label9);
-            panel1.Controls.Add(txtContraseñaUsuario);
+            panel1.Controls.Add(txtPrestamistaPréstamo);
             panel1.Controls.Add(txtDevolucionPréstamo);
             panel1.Controls.Add(txtFechaPréstamo);
             panel1.Controls.Add(txtPrestatarioPréstamo);
@@ -70,6 +98,33 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
+            // 
+            // btnEstado
+            // 
+            btnEstado.Location = new Point(420, 305);
+            btnEstado.Name = "btnEstado";
+            btnEstado.Size = new Size(25, 23);
+            btnEstado.TabIndex = 15;
+            btnEstado.UseVisualStyleBackColor = true;
+            btnEstado.Click += btnEstado_Click;
+            // 
+            // btnPrestatario
+            // 
+            btnPrestatario.Location = new Point(420, 143);
+            btnPrestatario.Name = "btnPrestatario";
+            btnPrestatario.Size = new Size(25, 23);
+            btnPrestatario.TabIndex = 14;
+            btnPrestatario.UseVisualStyleBackColor = true;
+            btnPrestatario.Click += btnPrestatario_Click;
+            // 
+            // btnPrestamista
+            // 
+            btnPrestamista.Location = new Point(290, 305);
+            btnPrestamista.Name = "btnPrestamista";
+            btnPrestamista.Size = new Size(25, 23);
+            btnPrestamista.TabIndex = 13;
+            btnPrestamista.UseVisualStyleBackColor = true;
+            btnPrestamista.Click += btnPrestamista_Click;
             // 
             // txtEstadoPréstamo
             // 
@@ -89,13 +144,13 @@
             label9.TabIndex = 11;
             label9.Text = "Estado";
             // 
-            // txtContraseñaUsuario
+            // txtPrestamistaPréstamo
             // 
-            txtContraseñaUsuario.Font = new Font("Segoe UI", 12F);
-            txtContraseñaUsuario.Location = new Point(51, 301);
-            txtContraseñaUsuario.Name = "txtContraseñaUsuario";
-            txtContraseñaUsuario.Size = new Size(233, 29);
-            txtContraseñaUsuario.TabIndex = 10;
+            txtPrestamistaPréstamo.Font = new Font("Segoe UI", 12F);
+            txtPrestamistaPréstamo.Location = new Point(51, 301);
+            txtPrestamistaPréstamo.Name = "txtPrestamistaPréstamo";
+            txtPrestamistaPréstamo.Size = new Size(233, 29);
+            txtPrestamistaPréstamo.TabIndex = 10;
             // 
             // txtDevolucionPréstamo
             // 
@@ -207,6 +262,7 @@
             btnNuevoPrestamo.TabIndex = 2;
             btnNuevoPrestamo.Text = "Nuevo Prestamo";
             btnNuevoPrestamo.UseVisualStyleBackColor = false;
+            btnNuevoPrestamo.Click += btnNuevoPrestamo_Click;
             // 
             // label2
             // 
@@ -218,12 +274,174 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
+            // btnBuscarPrestatario
+            // 
+            btnBuscarPrestatario.Location = new Point(208, 12);
+            btnBuscarPrestatario.Name = "btnBuscarPrestatario";
+            btnBuscarPrestatario.Size = new Size(25, 23);
+            btnBuscarPrestatario.TabIndex = 17;
+            btnBuscarPrestatario.UseVisualStyleBackColor = true;
+            btnBuscarPrestatario.Click += btnBuscarPrestatario_Click;
+            // 
+            // txtBuscarPrestatario
+            // 
+            txtBuscarPrestatario.Font = new Font("Segoe UI", 12F);
+            txtBuscarPrestatario.Location = new Point(3, 8);
+            txtBuscarPrestatario.Name = "txtBuscarPrestatario";
+            txtBuscarPrestatario.Size = new Size(202, 29);
+            txtBuscarPrestatario.TabIndex = 11;
+            // 
+            // panelPrestatario
+            // 
+            panelPrestatario.Controls.Add(btnBuscarPrestatario);
+            panelPrestatario.Controls.Add(btnCerrarPrestatario);
+            panelPrestatario.Controls.Add(dataGridViewPrestatario);
+            panelPrestatario.Controls.Add(txtBuscarPrestatario);
+            panelPrestatario.Location = new Point(1065, 5);
+            panelPrestatario.Name = "panelPrestatario";
+            panelPrestatario.Size = new Size(276, 235);
+            panelPrestatario.TabIndex = 16;
+            // 
+            // btnCerrarPrestatario
+            // 
+            btnCerrarPrestatario.Location = new Point(237, 12);
+            btnCerrarPrestatario.Name = "btnCerrarPrestatario";
+            btnCerrarPrestatario.Size = new Size(25, 23);
+            btnCerrarPrestatario.TabIndex = 20;
+            btnCerrarPrestatario.UseVisualStyleBackColor = true;
+            btnCerrarPrestatario.Click += btnCerrarPrestatario_Click;
+            // 
+            // dataGridViewPrestatario
+            // 
+            dataGridViewPrestatario.AllowUserToAddRows = false;
+            dataGridViewPrestatario.AllowUserToDeleteRows = false;
+            dataGridViewPrestatario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPrestatario.Location = new Point(0, 60);
+            dataGridViewPrestatario.Name = "dataGridViewPrestatario";
+            dataGridViewPrestatario.ReadOnly = true;
+            dataGridViewPrestatario.Size = new Size(276, 177);
+            dataGridViewPrestatario.TabIndex = 16;
+            dataGridViewPrestatario.DoubleClick += dataGridViewPrestatario_DoubleClick;
+            // 
+            // panelPrestamista
+            // 
+            panelPrestamista.Controls.Add(btnBuscarPrestamista);
+            panelPrestamista.Controls.Add(btnCerrarPrestamista);
+            panelPrestamista.Controls.Add(dataGridViewPrestamista);
+            panelPrestamista.Controls.Add(txtBuscarPrestamista);
+            panelPrestamista.Location = new Point(1065, 246);
+            panelPrestamista.Name = "panelPrestamista";
+            panelPrestamista.Size = new Size(276, 235);
+            panelPrestamista.TabIndex = 21;
+            // 
+            // btnBuscarPrestamista
+            // 
+            btnBuscarPrestamista.Location = new Point(208, 12);
+            btnBuscarPrestamista.Name = "btnBuscarPrestamista";
+            btnBuscarPrestamista.Size = new Size(25, 23);
+            btnBuscarPrestamista.TabIndex = 17;
+            btnBuscarPrestamista.UseVisualStyleBackColor = true;
+            btnBuscarPrestamista.Click += btnBuscarPrestamista_Click;
+            // 
+            // btnCerrarPrestamista
+            // 
+            btnCerrarPrestamista.Location = new Point(237, 12);
+            btnCerrarPrestamista.Name = "btnCerrarPrestamista";
+            btnCerrarPrestamista.Size = new Size(25, 23);
+            btnCerrarPrestamista.TabIndex = 20;
+            btnCerrarPrestamista.UseVisualStyleBackColor = true;
+            btnCerrarPrestamista.Click += btnCerrarPrestamista_Click;
+            // 
+            // dataGridViewPrestamista
+            // 
+            dataGridViewPrestamista.AllowUserToAddRows = false;
+            dataGridViewPrestamista.AllowUserToDeleteRows = false;
+            dataGridViewPrestamista.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewPrestamista.Location = new Point(0, 60);
+            dataGridViewPrestamista.Name = "dataGridViewPrestamista";
+            dataGridViewPrestamista.ReadOnly = true;
+            dataGridViewPrestamista.Size = new Size(276, 177);
+            dataGridViewPrestamista.TabIndex = 16;
+            dataGridViewPrestamista.DoubleClick += dataGridViewPrestamista_DoubleClick;
+            // 
+            // txtBuscarPrestamista
+            // 
+            txtBuscarPrestamista.Font = new Font("Segoe UI", 12F);
+            txtBuscarPrestamista.Location = new Point(3, 8);
+            txtBuscarPrestamista.Name = "txtBuscarPrestamista";
+            txtBuscarPrestamista.Size = new Size(202, 29);
+            txtBuscarPrestamista.TabIndex = 11;
+            // 
+            // panelEstado
+            // 
+            panelEstado.Controls.Add(btnBuscarEstado);
+            panelEstado.Controls.Add(btnCerrarEstado);
+            panelEstado.Controls.Add(dataGridViewEstado);
+            panelEstado.Controls.Add(txtBuscarEstado);
+            panelEstado.Location = new Point(1065, 489);
+            panelEstado.Name = "panelEstado";
+            panelEstado.Size = new Size(276, 235);
+            panelEstado.TabIndex = 21;
+            // 
+            // btnBuscarEstado
+            // 
+            btnBuscarEstado.Location = new Point(208, 12);
+            btnBuscarEstado.Name = "btnBuscarEstado";
+            btnBuscarEstado.Size = new Size(25, 23);
+            btnBuscarEstado.TabIndex = 17;
+            btnBuscarEstado.UseVisualStyleBackColor = true;
+            btnBuscarEstado.Click += btnBuscarEstado_Click;
+            // 
+            // btnCerrarEstado
+            // 
+            btnCerrarEstado.Location = new Point(237, 12);
+            btnCerrarEstado.Name = "btnCerrarEstado";
+            btnCerrarEstado.Size = new Size(25, 23);
+            btnCerrarEstado.TabIndex = 20;
+            btnCerrarEstado.UseVisualStyleBackColor = true;
+            btnCerrarEstado.Click += btnCerrarEstado_Click;
+            // 
+            // dataGridViewEstado
+            // 
+            dataGridViewEstado.AllowUserToAddRows = false;
+            dataGridViewEstado.AllowUserToDeleteRows = false;
+            dataGridViewEstado.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEstado.Location = new Point(0, 60);
+            dataGridViewEstado.Name = "dataGridViewEstado";
+            dataGridViewEstado.ReadOnly = true;
+            dataGridViewEstado.Size = new Size(276, 177);
+            dataGridViewEstado.TabIndex = 16;
+            dataGridViewEstado.DoubleClick += dataGridViewEstado_DoubleClick;
+            // 
+            // txtBuscarEstado
+            // 
+            txtBuscarEstado.Font = new Font("Segoe UI", 12F);
+            txtBuscarEstado.Location = new Point(3, 8);
+            txtBuscarEstado.Name = "txtBuscarEstado";
+            txtBuscarEstado.Size = new Size(202, 29);
+            txtBuscarEstado.TabIndex = 11;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // FormNuevoPréstamo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
+            Controls.Add(panelEstado);
+            Controls.Add(panelPrestamista);
+            Controls.Add(panelPrestatario);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "FormNuevoPréstamo";
@@ -232,17 +450,23 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panelPrestatario.ResumeLayout(false);
+            panelPrestatario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPrestatario).EndInit();
+            panelPrestamista.ResumeLayout(false);
+            panelPrestamista.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewPrestamista).EndInit();
+            panelEstado.ResumeLayout(false);
+            panelEstado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEstado).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private TextBox txtContraseñaUsuario;
         private TextBox txtDevolucionPréstamo;
         private TextBox txtFechaPréstamo;
-        private TextBox txtPrestatarioPréstamo;
-        private TextBox txEquipoPréstamo;
         private Label label8;
         private Label label7;
         private Label label1;
@@ -251,8 +475,30 @@
         private Label label4;
         private Panel panel2;
         private Label label2;
-        private TextBox txtEstadoPréstamo;
         private Label label9;
         private Button btnNuevoPrestamo;
+        private TextBox txtEstadoPréstamo;
+        private TextBox txtPrestamistaPréstamo;
+        private TextBox txtPrestatarioPréstamo;
+        private TextBox txEquipoPréstamo;
+        private Button btnEstado;
+        private Button btnPrestatario;
+        private Button btnPrestamista;
+        private Button btnBuscarPrestatario;
+        private TextBox txtBuscarPrestatario;
+        private Panel panelPrestatario;
+        private Button btnCerrarPrestatario;
+        private DataGridView dataGridViewPrestatario;
+        private Panel panelPrestamista;
+        private Button btnBuscarPrestamista;
+        private Button btnCerrarPrestamista;
+        private DataGridView dataGridViewPrestamista;
+        private TextBox txtBuscarPrestamista;
+        private Panel panelEstado;
+        private Button btnBuscarEstado;
+        private Button btnCerrarEstado;
+        private DataGridView dataGridViewEstado;
+        private TextBox txtBuscarEstado;
+        private Button btnCancelar;
     }
 }

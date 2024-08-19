@@ -42,6 +42,7 @@
             panel2 = new Panel();
             btnEditarUsuario = new Button();
             label2 = new Label();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -163,6 +164,7 @@
             btnEditarUsuario.TabIndex = 11;
             btnEditarUsuario.Text = "Editar Usuario";
             btnEditarUsuario.UseVisualStyleBackColor = false;
+            btnEditarUsuario.Click += btnEditarUsuario_Click;
             // 
             // label2
             // 
@@ -174,15 +176,27 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
-            // ModificarUsuario
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
+            // EditarUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Name = "ModificarUsuario";
+            Name = "EditarUsuario";
             Text = "Editar Usuario";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -206,5 +220,6 @@
         private Panel panel2;
         private Button btnEditarUsuario;
         private Label label2;
+        private Button btnCancelar;
     }
 }

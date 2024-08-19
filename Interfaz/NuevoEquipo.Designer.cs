@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoEquipo));
             panel1 = new Panel();
+            btnCategoria = new Button();
+            btnEstadoEquipo = new Button();
             txtDescripciónEquipo = new TextBox();
             txtCategoríaEquipo = new TextBox();
             txtEstadoEquipo = new TextBox();
@@ -44,13 +46,34 @@
             panel2 = new Panel();
             btnGuardarEquipo = new Button();
             label2 = new Label();
+            panelEstadoEquipo = new Panel();
+            btnCerrarEstadoEquipo = new Button();
+            btnBuscarEstadoEquipo = new Button();
+            txtBuscarEstadoEquipo = new TextBox();
+            dataGridViewEstadoEquipo = new DataGridView();
+            panelCategoria = new Panel();
+            btnCerrarCategoria = new Button();
+            btnBuscarCategoria = new Button();
+            txtBuscarCategoria = new TextBox();
+            dataGridViewCategoria = new DataGridView();
+            txtMarca = new TextBox();
+            label3 = new Label();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            panelEstadoEquipo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEstadoEquipo).BeginInit();
+            panelCategoria.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCategoria).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(txtMarca);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(btnCategoria);
+            panel1.Controls.Add(btnEstadoEquipo);
             panel1.Controls.Add(txtDescripciónEquipo);
             panel1.Controls.Add(txtCategoríaEquipo);
             panel1.Controls.Add(txtEstadoEquipo);
@@ -67,10 +90,28 @@
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
             // 
+            // btnCategoria
+            // 
+            btnCategoria.Location = new Point(417, 222);
+            btnCategoria.Name = "btnCategoria";
+            btnCategoria.Size = new Size(28, 23);
+            btnCategoria.TabIndex = 12;
+            btnCategoria.UseVisualStyleBackColor = true;
+            btnCategoria.Click += btnCategoria_Click;
+            // 
+            // btnEstadoEquipo
+            // 
+            btnEstadoEquipo.Location = new Point(290, 222);
+            btnEstadoEquipo.Name = "btnEstadoEquipo";
+            btnEstadoEquipo.Size = new Size(28, 23);
+            btnEstadoEquipo.TabIndex = 11;
+            btnEstadoEquipo.UseVisualStyleBackColor = true;
+            btnEstadoEquipo.Click += btnEstadoEquipo_Click;
+            // 
             // txtDescripciónEquipo
             // 
             txtDescripciónEquipo.Font = new Font("Segoe UI", 12F);
-            txtDescripciónEquipo.Location = new Point(258, 288);
+            txtDescripciónEquipo.Location = new Point(451, 310);
             txtDescripciónEquipo.Name = "txtDescripciónEquipo";
             txtDescripciónEquipo.Size = new Size(233, 29);
             txtDescripciónEquipo.TabIndex = 10;
@@ -102,7 +143,7 @@
             // txSerieEquipo
             // 
             txSerieEquipo.Font = new Font("Segoe UI", 12F);
-            txSerieEquipo.Location = new Point(51, 139);
+            txSerieEquipo.Location = new Point(51, 131);
             txSerieEquipo.Name = "txSerieEquipo";
             txSerieEquipo.Size = new Size(233, 29);
             txSerieEquipo.TabIndex = 6;
@@ -111,11 +152,12 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(295, 248);
+            label8.Location = new Point(451, 266);
             label8.Name = "label8";
             label8.Size = new Size(153, 28);
             label8.TabIndex = 5;
             label8.Text = "Descripción";
+            label8.Click += label8_Click;
             // 
             // label7
             // 
@@ -133,9 +175,9 @@
             label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.Location = new Point(51, 173);
             label1.Name = "label1";
-            label1.Size = new Size(244, 28);
+            label1.Size = new Size(214, 28);
             label1.TabIndex = 3;
-            label1.Text = "Estado de Prestamo";
+            label1.Text = "Estado de Equipo";
             // 
             // label6
             // 
@@ -185,6 +227,7 @@
             btnGuardarEquipo.TabIndex = 11;
             btnGuardarEquipo.Text = "Nuevo Equipo";
             btnGuardarEquipo.UseVisualStyleBackColor = false;
+            btnGuardarEquipo.Click += btnGuardarEquipo_Click;
             // 
             // label2
             // 
@@ -196,12 +239,140 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
+            // panelEstadoEquipo
+            // 
+            panelEstadoEquipo.Controls.Add(btnCerrarEstadoEquipo);
+            panelEstadoEquipo.Controls.Add(btnBuscarEstadoEquipo);
+            panelEstadoEquipo.Controls.Add(txtBuscarEstadoEquipo);
+            panelEstadoEquipo.Controls.Add(dataGridViewEstadoEquipo);
+            panelEstadoEquipo.Location = new Point(1048, 101);
+            panelEstadoEquipo.Name = "panelEstadoEquipo";
+            panelEstadoEquipo.Size = new Size(276, 235);
+            panelEstadoEquipo.TabIndex = 7;
+            // 
+            // btnCerrarEstadoEquipo
+            // 
+            btnCerrarEstadoEquipo.Location = new Point(239, 16);
+            btnCerrarEstadoEquipo.Name = "btnCerrarEstadoEquipo";
+            btnCerrarEstadoEquipo.Size = new Size(28, 23);
+            btnCerrarEstadoEquipo.TabIndex = 21;
+            btnCerrarEstadoEquipo.UseVisualStyleBackColor = true;
+            btnCerrarEstadoEquipo.Click += btnCerrarEstadoEquipo_Click;
+            // 
+            // btnBuscarEstadoEquipo
+            // 
+            btnBuscarEstadoEquipo.Location = new Point(205, 15);
+            btnBuscarEstadoEquipo.Name = "btnBuscarEstadoEquipo";
+            btnBuscarEstadoEquipo.Size = new Size(28, 23);
+            btnBuscarEstadoEquipo.TabIndex = 13;
+            btnBuscarEstadoEquipo.UseVisualStyleBackColor = true;
+            btnBuscarEstadoEquipo.Click += btnBuscarEstadoEquipo_Click;
+            // 
+            // txtBuscarEstadoEquipo
+            // 
+            txtBuscarEstadoEquipo.Location = new Point(11, 16);
+            txtBuscarEstadoEquipo.Name = "txtBuscarEstadoEquipo";
+            txtBuscarEstadoEquipo.Size = new Size(188, 23);
+            txtBuscarEstadoEquipo.TabIndex = 18;
+            // 
+            // dataGridViewEstadoEquipo
+            // 
+            dataGridViewEstadoEquipo.AllowUserToAddRows = false;
+            dataGridViewEstadoEquipo.AllowUserToDeleteRows = false;
+            dataGridViewEstadoEquipo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEstadoEquipo.Location = new Point(0, 55);
+            dataGridViewEstadoEquipo.Name = "dataGridViewEstadoEquipo";
+            dataGridViewEstadoEquipo.ReadOnly = true;
+            dataGridViewEstadoEquipo.Size = new Size(276, 177);
+            dataGridViewEstadoEquipo.TabIndex = 17;
+            dataGridViewEstadoEquipo.DoubleClick += dataGridViewEstadoEquipo_DoubleClick;
+            // 
+            // panelCategoria
+            // 
+            panelCategoria.Controls.Add(btnCerrarCategoria);
+            panelCategoria.Controls.Add(btnBuscarCategoria);
+            panelCategoria.Controls.Add(txtBuscarCategoria);
+            panelCategoria.Controls.Add(dataGridViewCategoria);
+            panelCategoria.Location = new Point(1048, 353);
+            panelCategoria.Name = "panelCategoria";
+            panelCategoria.Size = new Size(276, 235);
+            panelCategoria.TabIndex = 8;
+            // 
+            // btnCerrarCategoria
+            // 
+            btnCerrarCategoria.Location = new Point(239, 17);
+            btnCerrarCategoria.Name = "btnCerrarCategoria";
+            btnCerrarCategoria.Size = new Size(28, 23);
+            btnCerrarCategoria.TabIndex = 20;
+            btnCerrarCategoria.UseVisualStyleBackColor = true;
+            btnCerrarCategoria.Click += btnCerrarCategoria_Click;
+            // 
+            // btnBuscarCategoria
+            // 
+            btnBuscarCategoria.Location = new Point(205, 17);
+            btnBuscarCategoria.Name = "btnBuscarCategoria";
+            btnBuscarCategoria.Size = new Size(28, 23);
+            btnBuscarCategoria.TabIndex = 19;
+            btnBuscarCategoria.UseVisualStyleBackColor = true;
+            btnBuscarCategoria.Click += btnBuscarCategoria_Click;
+            // 
+            // txtBuscarCategoria
+            // 
+            txtBuscarCategoria.Location = new Point(11, 17);
+            txtBuscarCategoria.Name = "txtBuscarCategoria";
+            txtBuscarCategoria.Size = new Size(188, 23);
+            txtBuscarCategoria.TabIndex = 19;
+            // 
+            // dataGridViewCategoria
+            // 
+            dataGridViewCategoria.AllowUserToAddRows = false;
+            dataGridViewCategoria.AllowUserToDeleteRows = false;
+            dataGridViewCategoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCategoria.Location = new Point(0, 58);
+            dataGridViewCategoria.Name = "dataGridViewCategoria";
+            dataGridViewCategoria.ReadOnly = true;
+            dataGridViewCategoria.Size = new Size(276, 177);
+            dataGridViewCategoria.TabIndex = 18;
+            dataGridViewCategoria.DoubleClick += dataGridViewCategoria_DoubleClick;
+            // 
+            // txtMarca
+            // 
+            txtMarca.Font = new Font("Segoe UI", 12F);
+            txtMarca.Location = new Point(51, 310);
+            txtMarca.Name = "txtMarca";
+            txtMarca.Size = new Size(233, 29);
+            txtMarca.TabIndex = 14;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Location = new Point(51, 266);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 28);
+            label3.TabIndex = 13;
+            label3.Text = "Marca";
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // NuevoEquipo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
+            Controls.Add(panelCategoria);
+            Controls.Add(panelEstadoEquipo);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "NuevoEquipo";
@@ -210,6 +381,12 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panelEstadoEquipo.ResumeLayout(false);
+            panelEstadoEquipo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEstadoEquipo).EndInit();
+            panelCategoria.ResumeLayout(false);
+            panelCategoria.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewCategoria).EndInit();
             ResumeLayout(false);
         }
 
@@ -217,9 +394,6 @@
 
         private Panel panel1;
         private TextBox txtDescripciónEquipo;
-        private TextBox txtCategoríaEquipo;
-        private TextBox txtEstadoEquipo;
-        private TextBox txtModeloEquipo;
         private TextBox txSerieEquipo;
         private Label label8;
         private Label label7;
@@ -230,5 +404,23 @@
         private Panel panel2;
         private Label label2;
         private Button btnGuardarEquipo;
+        private TextBox txtCategoríaEquipo;
+        private TextBox txtEstadoEquipo;
+        private TextBox txtModeloEquipo;
+        private Button btnCategoria;
+        private Button btnEstadoEquipo;
+        private Panel panelEstadoEquipo;
+        private Panel panelCategoria;
+        private DataGridView dataGridViewEstadoEquipo;
+        private DataGridView dataGridViewCategoria;
+        private Button btnCerrarEstadoEquipo;
+        private Button btnBuscarEstadoEquipo;
+        private TextBox txtBuscarEstadoEquipo;
+        private Button btnCerrarCategoria;
+        private Button btnBuscarCategoria;
+        private TextBox txtBuscarCategoria;
+        private TextBox txtMarca;
+        private Label label3;
+        private Button btnCancelar;
     }
 }

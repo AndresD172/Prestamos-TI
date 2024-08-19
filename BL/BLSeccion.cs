@@ -10,25 +10,25 @@ namespace BL
 {
     public class BLSeccion
     {
-        public Respuesta RegistrarSeccion(EntidadSección seccion)
+        public static Respuesta RegistrarSeccion(EntidadSección seccion)
         {
             DALSeccion DalSeccion = new DALSeccion();
 
             return DalSeccion.RegistrarSeccion(seccion);
         }
-        public Respuesta ListarSeccion(string cTexto)
+        public static Respuesta ListarSeccion(string cTexto)
         {
             DALSeccion DalSeccion = new DALSeccion();
 
             return DalSeccion.ListarSeccion(cTexto);
         }
-        public Respuesta EliminarSeccion(int IdSeccion)
+        public static Respuesta EliminarSeccion(int IdSeccion)
         {
             DALSeccion DalSeccion = new DALSeccion();
 
             return DalSeccion.EliminarSeccion(IdSeccion);
         }
-        public Respuesta ActualizarSeccion(EntidadSección seccion)
+        public static Respuesta ActualizarSeccion(EntidadSección seccion)
         {
             DALSeccion DalSeccion = new DALSeccion();
 

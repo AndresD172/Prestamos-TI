@@ -16,5 +16,18 @@ namespace InterfazGráfica
         {
             InitializeComponent();
         }
+
+        private void btnEditarPrestatario_Click(object sender, EventArgs e)
+        {
+
+            VerificacionEditar verificar = new VerificacionEditar();
+            verificar.ShowDialog();
+
+        }
+
+        private void btnSeccion_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

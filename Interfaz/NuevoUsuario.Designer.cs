@@ -34,7 +34,7 @@
             txtCarnetUsuario = new TextBox();
             txtCorreoUsuario = new TextBox();
             txtApellidosUsuario = new TextBox();
-            txnNombreUsurio = new TextBox();
+            txtNombreUsuario = new TextBox();
             label8 = new Label();
             label7 = new Label();
             label1 = new Label();
@@ -44,6 +44,7 @@
             panel2 = new Panel();
             btnGuardarUsuario = new Button();
             label2 = new Label();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -55,7 +56,7 @@
             panel1.Controls.Add(txtCarnetUsuario);
             panel1.Controls.Add(txtCorreoUsuario);
             panel1.Controls.Add(txtApellidosUsuario);
-            panel1.Controls.Add(txnNombreUsurio);
+            panel1.Controls.Add(txtNombreUsuario);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label1);
@@ -99,13 +100,13 @@
             txtApellidosUsuario.Size = new Size(233, 29);
             txtApellidosUsuario.TabIndex = 7;
             // 
-            // txnNombreUsurio
+            // txtNombreUsuario
             // 
-            txnNombreUsurio.Font = new Font("Segoe UI", 12F);
-            txnNombreUsurio.Location = new Point(51, 139);
-            txnNombreUsurio.Name = "txnNombreUsurio";
-            txnNombreUsurio.Size = new Size(233, 29);
-            txnNombreUsurio.TabIndex = 6;
+            txtNombreUsuario.Font = new Font("Segoe UI", 12F);
+            txtNombreUsuario.Location = new Point(51, 139);
+            txtNombreUsuario.Name = "txtNombreUsuario";
+            txtNombreUsuario.Size = new Size(233, 29);
+            txtNombreUsuario.TabIndex = 6;
             // 
             // label8
             // 
@@ -185,6 +186,7 @@
             btnGuardarUsuario.TabIndex = 11;
             btnGuardarUsuario.Text = "Nuevo Usuario";
             btnGuardarUsuario.UseVisualStyleBackColor = false;
+            btnGuardarUsuario.Click += btnGuardarUsuario_Click;
             // 
             // label2
             // 
@@ -196,12 +198,24 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // NuevoUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "NuevoUsuario";
@@ -227,8 +241,9 @@
         private TextBox txtCarnetUsuario;
         private TextBox txtCorreoUsuario;
         private TextBox txtApellidosUsuario;
-        private TextBox txnNombreUsurio;
+        private TextBox txtNombreUsuario;
         private Label label8;
         private Button btnGuardarUsuario;
+        private Button btnCancelar;
     }
 }
