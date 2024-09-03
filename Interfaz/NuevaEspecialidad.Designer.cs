@@ -98,6 +98,7 @@
             btnGuardarEspecialidad.TabIndex = 7;
             btnGuardarEspecialidad.Text = "Nueva Especialidad";
             btnGuardarEspecialidad.UseVisualStyleBackColor = false;
+            btnGuardarEspecialidad.Click += btnGuardarEspecialidad_Click;
             // 
             // label2
             // 

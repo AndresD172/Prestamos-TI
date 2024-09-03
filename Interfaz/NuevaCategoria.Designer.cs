@@ -98,6 +98,7 @@
             btnGuardarCategoria.TabIndex = 7;
             btnGuardarCategoria.Text = "Nueva Categoria";
             btnGuardarCategoria.UseVisualStyleBackColor = false;
+            btnGuardarCategoria.Click += btnGuardarCategoria_Click;
             // 
             // label2
             // 
