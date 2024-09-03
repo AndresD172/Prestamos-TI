@@ -25,14 +25,15 @@ namespace InterfazGráfica
 
         private void FormatearDataGrid()
         {
+            dataGridViewCategoria.Columns[0].Width = 80;
             dataGridViewCategoria.Columns[0].HeaderText = "Id";
             dataGridViewCategoria.Columns[1].HeaderText = "Nombre";
         }
 
         private void BuscarCategoria_Load(object sender, EventArgs e)
         {
+            dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%").Contenido;
             this.FormatearDataGrid();
-            dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%");
         }
 
         private void SeleccionarItemActual()
@@ -50,7 +51,7 @@ namespace InterfazGráfica
         private void btnEliminarCategoria_Click(object sender, EventArgs e)
         {
             VerificarEliminar verificarEliminar = new VerificarEliminar();
-            verificarEliminar.Show();
+            verificarEliminar.ShowDialog();
 
             bool eliminarDato = verificarEliminar.Seleccion;
 
@@ -67,6 +68,8 @@ namespace InterfazGráfica
             do
             {
                 respuesta = BLCategoria.EliminarCategoria(this.Id);
+
+                dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%").Contenido;
 
                 if (respuesta.CódigoEstado != 0)
                 {

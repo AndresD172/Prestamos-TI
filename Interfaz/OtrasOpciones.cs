@@ -21,8 +21,8 @@ namespace InterfazGráfica
         {
 
             this.Close();
-            NuevoTipoMulta nuevo = new NuevoTipoMulta();
-            nuevo.ShowDialog();
+            Opciones opciones = new Opciones("TipoMulta");
+            opciones.Show();
 
         }
 
@@ -30,39 +30,39 @@ namespace InterfazGráfica
         {
             
             this.Close();
-            NuevaCategoria nuevo = new NuevaCategoria();
-            nuevo.ShowDialog();
+            Opciones opciones = new Opciones("Categoria");
+            opciones.Show();
             
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
-            NuevaEspecialidad nuevo = new NuevaEspecialidad();
-            nuevo.ShowDialog();
+            Opciones opciones = new Opciones("Especialidad");
+            opciones.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
 
             this.Close();
-            NuevoEstado nuevo = new NuevoEstado();
-            nuevo.ShowDialog();
+            Opciones opciones = new Opciones("Estado");
+            opciones.Show();
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
-            NuevaSeccion nuevo = new NuevaSeccion();
-            nuevo.ShowDialog();
+            Opciones opciones = new Opciones("Seccion");
+            opciones.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
-            NuevoDepartamento nuevo = new NuevoDepartamento();
-            nuevo.ShowDialog();
+            Opciones opciones = new Opciones("Departamento");
+            opciones.Show();
         }
     }
 }
