@@ -6,30 +6,30 @@ namespace BL
     {
         public static Respuesta RegistrarCategoria(EntidadCategoría categoria)
         {
-            DALCategoria dalcategoria = new DALCategoria();
+            DALCategoria DalCategoria = new DALCategoria();
 
-            return dalcategoria.RegistrarCategoria(categoria);
+            return DalCategoria.RegistrarCategoria(categoria);
 
         }
         public static Respuesta ListarCategoria(string cTexto)
         {
-            DALCategoria dalcategoria = new DALCategoria();
+            DALCategoria DalCategoria = new DALCategoria();
 
-            return dalcategoria.ListarCategoria(cTexto);
+            return DalCategoria.ListarCategoria(cTexto);
 
         }
         public static Respuesta EliminarCategoria(int IdCategoria)
         {
-            DALCategoria dalcategoria = new DALCategoria();
+            DALCategoria DalCategoria = new DALCategoria();
 
-            return dalcategoria.EliminarCategoria(IdCategoria);
+            return DalCategoria.EliminarCategoria(IdCategoria);
 
         }
         public static Respuesta ActualizarCategoria(EntidadCategoría categoria)
         {
-            DALCategoria dalcategoria = new DALCategoria();
+            DALCategoria DalCategoria = new DALCategoria();
 
-            return dalcategoria.ActualizarCategoria(categoria);
+            return DalCategoria.ActualizarCategoria(categoria);
 
         }
     }

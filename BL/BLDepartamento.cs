@@ -12,30 +12,30 @@ namespace BL
     {
         public static Respuesta RegistrarDepartamento(EntidadDepartamento departamento)
         {
-            DALDepartamento daldepartamento = new DALDepartamento();
+            DALDepartamento DalDepartamento = new DALDepartamento();
 
-            return daldepartamento.RegistrarDepartamento(departamento);
+            return DalDepartamento.RegistrarDepartamento(departamento);
 
         }
         public static Respuesta ListarDepartamento(string cTexto)
         {
-            DALDepartamento daldepartamento = new DALDepartamento();
+            DALDepartamento DalDepartamento = new DALDepartamento();
 
-            return daldepartamento.ListarDepartamento(cTexto);
+            return DalDepartamento.ListarDepartamento(cTexto);
 
         }
         public static Respuesta EliminarDepartamento(int IdDepartamento)
         {
-            DALDepartamento daldepartamento = new DALDepartamento();
+            DALDepartamento DalDepartamento = new DALDepartamento();
 
-            return daldepartamento.EliminarDepartamento(IdDepartamento);
+            return DalDepartamento.EliminarDepartamento(IdDepartamento);
 
         }
         public static Respuesta ActualizarDepartamento(EntidadDepartamento departamento)
         {
-            DALDepartamento daldepartamento = new DALDepartamento();
+            DALDepartamento DalDepartamento = new DALDepartamento();
 
-            return daldepartamento.ActualizarDepartamento(departamento);
+            return DalDepartamento.ActualizarDepartamento(departamento);
 
         }
     }
