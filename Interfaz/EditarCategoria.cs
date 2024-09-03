@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BL;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +14,39 @@ namespace InterfazGráfica
 {
     public partial class EditarCategoria : Form
     {
-        public EditarCategoria()
+        private int Id { get; set; }
+
+        public EditarCategoria(int id)
         {
             InitializeComponent();
+            this.Id = id;
         }
 
         private void btnEditarCategoria_Click(object sender, EventArgs e)
         {
-            VerificacionEditar editar=new VerificacionEditar();
-            editar.ShowDialog();
+            VerificacionEditar verificacionEditar = new VerificacionEditar();
+            verificacionEditar.Show();
+
+            bool ejecutarAccion = verificacionEditar.Seleccion;
+
+            if (!ejecutarAccion)
+            {
+                return;
+            }
+
+            EntidadCategoría entidadCategoría = new EntidadCategoría { IdCategoría = Id, Nombre = txtDescripcionCategoria.Text };
+
+            Respuesta respuesta;
+            do
+            {
+                respuesta = BLCategoria.ActualizarCategoria(entidadCategoría);
+
+                if (respuesta.CódigoEstado != 0)
+                {
+                    MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            } while (respuesta.CódigoEstado != 0); 
         }
     }
 }
