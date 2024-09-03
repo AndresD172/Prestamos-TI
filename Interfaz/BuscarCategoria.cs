@@ -97,9 +97,9 @@ namespace InterfazGráfica
             this.FormatearDataGrid();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnAtrasLogo_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }

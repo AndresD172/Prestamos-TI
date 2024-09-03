@@ -1,4 +1,5 @@
-﻿namespace InterfazGráfica
+﻿
+namespace InterfazGráfica
 {
     partial class BuscarEquipo
     {
@@ -213,6 +214,7 @@
             ResumeLayout(false);
             PerformLayout();
         }
+
 
         #endregion
 

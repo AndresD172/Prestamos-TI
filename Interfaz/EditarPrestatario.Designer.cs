@@ -143,7 +143,6 @@
             btnSeccion.Size = new Size(25, 23);
             btnSeccion.TabIndex = 28;
             btnSeccion.UseVisualStyleBackColor = true;
-            btnSeccion.Click += btnSeccion_Click;
             // 
             // btnEspecialidad
             // 

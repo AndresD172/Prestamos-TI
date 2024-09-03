@@ -130,6 +130,7 @@
             btnAtrasLogo.TabIndex = 52;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // Usuario
             // 
