@@ -60,6 +60,7 @@
             btnNuevo.TabIndex = 56;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // Opciones
             // 

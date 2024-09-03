@@ -102,5 +102,11 @@ namespace InterfazGráfica
 
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            NuevoUsuario nuevoUsuario = new NuevoUsuario();
+            nuevoUsuario.Show();
+            this.Close();
+        }
     }
 }
