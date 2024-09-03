@@ -72,6 +72,7 @@ namespace InterfazGráfica
             Controls.Add(btnNuevo);
             Controls.Add(btnBuscar);
             Name = "Opciones";
+            Text = "Opciones";
             ResumeLayout(false);
         }
 

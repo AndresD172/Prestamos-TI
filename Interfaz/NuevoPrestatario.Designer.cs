@@ -71,6 +71,7 @@
             btnCerrarEspecialidad = new Button();
             dataGridViewEspecialidad = new DataGridView();
             txtBuscarEspecialidad = new TextBox();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panelSeccion.SuspendLayout();
@@ -496,12 +497,24 @@
             txtBuscarEspecialidad.Size = new Size(202, 29);
             txtBuscarEspecialidad.TabIndex = 11;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // NuevoPrestatario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panelEspecialidad);
             Controls.Add(panelDepartamento);
             Controls.Add(panelSeccion);
@@ -573,5 +586,6 @@
         private Button btnCerrarEspecialidad;
         private DataGridView dataGridViewEspecialidad;
         private TextBox txtBuscarEspecialidad;
+        private Button btnCancelar;
     }
 }

@@ -30,8 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarPrestamo));
             panel1 = new Panel();
+            btnPrestatario = new Button();
+            btnEstado = new Button();
             txtEstadoPréstamo = new TextBox();
             label9 = new Label();
+            btnPrestamista = new Button();
             txtContraseñaUsuario = new TextBox();
             txtDevolucionPréstamo = new TextBox();
             txtFechaPréstamo = new TextBox();
@@ -46,9 +49,6 @@
             panel2 = new Panel();
             btnEditarPrestamo = new Button();
             label2 = new Label();
-            btnEstado = new Button();
-            btnPrestatario = new Button();
-            btnPrestamista = new Button();
             panelEstado = new Panel();
             btnBuscarEstado = new Button();
             btnCerrarEstado = new Button();
@@ -64,6 +64,13 @@
             btnCerrarPrestatario = new Button();
             dataGridViewPrestatario = new DataGridView();
             txtBuscarPrestatario = new TextBox();
+            btnEquipo = new Button();
+            panelEquipo = new Panel();
+            btnBuscarEquipo = new Button();
+            btnCerrarEquipo = new Button();
+            dataGridViewEquipo = new DataGridView();
+            txtBuscarEquipo = new TextBox();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panelEstado.SuspendLayout();
@@ -72,11 +79,14 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewPrestamista).BeginInit();
             panelPrestatario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPrestatario).BeginInit();
+            panelEquipo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEquipo).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(btnEquipo);
             panel1.Controls.Add(btnPrestatario);
             panel1.Controls.Add(btnEstado);
             panel1.Controls.Add(txtEstadoPréstamo);
@@ -98,6 +108,22 @@
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 8;
             // 
+            // btnPrestatario
+            // 
+            btnPrestatario.Location = new Point(420, 139);
+            btnPrestatario.Name = "btnPrestatario";
+            btnPrestatario.Size = new Size(25, 23);
+            btnPrestatario.TabIndex = 23;
+            btnPrestatario.UseVisualStyleBackColor = true;
+            // 
+            // btnEstado
+            // 
+            btnEstado.Location = new Point(420, 307);
+            btnEstado.Name = "btnEstado";
+            btnEstado.Size = new Size(25, 23);
+            btnEstado.TabIndex = 24;
+            btnEstado.UseVisualStyleBackColor = true;
+            // 
             // txtEstadoPréstamo
             // 
             txtEstadoPréstamo.Font = new Font("Segoe UI", 12F);
@@ -115,6 +141,14 @@
             label9.Size = new Size(92, 28);
             label9.TabIndex = 11;
             label9.Text = "Estado";
+            // 
+            // btnPrestamista
+            // 
+            btnPrestamista.Location = new Point(290, 307);
+            btnPrestamista.Name = "btnPrestamista";
+            btnPrestamista.Size = new Size(25, 23);
+            btnPrestamista.TabIndex = 22;
+            btnPrestamista.UseVisualStyleBackColor = true;
             // 
             // txtContraseñaUsuario
             // 
@@ -245,30 +279,6 @@
             label2.Size = new Size(122, 44);
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
-            // 
-            // btnEstado
-            // 
-            btnEstado.Location = new Point(420, 307);
-            btnEstado.Name = "btnEstado";
-            btnEstado.Size = new Size(25, 23);
-            btnEstado.TabIndex = 24;
-            btnEstado.UseVisualStyleBackColor = true;
-            // 
-            // btnPrestatario
-            // 
-            btnPrestatario.Location = new Point(420, 139);
-            btnPrestatario.Name = "btnPrestatario";
-            btnPrestatario.Size = new Size(25, 23);
-            btnPrestatario.TabIndex = 23;
-            btnPrestatario.UseVisualStyleBackColor = true;
-            // 
-            // btnPrestamista
-            // 
-            btnPrestamista.Location = new Point(290, 307);
-            btnPrestamista.Name = "btnPrestamista";
-            btnPrestamista.Size = new Size(25, 23);
-            btnPrestamista.TabIndex = 22;
-            btnPrestamista.UseVisualStyleBackColor = true;
             // 
             // panelEstado
             // 
@@ -408,12 +418,79 @@
             txtBuscarPrestatario.Size = new Size(202, 29);
             txtBuscarPrestatario.TabIndex = 11;
             // 
+            // btnEquipo
+            // 
+            btnEquipo.Location = new Point(290, 143);
+            btnEquipo.Name = "btnEquipo";
+            btnEquipo.Size = new Size(25, 23);
+            btnEquipo.TabIndex = 25;
+            btnEquipo.UseVisualStyleBackColor = true;
+            // 
+            // panelEquipo
+            // 
+            panelEquipo.Controls.Add(btnBuscarEquipo);
+            panelEquipo.Controls.Add(btnCerrarEquipo);
+            panelEquipo.Controls.Add(dataGridViewEquipo);
+            panelEquipo.Controls.Add(txtBuscarEquipo);
+            panelEquipo.Location = new Point(12, 194);
+            panelEquipo.Name = "panelEquipo";
+            panelEquipo.Size = new Size(276, 235);
+            panelEquipo.TabIndex = 26;
+            // 
+            // btnBuscarEquipo
+            // 
+            btnBuscarEquipo.Location = new Point(208, 12);
+            btnBuscarEquipo.Name = "btnBuscarEquipo";
+            btnBuscarEquipo.Size = new Size(25, 23);
+            btnBuscarEquipo.TabIndex = 17;
+            btnBuscarEquipo.UseVisualStyleBackColor = true;
+            // 
+            // btnCerrarEquipo
+            // 
+            btnCerrarEquipo.Location = new Point(237, 12);
+            btnCerrarEquipo.Name = "btnCerrarEquipo";
+            btnCerrarEquipo.Size = new Size(25, 23);
+            btnCerrarEquipo.TabIndex = 20;
+            btnCerrarEquipo.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewEquipo
+            // 
+            dataGridViewEquipo.AllowUserToAddRows = false;
+            dataGridViewEquipo.AllowUserToDeleteRows = false;
+            dataGridViewEquipo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEquipo.Location = new Point(0, 60);
+            dataGridViewEquipo.Name = "dataGridViewEquipo";
+            dataGridViewEquipo.ReadOnly = true;
+            dataGridViewEquipo.Size = new Size(276, 177);
+            dataGridViewEquipo.TabIndex = 16;
+            // 
+            // txtBuscarEquipo
+            // 
+            txtBuscarEquipo.Font = new Font("Segoe UI", 12F);
+            txtBuscarEquipo.Location = new Point(3, 8);
+            txtBuscarEquipo.Name = "txtBuscarEquipo";
+            txtBuscarEquipo.Size = new Size(202, 29);
+            txtBuscarEquipo.TabIndex = 11;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // ModificarPrestamo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
+            Controls.Add(panelEquipo);
             Controls.Add(panelEstado);
             Controls.Add(panelPrestamista);
             Controls.Add(panelPrestatario);
@@ -434,6 +511,9 @@
             panelPrestatario.ResumeLayout(false);
             panelPrestatario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewPrestatario).EndInit();
+            panelEquipo.ResumeLayout(false);
+            panelEquipo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEquipo).EndInit();
             ResumeLayout(false);
         }
 
@@ -474,5 +554,12 @@
         private Button btnCerrarPrestatario;
         private DataGridView dataGridViewPrestatario;
         private TextBox txtBuscarPrestatario;
+        private Button btnEquipo;
+        private Panel panelEquipo;
+        private Button btnBuscarEquipo;
+        private Button btnCerrarEquipo;
+        private DataGridView dataGridViewEquipo;
+        private TextBox txtBuscarEquipo;
+        private Button btnCancelar;
     }
 }

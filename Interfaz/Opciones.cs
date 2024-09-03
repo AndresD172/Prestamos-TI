@@ -23,6 +23,7 @@ namespace InterfazGráfica
 
         private void btnOpcionNuevo_Click(object sender, EventArgs e)
         {
+ 
         }
 
         private void btnOpcionBuscar_Click(object sender, EventArgs e)
@@ -54,6 +55,7 @@ namespace InterfazGráfica
                 nuevoEquipoOpcion.ShowDialog();
 
             }
+
             if (opcion == "Prestamos")
             {
                 //NuevoPrestamo nuevoPrestamoOpcion = new NuevoPrestamo();
@@ -97,5 +99,46 @@ namespace InterfazGráfica
             }
 
         }
+
+        private void btnOpcionBuscar_Click(object sender, EventArgs e)
+        {
+            /*if (opcion == "Usuario")
+            {
+
+                BuscarUsuario BuscarUsuarioOpcion = new BuscarUsuario();
+                BuscarUsuarioOpcion.ShowDialog();
+
+            }
+            if (opcion == "Prestatario")
+            {
+
+                BuscarPrestatario BuscarPrestatarioOpcion = new BuscarPrestatario();
+                BuscarPrestatarioOpcion.ShowDialog();
+
+            }
+            if (opcion == "Equipo")
+            {
+
+                BuscarEquipo BuscarEquipoOpcion = new BuscarEquipo();
+                BuscarEquipoOpcion.ShowDialog();
+
+            }
+            if (opcion == "Prestamos")
+            {
+
+                BuscarPrestamo BuscarPrestamoOpcion = new BuscarPrestamo();
+                BuscarPrestamoOpcion.ShowDialog();
+
+            }
+            if (opcion == "Multas")
+            {
+
+                BuscarMulta BuscarMultaOpcion = new BuscarMulta();
+                BuscarMultaOpcion.ShowDialog();
+
+            }*/
+
+        }
+
     }
 }

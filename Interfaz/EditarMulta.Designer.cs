@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarMulta));
             panel1 = new Panel();
+            btnPrestatario = new Button();
+            btnTecnico = new Button();
             txtDescripciónMulta = new TextBox();
+            btnTipoMulta = new Button();
             txtTipoMulta = new TextBox();
             txtTécnicoMulta = new TextBox();
             txtPrestatarioMulta = new TextBox();
@@ -42,9 +45,6 @@
             panel2 = new Panel();
             btnEditarMulta = new Button();
             label2 = new Label();
-            btnTecnico = new Button();
-            btnTipoMulta = new Button();
-            btnPrestatario = new Button();
             panelTipoMulta = new Panel();
             btnBuscarTipoMulta = new Button();
             btnCerrarTipoMulta = new Button();
@@ -60,6 +60,7 @@
             btnBuscarPrestatario = new Button();
             dataGridViewPrestatarios = new DataGridView();
             txtBuscarPrestatario = new TextBox();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panelTipoMulta.SuspendLayout();
@@ -90,6 +91,22 @@
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 8;
             // 
+            // btnPrestatario
+            // 
+            btnPrestatario.Location = new Point(291, 157);
+            btnPrestatario.Name = "btnPrestatario";
+            btnPrestatario.Size = new Size(27, 23);
+            btnPrestatario.TabIndex = 19;
+            btnPrestatario.UseVisualStyleBackColor = true;
+            // 
+            // btnTecnico
+            // 
+            btnTecnico.Location = new Point(419, 163);
+            btnTecnico.Name = "btnTecnico";
+            btnTecnico.Size = new Size(27, 23);
+            btnTecnico.TabIndex = 21;
+            btnTecnico.UseVisualStyleBackColor = true;
+            // 
             // txtDescripciónMulta
             // 
             txtDescripciónMulta.Font = new Font("Segoe UI", 12F);
@@ -97,6 +114,14 @@
             txtDescripciónMulta.Name = "txtDescripciónMulta";
             txtDescripciónMulta.Size = new Size(233, 29);
             txtDescripciónMulta.TabIndex = 9;
+            // 
+            // btnTipoMulta
+            // 
+            btnTipoMulta.Location = new Point(291, 270);
+            btnTipoMulta.Name = "btnTipoMulta";
+            btnTipoMulta.Size = new Size(27, 23);
+            btnTipoMulta.TabIndex = 20;
+            btnTipoMulta.UseVisualStyleBackColor = true;
             // 
             // txtTipoMulta
             // 
@@ -202,30 +227,6 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
-            // btnTecnico
-            // 
-            btnTecnico.Location = new Point(419, 163);
-            btnTecnico.Name = "btnTecnico";
-            btnTecnico.Size = new Size(27, 23);
-            btnTecnico.TabIndex = 21;
-            btnTecnico.UseVisualStyleBackColor = true;
-            // 
-            // btnTipoMulta
-            // 
-            btnTipoMulta.Location = new Point(291, 270);
-            btnTipoMulta.Name = "btnTipoMulta";
-            btnTipoMulta.Size = new Size(27, 23);
-            btnTipoMulta.TabIndex = 20;
-            btnTipoMulta.UseVisualStyleBackColor = true;
-            // 
-            // btnPrestatario
-            // 
-            btnPrestatario.Location = new Point(291, 157);
-            btnPrestatario.Name = "btnPrestatario";
-            btnPrestatario.Size = new Size(27, 23);
-            btnPrestatario.TabIndex = 19;
-            btnPrestatario.UseVisualStyleBackColor = true;
-            // 
             // panelTipoMulta
             // 
             panelTipoMulta.Controls.Add(btnBuscarTipoMulta);
@@ -280,7 +281,6 @@
             panelTecnico.Name = "panelTecnico";
             panelTecnico.Size = new Size(276, 235);
             panelTecnico.TabIndex = 17;
-//            panelTecnico.Paint += this.panelTecnico_Paint;
             // 
             // btnBuscarTecnico
             // 
@@ -327,7 +327,6 @@
             panelPrestatario.Name = "panelPrestatario";
             panelPrestatario.Size = new Size(276, 235);
             panelPrestatario.TabIndex = 16;
-         //   panelPrestatario.Paint += this.panelPrestatario_Paint;
             // 
             // btnCerrarPrestatarios
             // 
@@ -361,12 +360,24 @@
             txtBuscarPrestatario.Size = new Size(202, 29);
             txtBuscarPrestatario.TabIndex = 10;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // EditarMulta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panelTipoMulta);
             Controls.Add(panelTecnico);
             Controls.Add(panelPrestatario);
@@ -423,5 +434,6 @@
         private Button btnBuscarPrestatario;
         private DataGridView dataGridViewPrestatarios;
         private TextBox txtBuscarPrestatario;
+        private Button btnCancelar;
     }
 }
