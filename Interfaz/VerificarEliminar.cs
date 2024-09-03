@@ -22,11 +22,13 @@ namespace InterfazGráfica
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Seleccion = true;
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Seleccion = false;
+            this.Close();
         }
     }
 }

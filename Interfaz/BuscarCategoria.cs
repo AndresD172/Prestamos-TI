@@ -56,26 +56,30 @@ namespace InterfazGráfica
 
             verificarEliminar.Close();
 
-            if (eliminarDato)
+            if (!eliminarDato)
             {
-                SeleccionarItemActual();
-                Respuesta respuesta = BLCategoria.EliminarCategoria(this.Id);
-
-                do
-                {
-                    if (respuesta.CódigoEstado != 0)
-                    {
-                        MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-                    respuesta = BLCategoria.EliminarCategoria(this.Id);
-                } while (respuesta.CódigoEstado != 0);
+                return;
             }
+            
+            SeleccionarItemActual();
+            
+            Respuesta respuesta;
+            do
+            {
+                respuesta = BLCategoria.EliminarCategoria(this.Id);
+
+                if (respuesta.CódigoEstado != 0)
+                {
+                    MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            } while (respuesta.CódigoEstado != 0);
         }
 
         private void btnEditarCategoria_Click(object sender, EventArgs e)
         {
-            EditarCategoria editarCategoria = new EditarCategoria();
+            this.SeleccionarItemActual();
+            EditarCategoria editarCategoria = new EditarCategoria(this.Id);
             editarCategoria.Show();
         }
 
