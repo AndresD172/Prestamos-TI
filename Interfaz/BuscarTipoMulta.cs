@@ -16,5 +16,16 @@ namespace InterfazGráfica
         {
             InitializeComponent();
         }
+
+        private void btnEditarTipoMulta_Click(object sender, EventArgs e)
+        {
+            EditarTipoMulta editar = new EditarTipoMulta();
+            editar.ShowDialog();
+        }
+
+        private void btnAtrasLogo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

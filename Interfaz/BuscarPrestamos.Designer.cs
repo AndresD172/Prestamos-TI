@@ -104,6 +104,7 @@
             btnEditarPrestamo.Size = new Size(99, 90);
             btnEditarPrestamo.TabIndex = 55;
             btnEditarPrestamo.UseVisualStyleBackColor = false;
+            btnEditarPrestamo.Click += btnEditarPrestamo_Click;
             // 
             // btnEliminarPrestamo
             // 
@@ -127,6 +128,7 @@
             btnAtrasLogo.TabIndex = 52;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // Usuario
             // 

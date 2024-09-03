@@ -76,7 +76,7 @@
             btnCancelar.TabIndex = 3;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
-            //btnCancelar.Click += this.button1_Click;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // VerificacionEditar
             // 

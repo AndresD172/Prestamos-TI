@@ -16,5 +16,16 @@ namespace InterfazGráfica
         {
             InitializeComponent();
         }
+
+        private void btnEditarSeccion_Click(object sender, EventArgs e)
+        {
+            EditarSeccion editar = new EditarSeccion();
+            editar.ShowDialog();
+        }
+
+        private void btnAtrasLogo_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

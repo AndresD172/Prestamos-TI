@@ -104,6 +104,7 @@
             btnEditarDepartamento.Size = new Size(99, 90);
             btnEditarDepartamento.TabIndex = 55;
             btnEditarDepartamento.UseVisualStyleBackColor = false;
+            btnEditarDepartamento.Click += btnEditarDepartamento_Click;
             // 
             // btnEliminarDepartamento
             // 
@@ -127,6 +128,7 @@
             btnAtrasLogo.TabIndex = 52;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // Usuario
             // 

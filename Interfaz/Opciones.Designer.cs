@@ -1,4 +1,5 @@
-﻿namespace InterfazGráfica
+﻿
+namespace InterfazGráfica
 {
     partial class Opciones
     {
@@ -46,6 +47,7 @@
             btnBuscar.TabIndex = 55;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // btnNuevo
             // 
@@ -60,6 +62,7 @@
             btnNuevo.TabIndex = 56;
             btnNuevo.Text = "Nuevo";
             btnNuevo.UseVisualStyleBackColor = false;
+            btnNuevo.Click += btnNuevo_Click;
             // 
             // Opciones
             // 
@@ -72,6 +75,8 @@
             Text = "Opciones";
             ResumeLayout(false);
         }
+
+
 
         #endregion
 

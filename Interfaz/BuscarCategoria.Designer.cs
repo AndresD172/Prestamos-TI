@@ -104,6 +104,7 @@
             btnEditarCategoria.Size = new Size(99, 90);
             btnEditarCategoria.TabIndex = 55;
             btnEditarCategoria.UseVisualStyleBackColor = false;
+            btnEditarCategoria.Click += btnEditarCategoria_Click;
             // 
             // btnEliminarCategoria
             // 
@@ -115,6 +116,7 @@
             btnEliminarCategoria.Size = new Size(99, 90);
             btnEliminarCategoria.TabIndex = 54;
             btnEliminarCategoria.UseVisualStyleBackColor = false;
+            btnEliminarCategoria.Click += btnEliminarCategoria_Click;
             // 
             // btnAtrasLogo
             // 
@@ -127,6 +129,7 @@
             btnAtrasLogo.TabIndex = 52;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // Usuario
             // 

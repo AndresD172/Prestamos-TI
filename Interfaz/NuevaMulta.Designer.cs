@@ -215,6 +215,7 @@
             btnGuardarMulta.TabIndex = 7;
             btnGuardarMulta.Text = "Nueva Multa";
             btnGuardarMulta.UseVisualStyleBackColor = false;
+            btnGuardarMulta.Click += btnGuardarMulta_Click;
             // 
             // label2
             // 

@@ -104,6 +104,7 @@
             btnEditarTipoMulta.Size = new Size(99, 90);
             btnEditarTipoMulta.TabIndex = 55;
             btnEditarTipoMulta.UseVisualStyleBackColor = false;
+            btnEditarTipoMulta.Click += btnEditarTipoMulta_Click;
             // 
             // btnEliminarTipoMulta
             // 
@@ -127,6 +128,7 @@
             btnAtrasLogo.TabIndex = 52;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // Usuario
             // 

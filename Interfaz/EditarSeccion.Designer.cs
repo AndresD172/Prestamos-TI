@@ -98,6 +98,7 @@
             btnEditarSeccion.TabIndex = 11;
             btnEditarSeccion.Text = "Editar Seccion";
             btnEditarSeccion.UseVisualStyleBackColor = false;
+            btnEditarSeccion.Click += btnEditarSeccion_Click;
             // 
             // label2
             // 
