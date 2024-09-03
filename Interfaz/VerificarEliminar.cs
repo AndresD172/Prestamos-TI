@@ -12,6 +12,8 @@ namespace InterfazGráfica
 {
     public partial class VerificarEliminar : Form
     {
+        public bool Seleccion { get; set; }
+
         public VerificarEliminar()
         {
             InitializeComponent();
@@ -19,12 +21,12 @@ namespace InterfazGráfica
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            Seleccion = true;
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Seleccion = false;
         }
     }
 }

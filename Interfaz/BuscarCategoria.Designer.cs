@@ -55,11 +55,12 @@
             btnBuscarCategoria.Size = new Size(71, 33);
             btnBuscarCategoria.TabIndex = 60;
             btnBuscarCategoria.UseVisualStyleBackColor = false;
+            btnBuscarCategoria.Click += btnBuscarCategoria_Click;
             // 
             // txtBusqueda
             // 
             txtBusqueda.BackColor = Color.FromArgb(229, 220, 252);
-            txtBusqueda.Font = new Font("Baskerville Old Face", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBusqueda.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtBusqueda.Location = new Point(350, 126);
             txtBusqueda.Name = "txtBusqueda";
             txtBusqueda.Size = new Size(911, 35);
@@ -70,7 +71,7 @@
             dataGridViewCategoria.BackgroundColor = Color.FromArgb(246, 236, 255);
             dataGridViewCategoria.BorderStyle = BorderStyle.Fixed3D;
             dataGridViewCategoria.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCategoria.Location = new Point(350, 222);
+            dataGridViewCategoria.Location = new Point(353, 256);
             dataGridViewCategoria.Name = "dataGridViewCategoria";
             dataGridViewCategoria.Size = new Size(998, 501);
             dataGridViewCategoria.TabIndex = 58;
@@ -78,20 +79,20 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
+            label2.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
             label2.Location = new Point(133, 283);
             label2.Name = "label2";
-            label2.Size = new Size(115, 43);
+            label2.Size = new Size(121, 42);
             label2.TabIndex = 57;
             label2.Text = "Editar";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
+            label4.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
             label4.Location = new Point(133, 186);
             label4.Name = "label4";
-            label4.Size = new Size(155, 43);
+            label4.Size = new Size(159, 42);
             label4.TabIndex = 56;
             label4.Text = "Eliminar";
             // 
@@ -142,10 +143,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
+            label1.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
             label1.Location = new Point(117, 25);
             label1.Name = "label1";
-            label1.Size = new Size(126, 43);
+            label1.Size = new Size(141, 42);
             label1.TabIndex = 49;
             label1.Text = "Buscar";
             // 
@@ -172,7 +173,7 @@
             // txtNombreUsuario
             // 
             txtNombreUsuario.BackColor = Color.FromArgb(251, 246, 255);
-            txtNombreUsuario.Font = new Font("Baskerville Old Face", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNombreUsuario.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtNombreUsuario.Location = new Point(1084, 36);
             txtNombreUsuario.Name = "txtNombreUsuario";
             txtNombreUsuario.Size = new Size(198, 31);
@@ -210,6 +211,7 @@
             Controls.Add(label3);
             Name = "BuscarCategoria";
             Text = "BuscarCategoria";
+            Load += BuscarCategoria_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewCategoria).EndInit();
             ResumeLayout(false);
             PerformLayout();

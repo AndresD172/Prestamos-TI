@@ -38,7 +38,7 @@
             // btnCancelar
             // 
             btnCancelar.BackColor = Color.FromArgb(180, 154, 248);
-            btnCancelar.Font = new Font("Baskerville Old Face", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancelar.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelar.Location = new Point(240, 280);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(155, 51);
@@ -50,7 +50,7 @@
             // btnEliminar
             // 
             btnEliminar.BackColor = Color.FromArgb(180, 154, 248);
-            btnEliminar.Font = new Font("Baskerville Old Face", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEliminar.Location = new Point(56, 280);
             btnEliminar.Name = "btnEliminar";
             btnEliminar.Size = new Size(155, 51);
@@ -62,10 +62,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(39, 143);
             label2.Name = "label2";
-            label2.Size = new Size(399, 86);
+            label2.Size = new Size(458, 84);
             label2.TabIndex = 5;
             label2.Text = "¿Esta seguro de realizar \r\nla eliminación?";
             label2.TextAlign = ContentAlignment.MiddleCenter;
