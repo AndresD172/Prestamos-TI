@@ -100,7 +100,7 @@ namespace InterfazGráfica
 
         }
 
-        private void btnOpcionBuscar_Click(object sender, EventArgs e)
+        private void btnOpcionBuscarUsuario_Click(object sender, EventArgs e)
         {
             /*if (opcion == "Usuario")
             {
@@ -140,7 +140,7 @@ namespace InterfazGráfica
 
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void btnNuevoUsuario_Click(object sender, EventArgs e)
         {
             NuevoUsuario nuevoUsuario = new NuevoUsuario();
             nuevoUsuario.Show();

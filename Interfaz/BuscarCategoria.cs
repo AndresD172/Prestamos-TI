@@ -60,9 +60,9 @@ namespace InterfazGráfica
             {
                 return;
             }
-            
+
             SeleccionarItemActual();
-            
+
             Respuesta respuesta;
             do
             {
@@ -95,6 +95,11 @@ namespace InterfazGráfica
 
             dataGridViewCategoria.DataSource = respuesta.Contenido;
             this.FormatearDataGrid();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
