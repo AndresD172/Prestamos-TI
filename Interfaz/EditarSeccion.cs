@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BL;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +12,11 @@ using System.Windows.Forms;
 
 namespace InterfazGráfica
 {
+
     public partial class EditarSeccion : Form
     {
+        private int Id { get; set; }
+
         public EditarSeccion()
         {
             InitializeComponent();
@@ -19,8 +24,29 @@ namespace InterfazGráfica
 
         private void btnEditarSeccion_Click(object sender, EventArgs e)
         {
-            VerificacionEditar editar = new VerificacionEditar();
-            editar.ShowDialog();
+            VerificacionEditar verificacionEditar = new VerificacionEditar();
+            verificacionEditar.Show();
+
+            bool ejecutarAccion = verificacionEditar.Seleccion;
+
+            if (!ejecutarAccion)
+            {
+                return;
+            }
+
+            EntidadSección entidadSeccion = new EntidadSección { IdSección = Id, Nombre = txtDescripcionSeccion.Text };
+
+            Respuesta respuesta;
+            do
+            {
+                respuesta = BLSeccion.ActualizarSeccion(entidadSeccion);
+
+                if (respuesta.CódigoEstado != 0)
+                {
+                    MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+            } while (respuesta.CódigoEstado != 0);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace InterfazGráfica
 {
-    partial class BuscarEstado
+    partial class BuscarEstadoPrestamo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarEstado));
-            btnBuscarEstado = new Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BuscarEstadoPrestamo));
             txtBusqueda = new TextBox();
             dataGridViewEstado = new DataGridView();
             label2 = new Label();
             label4 = new Label();
             btnEditarEstado = new Button();
             btnEliminarEstado = new Button();
-            btnAtrasLogo = new Button();
-            Usuario = new Label();
             label1 = new Label();
             panel2 = new Panel();
             panel1 = new Panel();
-            txtNombreUsuario = new TextBox();
             label3 = new Label();
+            Usuario = new Label();
+            txtNombreUsuario = new TextBox();
+            btnBuscarEstado = new Button();
+            btnAtrasLogo = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewEstado).BeginInit();
             SuspendLayout();
-            // 
-            // btnBuscarEstado
-            // 
-            btnBuscarEstado.BackColor = Color.FromArgb(255, 192, 255);
-            btnBuscarEstado.ForeColor = Color.FromArgb(251, 246, 255);
-            btnBuscarEstado.Location = new Point(1267, 129);
-            btnBuscarEstado.Name = "btnBuscarEstado";
-            btnBuscarEstado.Size = new Size(71, 33);
-            btnBuscarEstado.TabIndex = 60;
-            btnBuscarEstado.UseVisualStyleBackColor = false;
-            btnBuscarEstado.Click += btnBuscarEstado_Click;
             // 
             // txtBusqueda
             // 
@@ -64,7 +53,7 @@
             txtBusqueda.Location = new Point(350, 126);
             txtBusqueda.Name = "txtBusqueda";
             txtBusqueda.Size = new Size(911, 35);
-            txtBusqueda.TabIndex = 59;
+            txtBusqueda.TabIndex = 69;
             // 
             // dataGridViewEstado
             // 
@@ -74,7 +63,7 @@
             dataGridViewEstado.Location = new Point(350, 222);
             dataGridViewEstado.Name = "dataGridViewEstado";
             dataGridViewEstado.Size = new Size(998, 501);
-            dataGridViewEstado.TabIndex = 58;
+            dataGridViewEstado.TabIndex = 68;
             // 
             // label2
             // 
@@ -83,7 +72,7 @@
             label2.Location = new Point(133, 283);
             label2.Name = "label2";
             label2.Size = new Size(115, 43);
-            label2.TabIndex = 57;
+            label2.TabIndex = 67;
             label2.Text = "Editar";
             // 
             // label4
@@ -93,7 +82,7 @@
             label4.Location = new Point(133, 186);
             label4.Name = "label4";
             label4.Size = new Size(155, 43);
-            label4.TabIndex = 56;
+            label4.TabIndex = 66;
             label4.Text = "Eliminar";
             // 
             // btnEditarEstado
@@ -103,9 +92,8 @@
             btnEditarEstado.Location = new Point(12, 256);
             btnEditarEstado.Name = "btnEditarEstado";
             btnEditarEstado.Size = new Size(99, 90);
-            btnEditarEstado.TabIndex = 55;
+            btnEditarEstado.TabIndex = 65;
             btnEditarEstado.UseVisualStyleBackColor = false;
-            btnEditarEstado.Click += btnEditarEstado_Click;
             // 
             // btnEliminarEstado
             // 
@@ -115,30 +103,9 @@
             btnEliminarEstado.Location = new Point(12, 160);
             btnEliminarEstado.Name = "btnEliminarEstado";
             btnEliminarEstado.Size = new Size(99, 90);
-            btnEliminarEstado.TabIndex = 54;
+            btnEliminarEstado.TabIndex = 64;
             btnEliminarEstado.UseVisualStyleBackColor = false;
             btnEliminarEstado.Click += btnEliminarEstado_Click;
-            // 
-            // btnAtrasLogo
-            // 
-            btnAtrasLogo.BackColor = Color.FromArgb(239, 221, 254);
-            btnAtrasLogo.Image = (Image)resources.GetObject("btnAtrasLogo.Image");
-            btnAtrasLogo.Location = new Point(9, 654);
-            btnAtrasLogo.Margin = new Padding(0);
-            btnAtrasLogo.Name = "btnAtrasLogo";
-            btnAtrasLogo.Size = new Size(137, 69);
-            btnAtrasLogo.TabIndex = 52;
-            btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAtrasLogo.UseVisualStyleBackColor = false;
-            btnAtrasLogo.Click += btnAtrasLogo_Click;
-            // 
-            // Usuario
-            // 
-            Usuario.Image = (Image)resources.GetObject("Usuario.Image");
-            Usuario.Location = new Point(1288, 24);
-            Usuario.Name = "Usuario";
-            Usuario.Size = new Size(50, 43);
-            Usuario.TabIndex = 50;
             // 
             // label1
             // 
@@ -147,7 +114,7 @@
             label1.Location = new Point(117, 25);
             label1.Name = "label1";
             label1.Size = new Size(126, 43);
-            label1.TabIndex = 49;
+            label1.TabIndex = 62;
             label1.Text = "Buscar";
             // 
             // panel2
@@ -158,7 +125,7 @@
             panel2.MinimumSize = new Size(1, 1);
             panel2.Name = "panel2";
             panel2.Size = new Size(10, 623);
-            panel2.TabIndex = 48;
+            panel2.TabIndex = 61;
             // 
             // panel1
             // 
@@ -168,18 +135,7 @@
             panel1.MinimumSize = new Size(1, 1);
             panel1.Name = "panel1";
             panel1.Size = new Size(1352, 10);
-            panel1.TabIndex = 47;
-            // 
-            // txtNombreUsuario
-            // 
-            txtNombreUsuario.BackColor = Color.FromArgb(251, 246, 255);
-            txtNombreUsuario.Font = new Font("Baskerville Old Face", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreUsuario.Location = new Point(1084, 36);
-            txtNombreUsuario.Name = "txtNombreUsuario";
-            txtNombreUsuario.Size = new Size(198, 31);
-            txtNombreUsuario.TabIndex = 51;
-            txtNombreUsuario.Text = "Nombre del usuario";
-            txtNombreUsuario.TextAlign = HorizontalAlignment.Center;
+            panel1.TabIndex = 60;
             // 
             // label3
             // 
@@ -187,30 +143,71 @@
             label3.Location = new Point(2, 6);
             label3.Name = "label3";
             label3.Size = new Size(141, 89);
-            label3.TabIndex = 53;
+            label3.TabIndex = 63;
             // 
-            // BuscarEstado
+            // Usuario
+            // 
+            Usuario.Image = (Image)resources.GetObject("Usuario.Image");
+            Usuario.Location = new Point(1290, 39);
+            Usuario.Name = "Usuario";
+            Usuario.Size = new Size(50, 43);
+            Usuario.TabIndex = 70;
+            // 
+            // txtNombreUsuario
+            // 
+            txtNombreUsuario.BackColor = Color.FromArgb(251, 246, 255);
+            txtNombreUsuario.Font = new Font("Baskerville Old Face", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNombreUsuario.Location = new Point(1086, 51);
+            txtNombreUsuario.Name = "txtNombreUsuario";
+            txtNombreUsuario.Size = new Size(198, 31);
+            txtNombreUsuario.TabIndex = 71;
+            txtNombreUsuario.Text = "Nombre del usuario";
+            txtNombreUsuario.TextAlign = HorizontalAlignment.Center;
+            // 
+            // btnBuscarEstado
+            // 
+            btnBuscarEstado.BackColor = Color.FromArgb(255, 192, 255);
+            btnBuscarEstado.ForeColor = Color.FromArgb(251, 246, 255);
+            btnBuscarEstado.Location = new Point(1269, 129);
+            btnBuscarEstado.Name = "btnBuscarEstado";
+            btnBuscarEstado.Size = new Size(71, 33);
+            btnBuscarEstado.TabIndex = 72;
+            btnBuscarEstado.UseVisualStyleBackColor = false;
+            btnBuscarEstado.Click += btnBuscarEstado_Click;
+            // 
+            // btnAtrasLogo
+            // 
+            btnAtrasLogo.BackColor = Color.FromArgb(239, 221, 254);
+            btnAtrasLogo.Image = (Image)resources.GetObject("btnAtrasLogo.Image");
+            btnAtrasLogo.Location = new Point(12, 649);
+            btnAtrasLogo.Margin = new Padding(0);
+            btnAtrasLogo.Name = "btnAtrasLogo";
+            btnAtrasLogo.Size = new Size(137, 69);
+            btnAtrasLogo.TabIndex = 73;
+            btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAtrasLogo.UseVisualStyleBackColor = false;
+            // 
+            // BuscarEstadoPrestamo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnAtrasLogo);
             Controls.Add(btnBuscarEstado);
+            Controls.Add(Usuario);
+            Controls.Add(txtNombreUsuario);
             Controls.Add(txtBusqueda);
             Controls.Add(dataGridViewEstado);
             Controls.Add(label2);
             Controls.Add(label4);
             Controls.Add(btnEditarEstado);
             Controls.Add(btnEliminarEstado);
-            Controls.Add(btnAtrasLogo);
-            Controls.Add(Usuario);
             Controls.Add(label1);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Controls.Add(txtNombreUsuario);
             Controls.Add(label3);
-            Name = "BuscarEstado";
-            Text = "BuscarEstado";
+            Name = "BuscarEstadoPrestamo";
+            Text = "BuscarEstadoPrestamo";
             ((System.ComponentModel.ISupportInitialize)dataGridViewEstado).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -218,19 +215,19 @@
 
         #endregion
 
-        private Button btnBuscarEstado;
         private TextBox txtBusqueda;
         private DataGridView dataGridViewEstado;
         private Label label2;
         private Label label4;
         private Button btnEditarEstado;
         private Button btnEliminarEstado;
-        private Button btnAtrasLogo;
-        private Label Usuario;
         private Label label1;
         private Panel panel2;
         private Panel panel1;
-        private TextBox txtNombreUsuario;
         private Label label3;
+        private Label Usuario;
+        private TextBox txtNombreUsuario;
+        private Button btnBuscarEstado;
+        private Button btnAtrasLogo;
     }
 }
