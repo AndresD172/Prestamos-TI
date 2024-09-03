@@ -26,10 +26,6 @@ namespace InterfazGráfica
  
         }
 
-        private void btnOpcionBuscar_Click(object sender, EventArgs e)
-        {
-        }
-
         private void btnNuevo_Click(object sender, EventArgs e)
         {
 
