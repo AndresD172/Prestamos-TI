@@ -25,7 +25,7 @@ namespace InterfazGráfica
         private void btnEditarCategoria_Click(object sender, EventArgs e)
         {
             VerificacionEditar verificacionEditar = new VerificacionEditar();
-            verificacionEditar.Show();
+            verificacionEditar.ShowDialog();
 
             bool ejecutarAccion = verificacionEditar.Seleccion;
 
