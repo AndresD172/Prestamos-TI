@@ -104,6 +104,7 @@
             btnEditarEspecialidad.Size = new Size(99, 90);
             btnEditarEspecialidad.TabIndex = 55;
             btnEditarEspecialidad.UseVisualStyleBackColor = false;
+            btnEditarEspecialidad.Click += btnEditarEspecialidad_Click;
             // 
             // btnEliminarEspecialidad
             // 
@@ -127,6 +128,7 @@
             btnAtrasLogo.TabIndex = 52;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // Usuario
             // 

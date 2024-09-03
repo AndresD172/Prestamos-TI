@@ -1,4 +1,5 @@
-﻿namespace InterfazGráfica
+﻿
+namespace InterfazGráfica
 {
     partial class BuscarSeccion
     {
@@ -104,6 +105,7 @@
             btnEditarSeccion.Size = new Size(99, 90);
             btnEditarSeccion.TabIndex = 55;
             btnEditarSeccion.UseVisualStyleBackColor = false;
+            btnEditarSeccion.Click += btnEditarSeccion_Click;
             // 
             // btnEliminarSeccion
             // 
@@ -127,6 +129,7 @@
             btnAtrasLogo.TabIndex = 52;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // Usuario
             // 
@@ -184,6 +187,7 @@
             label3.Name = "label3";
             label3.Size = new Size(141, 89);
             label3.TabIndex = 53;
+            label3.Click += label3_Click;
             // 
             // BuscarSeccion
             // 
@@ -210,6 +214,11 @@
             ((System.ComponentModel.ISupportInitialize)dataGridViewSeccion).EndInit();
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

@@ -59,6 +59,7 @@
             btnHome.Size = new Size(99, 88);
             btnHome.TabIndex = 0;
             btnHome.UseVisualStyleBackColor = false;
+            btnHome.Click += btnHome_Click;
             // 
             // panel1
             // 

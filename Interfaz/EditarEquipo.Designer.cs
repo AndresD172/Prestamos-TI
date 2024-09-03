@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarEquipo));
             panel1 = new Panel();
-            txtDescripciónEquipo = new TextBox();
+            btnCategoria = new Button();
+            btnModelo = new Button();
             txtCategoríaEquipo = new TextBox();
             txtEstadoEquipo = new TextBox();
             txtModeloEquipo = new TextBox();
             txSerieEquipo = new TextBox();
-            label8 = new Label();
             label7 = new Label();
             label1 = new Label();
             label6 = new Label();
@@ -44,8 +44,6 @@
             panel2 = new Panel();
             btnEditarEquipo = new Button();
             label2 = new Label();
-            btnCategoria = new Button();
-            btnModelo = new Button();
             panelCategoria = new Panel();
             btnCerrarCategoria = new Button();
             btnBuscarCategoria = new Button();
@@ -56,25 +54,41 @@
             btnBuscarModelo = new Button();
             txtBuscarModelo = new TextBox();
             dataGridViewModelo = new DataGridView();
+            txtMarca = new TextBox();
+            label3 = new Label();
+            txtDescripciónEquipo = new TextBox();
+            label8 = new Label();
+            btnEquipo = new Button();
+            panelEquipo = new Panel();
+            btnBuscarEquipo = new Button();
+            btnCerrarEquipo = new Button();
+            dataGridViewEquipo = new DataGridView();
+            txtBuscarEquipo = new TextBox();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panelCategoria.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewCategoria).BeginInit();
             panelModelo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewModelo).BeginInit();
+            panelEquipo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEquipo).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(btnEquipo);
+            panel1.Controls.Add(txtMarca);
+            panel1.Controls.Add(label3);
             panel1.Controls.Add(btnCategoria);
-            panel1.Controls.Add(btnModelo);
             panel1.Controls.Add(txtDescripciónEquipo);
+            panel1.Controls.Add(btnModelo);
+            panel1.Controls.Add(label8);
             panel1.Controls.Add(txtCategoríaEquipo);
             panel1.Controls.Add(txtEstadoEquipo);
             panel1.Controls.Add(txtModeloEquipo);
             panel1.Controls.Add(txSerieEquipo);
-            panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(label6);
@@ -85,13 +99,21 @@
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 8;
             // 
-            // txtDescripciónEquipo
+            // btnCategoria
             // 
-            txtDescripciónEquipo.Font = new Font("Segoe UI", 12F);
-            txtDescripciónEquipo.Location = new Point(258, 288);
-            txtDescripciónEquipo.Name = "txtDescripciónEquipo";
-            txtDescripciónEquipo.Size = new Size(233, 29);
-            txtDescripciónEquipo.TabIndex = 10;
+            btnCategoria.Location = new Point(417, 220);
+            btnCategoria.Name = "btnCategoria";
+            btnCategoria.Size = new Size(28, 23);
+            btnCategoria.TabIndex = 16;
+            btnCategoria.UseVisualStyleBackColor = true;
+            // 
+            // btnModelo
+            // 
+            btnModelo.Location = new Point(417, 141);
+            btnModelo.Name = "btnModelo";
+            btnModelo.Size = new Size(28, 23);
+            btnModelo.TabIndex = 15;
+            btnModelo.UseVisualStyleBackColor = true;
             // 
             // txtCategoríaEquipo
             // 
@@ -124,16 +146,6 @@
             txSerieEquipo.Name = "txSerieEquipo";
             txSerieEquipo.Size = new Size(233, 29);
             txSerieEquipo.TabIndex = 6;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(295, 248);
-            label8.Name = "label8";
-            label8.Size = new Size(153, 28);
-            label8.TabIndex = 5;
-            label8.Text = "Descripción";
             // 
             // label7
             // 
@@ -214,22 +226,6 @@
             label2.Size = new Size(122, 44);
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
-            // 
-            // btnCategoria
-            // 
-            btnCategoria.Location = new Point(417, 220);
-            btnCategoria.Name = "btnCategoria";
-            btnCategoria.Size = new Size(28, 23);
-            btnCategoria.TabIndex = 16;
-            btnCategoria.UseVisualStyleBackColor = true;
-            // 
-            // btnModelo
-            // 
-            btnModelo.Location = new Point(417, 141);
-            btnModelo.Name = "btnModelo";
-            btnModelo.Size = new Size(28, 23);
-            btnModelo.TabIndex = 15;
-            btnModelo.UseVisualStyleBackColor = true;
             // 
             // panelCategoria
             // 
@@ -321,13 +317,116 @@
             dataGridViewModelo.Size = new Size(276, 177);
             dataGridViewModelo.TabIndex = 17;
             // 
+            // txtMarca
+            // 
+            txtMarca.Font = new Font("Segoe UI", 12F);
+            txtMarca.Location = new Point(51, 310);
+            txtMarca.Name = "txtMarca";
+            txtMarca.Size = new Size(233, 29);
+            txtMarca.TabIndex = 18;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Location = new Point(51, 266);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 28);
+            label3.TabIndex = 17;
+            label3.Text = "Marca";
+            // 
+            // txtDescripciónEquipo
+            // 
+            txtDescripciónEquipo.Font = new Font("Segoe UI", 12F);
+            txtDescripciónEquipo.Location = new Point(451, 310);
+            txtDescripciónEquipo.Name = "txtDescripciónEquipo";
+            txtDescripciónEquipo.Size = new Size(233, 29);
+            txtDescripciónEquipo.TabIndex = 16;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.Location = new Point(451, 266);
+            label8.Name = "label8";
+            label8.Size = new Size(153, 28);
+            label8.TabIndex = 15;
+            label8.Text = "Descripción";
+            // 
+            // btnEquipo
+            // 
+            btnEquipo.Location = new Point(290, 147);
+            btnEquipo.Name = "btnEquipo";
+            btnEquipo.Size = new Size(25, 23);
+            btnEquipo.TabIndex = 27;
+            btnEquipo.UseVisualStyleBackColor = true;
+            // 
+            // panelEquipo
+            // 
+            panelEquipo.Controls.Add(btnBuscarEquipo);
+            panelEquipo.Controls.Add(btnCerrarEquipo);
+            panelEquipo.Controls.Add(dataGridViewEquipo);
+            panelEquipo.Controls.Add(txtBuscarEquipo);
+            panelEquipo.Location = new Point(12, 215);
+            panelEquipo.Name = "panelEquipo";
+            panelEquipo.Size = new Size(276, 235);
+            panelEquipo.TabIndex = 28;
+            // 
+            // btnBuscarEquipo
+            // 
+            btnBuscarEquipo.Location = new Point(208, 12);
+            btnBuscarEquipo.Name = "btnBuscarEquipo";
+            btnBuscarEquipo.Size = new Size(25, 23);
+            btnBuscarEquipo.TabIndex = 17;
+            btnBuscarEquipo.UseVisualStyleBackColor = true;
+            // 
+            // btnCerrarEquipo
+            // 
+            btnCerrarEquipo.Location = new Point(237, 12);
+            btnCerrarEquipo.Name = "btnCerrarEquipo";
+            btnCerrarEquipo.Size = new Size(25, 23);
+            btnCerrarEquipo.TabIndex = 20;
+            btnCerrarEquipo.UseVisualStyleBackColor = true;
+            // 
+            // dataGridViewEquipo
+            // 
+            dataGridViewEquipo.AllowUserToAddRows = false;
+            dataGridViewEquipo.AllowUserToDeleteRows = false;
+            dataGridViewEquipo.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewEquipo.Location = new Point(0, 60);
+            dataGridViewEquipo.Name = "dataGridViewEquipo";
+            dataGridViewEquipo.ReadOnly = true;
+            dataGridViewEquipo.Size = new Size(276, 177);
+            dataGridViewEquipo.TabIndex = 16;
+            // 
+            // txtBuscarEquipo
+            // 
+            txtBuscarEquipo.Font = new Font("Segoe UI", 12F);
+            txtBuscarEquipo.Location = new Point(3, 8);
+            txtBuscarEquipo.Name = "txtBuscarEquipo";
+            txtBuscarEquipo.Size = new Size(202, 29);
+            txtBuscarEquipo.TabIndex = 11;
+            // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 29;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // ModificarEquipo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panelCategoria);
+            Controls.Add(panelEquipo);
             Controls.Add(panelModelo);
             Controls.Add(panel1);
             Controls.Add(panel2);
@@ -343,18 +442,19 @@
             panelModelo.ResumeLayout(false);
             panelModelo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewModelo).EndInit();
+            panelEquipo.ResumeLayout(false);
+            panelEquipo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewEquipo).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private TextBox txtDescripciónEquipo;
         private TextBox txtCategoríaEquipo;
         private TextBox txtEstadoEquipo;
         private TextBox txtModeloEquipo;
         private TextBox txSerieEquipo;
-        private Label label8;
         private Label label7;
         private Label label1;
         private Label label6;
@@ -375,5 +475,16 @@
         private Button btnBuscarModelo;
         private TextBox txtBuscarModelo;
         private DataGridView dataGridViewModelo;
+        private TextBox txtMarca;
+        private Label label3;
+        private TextBox txtDescripciónEquipo;
+        private Label label8;
+        private Button btnEquipo;
+        private Panel panelEquipo;
+        private Button btnBuscarEquipo;
+        private Button btnCerrarEquipo;
+        private DataGridView dataGridViewEquipo;
+        private TextBox txtBuscarEquipo;
+        private Button btnCancelar;
     }
 }

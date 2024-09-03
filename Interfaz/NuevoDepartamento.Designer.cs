@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoDepartamento));
             panel1 = new Panel();
+            txtDescripcionDepartamento = new TextBox();
             label7 = new Label();
             label4 = new Label();
             panel2 = new Panel();
             btnGuardarDepartamento = new Button();
             label2 = new Label();
-            txtDescripcionDepartamento = new TextBox();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -50,6 +51,14 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 8;
+            // 
+            // txtDescripcionDepartamento
+            // 
+            txtDescripcionDepartamento.Font = new Font("Segoe UI", 12F);
+            txtDescripcionDepartamento.Location = new Point(249, 201);
+            txtDescripcionDepartamento.Name = "txtDescripcionDepartamento";
+            txtDescripcionDepartamento.Size = new Size(233, 29);
+            txtDescripcionDepartamento.TabIndex = 10;
             // 
             // label7
             // 
@@ -89,6 +98,7 @@
             btnGuardarDepartamento.TabIndex = 7;
             btnGuardarDepartamento.Text = "Nuevo Departamento";
             btnGuardarDepartamento.UseVisualStyleBackColor = false;
+            btnGuardarDepartamento.Click += btnGuardarDepartamento_Click;
             // 
             // label2
             // 
@@ -100,13 +110,16 @@
             label2.TabIndex = 1;
             label2.Text = "LOGIN";
             // 
-            // txtDescripcionDepartamento
+            // btnCancelar
             // 
-            txtDescripcionDepartamento.Font = new Font("Segoe UI", 12F);
-            txtDescripcionDepartamento.Location = new Point(249, 201);
-            txtDescripcionDepartamento.Name = "txtDescripcionDepartamento";
-            txtDescripcionDepartamento.Size = new Size(233, 29);
-            txtDescripcionDepartamento.TabIndex = 10;
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
             // 
             // NuevoDepartamento
             // 
@@ -114,6 +127,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panel1);
             Controls.Add(panel2);
             Name = "NuevoDepartamento";
@@ -144,5 +158,6 @@
         private Button btnGuardarDepartamento;
         private Label label2;
         private TextBox txtDescripcionDepartamento;
+        private Button btnCancelar;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BL;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,34 @@ namespace InterfazGráfica
         public NuevaSeccion()
         {
             InitializeComponent();
+        }
+
+        private void btnGuardarSeccion_Click(object sender, EventArgs e)
+        {
+            //Comprueba que todos los campos de datos hayan sido ingresados
+            if (txtDescripciónSeccion.Text == String.Empty)
+            {
+                MessageBox.Show("Ingrese todos los datos requeridos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                EntidadSección seccion = new EntidadSección();
+                Respuesta respuesta;
+                //Asigna los datos que se ingresaron
+                seccion.Nombre = txtDescripciónSeccion.Text.Trim();
+
+                respuesta = BLSeccion.RegistrarSeccion(seccion);
+
+                //Detección de errores
+                if (respuesta.CódigoEstado == 0)
+                {
+                    MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

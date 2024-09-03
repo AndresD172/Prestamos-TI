@@ -60,6 +60,7 @@
             btnCerrarTipoMulta = new Button();
             txtBuscarTipoMulta = new TextBox();
             dataGridViewTipoMulta = new DataGridView();
+            btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTecnico).BeginInit();
@@ -214,6 +215,7 @@
             btnGuardarMulta.TabIndex = 7;
             btnGuardarMulta.Text = "Nueva Multa";
             btnGuardarMulta.UseVisualStyleBackColor = false;
+            btnGuardarMulta.Click += btnGuardarMulta_Click;
             // 
             // label2
             // 
@@ -361,12 +363,24 @@
             dataGridViewTipoMulta.Size = new Size(276, 177);
             dataGridViewTipoMulta.TabIndex = 0;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Baskerville Old Face", 26.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.Location = new Point(12, 667);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(172, 50);
+            btnCancelar.TabIndex = 30;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // FormNuevaMulta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
             ClientSize = new Size(1350, 729);
+            Controls.Add(btnCancelar);
             Controls.Add(panelTipoMulta);
             Controls.Add(panelTecnico);
             Controls.Add(panelPrestatario);
@@ -423,5 +437,6 @@
         private Button btnCerrarPrestatarios;
         private Button btnCerrarTecnico;
         private Button btnCerrarTipoMulta;
+        private Button btnCancelar;
     }
 }
