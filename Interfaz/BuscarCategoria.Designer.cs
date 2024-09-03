@@ -148,6 +148,7 @@
             label1.Size = new Size(141, 42);
             label1.TabIndex = 49;
             label1.Text = "Buscar";
+            label1.Click += label1_Click;
             // 
             // panel2
             // 

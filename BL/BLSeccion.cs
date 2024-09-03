@@ -12,27 +12,27 @@ namespace BL
     {
         public static Respuesta RegistrarSeccion(EntidadSección seccion)
         {
-            DALSeccion dalseccion = new DALSeccion();
+            DALSeccion DalSeccion = new DALSeccion();
 
-            return dalseccion.RegistrarSeccion(seccion);
+            return DalSeccion.RegistrarSeccion(seccion);
         }
         public static Respuesta ListarSeccion(string cTexto)
         {
-            DALSeccion dalseccion = new DALSeccion();
+            DALSeccion DalSeccion = new DALSeccion();
 
-            return dalseccion.ListarSeccion(cTexto);
+            return DalSeccion.ListarSeccion(cTexto);
         }
         public static Respuesta EliminarSeccion(int IdSeccion)
         {
-            DALSeccion dalseccion = new DALSeccion();
+            DALSeccion DalSeccion = new DALSeccion();
 
-            return dalseccion.EliminarSeccion(IdSeccion);
+            return DalSeccion.EliminarSeccion(IdSeccion);
         }
         public static Respuesta ActualizarSeccion(EntidadSección seccion)
         {
-            DALSeccion dalseccion = new DALSeccion();
+            DALSeccion DalSeccion = new DALSeccion();
 
-            return dalseccion.RegistrarSeccion(seccion);
+            return DalSeccion.RegistrarSeccion(seccion);
         }
     }
 }

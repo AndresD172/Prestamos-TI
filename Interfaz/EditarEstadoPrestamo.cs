@@ -12,12 +12,11 @@ using System.Windows.Forms;
 
 namespace InterfazGráfica
 {
-    public partial class EditarEstado : Form
-
+    public partial class EditarEstadoPrestamo : Form
     {
         private int Id { get; set; }
 
-        public EditarEstado(int id)
+        public EditarEstadoPrestamo(int id)
         {
             InitializeComponent();
             this.Id = id;
@@ -35,12 +34,12 @@ namespace InterfazGráfica
                 return;
             }
 
-            EntidadEstadoEquipo entidadEstado = new EntidadEstadoEquipo { IdEstadoEquipo = Id, Nombre = txtDescripcionEstado.Text };
+            EntidadEstadoPréstamo entidadEstado = new EntidadEstadoPréstamo { IdEstadosPréstamo = Id, Nombre = txtDescripcionEstado.Text };
 
             Respuesta respuesta;
             do
             {
-                respuesta = BLEstadoEquipo.ActualizarEstadoEquipo(entidadEstado);
+                respuesta = BLEstadoPrestamo.ActualizarEstadoPrestamo(entidadEstado);
 
                 if (respuesta.CódigoEstado != 0)
                 {

@@ -230,6 +230,7 @@
             txtNombreUsuario.TabIndex = 16;
             txtNombreUsuario.Text = "Nombre del usuario";
             txtNombreUsuario.TextAlign = HorizontalAlignment.Center;
+            txtNombreUsuario.TextChanged += txtNombreUsuario_TextChanged;
             // 
             // label7
             // 

@@ -12,27 +12,27 @@ namespace BL
     {
         public static  Respuesta RegistrarEspecialidad(EntidadEspecialidad especialidad) 
         {
-            DALEspecialidad dalespecialidad = new DALEspecialidad();
+            DALEspecialidad DalEspecialidad = new DALEspecialidad();
 
-            return dalespecialidad.RegistrarEspecialidad(especialidad);
+            return DalEspecialidad.RegistrarEspecialidad(especialidad);
         }
         public static Respuesta ListarEspecialidad(string cTexto)
         {
-            DALEspecialidad dalespecialidad = new DALEspecialidad();
+            DALEspecialidad DalEspecialidad = new DALEspecialidad();
 
-            return dalespecialidad.ListarEspecialidad(cTexto);
+            return DalEspecialidad.ListarEspecialidad(cTexto);
         }
         public static Respuesta EliminarEspecialidad(int IdEspecialidad)
         {
-            DALEspecialidad dalespecialidad = new DALEspecialidad();
+            DALEspecialidad DalEspecialidad = new DALEspecialidad();
 
-            return dalespecialidad.EliminarEspecialidad(IdEspecialidad);
+            return DalEspecialidad.EliminarEspecialidad(IdEspecialidad);
         }
         public static Respuesta ActualizarEspecialidad(EntidadEspecialidad especialidad)
         {
-            DALEspecialidad dalespecialidad = new DALEspecialidad();
+            DALEspecialidad DalEspecialidad = new DALEspecialidad();
 
-            return dalespecialidad.ActualizarEspecialidad(especialidad);
+            return DalEspecialidad.ActualizarEspecialidad(especialidad);
         }
     }
 }

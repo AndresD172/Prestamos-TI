@@ -1,57 +1,55 @@
-﻿using System;
+﻿using BL;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BL;
-using Entidades;
 
 namespace InterfazGráfica
 {
-    public partial class BuscarCategoria : Form
+    public partial class BuscarEstadoPrestamo : Form
     {
         private int Id { get; set; }
         private String Nombre { get; set; }
 
-        public BuscarCategoria()
+        public BuscarEstadoPrestamo()
         {
             InitializeComponent();
         }
 
         private void FormatearDataGrid()
         {
-            dataGridViewCategoria.Columns[0].Width = 80;
-            dataGridViewCategoria.Columns[0].HeaderText = "Id";
-            dataGridViewCategoria.Columns[1].HeaderText = "Nombre";
+            dataGridViewEstado.Columns[0].HeaderText = "Id";
+            dataGridViewEstado.Columns[1].HeaderText = "Nombre";
         }
 
-        private void BuscarCategoria_Load(object sender, EventArgs e)
+        private void BuscarEstado_Load(object sender, EventArgs e)
         {
-            dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%").Contenido;
             this.FormatearDataGrid();
+            dataGridViewEstado.DataSource = BLEstadoPrestamo.ListarEstadoPrestamo("%");
         }
 
         private void SeleccionarItemActual()
         {
-            if (String.IsNullOrEmpty(Convert.ToString(dataGridViewCategoria.CurrentRow.Cells["Id"].Value)))
+            if (String.IsNullOrEmpty(Convert.ToString(dataGridViewEstado.CurrentRow.Cells["Id"].Value)))
             {
                 MessageBox.Show("No hay datos por seleccionar", "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            this.Id = Convert.ToInt16(dataGridViewCategoria.CurrentRow.Cells["id"].Value);
-            this.Nombre = Convert.ToString(dataGridViewCategoria.CurrentRow.Cells["nombre"].Value);
+            this.Id = Convert.ToInt16(dataGridViewEstado.CurrentRow.Cells["id"].Value);
+            this.Nombre = Convert.ToString(dataGridViewEstado.CurrentRow.Cells["nombre"].Value);
         }
 
-        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        private void btnEliminarEstado_Click(object sender, EventArgs e)
         {
             VerificarEliminar verificarEliminar = new VerificarEliminar();
-            verificarEliminar.ShowDialog();
+            verificarEliminar.Show();
 
             bool eliminarDato = verificarEliminar.Seleccion;
 
@@ -67,9 +65,7 @@ namespace InterfazGráfica
             Respuesta respuesta;
             do
             {
-                respuesta = BLCategoria.EliminarCategoria(this.Id);
-
-                dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%").Contenido;
+                respuesta = BLEstadoPrestamo.EliminarEstadoPrestamo(this.Id);
 
                 if (respuesta.CódigoEstado != 0)
                 {
@@ -79,16 +75,21 @@ namespace InterfazGráfica
             } while (respuesta.CódigoEstado != 0);
         }
 
-        private void btnEditarCategoria_Click(object sender, EventArgs e)
+        private void btnEditarEstado_Click(object sender, EventArgs e)
         {
             this.SeleccionarItemActual();
-            EditarCategoria editarCategoria = new EditarCategoria(this.Id);
-            editarCategoria.Show();
+            EditarEstadoPrestamo editar = new EditarEstadoPrestamo(this.Id);
+            editar.Show();
         }
 
-        private void btnBuscarCategoria_Click(object sender, EventArgs e)
+        private void btnAtrasLogo_Click(object sender, EventArgs e)
         {
-            Respuesta respuesta = BLCategoria.ListarCategoria(txtBusqueda.Text);
+            this.Close();
+        }
+
+        private void btnBuscarEstado_Click(object sender, EventArgs e)
+        {
+            Respuesta respuesta = BLEstadoPrestamo.ListarEstadoPrestamo(txtBusqueda.Text);
 
             if (respuesta.CódigoEstado != 0)
             {
@@ -96,13 +97,9 @@ namespace InterfazGráfica
                 return;
             }
 
-            dataGridViewCategoria.DataSource = respuesta.Contenido;
+            dataGridViewEstado.DataSource = respuesta.Contenido;
             this.FormatearDataGrid();
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+    }
     }
 }

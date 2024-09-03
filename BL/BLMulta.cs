@@ -12,27 +12,27 @@ namespace BL
     {
         public Respuesta RegistrarMulta(EntidadMulta multa)
         {
-            DALMulta dalmulta = new DALMulta();
+            DALMulta DalMulta = new DALMulta();
 
-            return dalmulta.RegistrarMulta(multa);
+            return DalMulta.RegistrarMulta(multa);
         }
         public Respuesta ListarMulta(string cTexto)
         {
-            DALMulta dalmulta = new DALMulta();
+            DALMulta DalMulta = new DALMulta();
 
-            return dalmulta.ListarMulta(cTexto);
+            return DalMulta.ListarMulta(cTexto);
         }
         public Respuesta EliminarMulta(int IdMulta)
         {
-            DALMulta dalmulta = new DALMulta();
+            DALMulta DalMulta = new DALMulta();
 
-            return dalmulta.EliminarMulta(IdMulta);
+            return DalMulta.EliminarMulta(IdMulta);
         }
         public Respuesta ActualizarMulta(EntidadMulta multa)
         {
-            DALMulta dalmulta = new DALMulta();
+            DALMulta DalMulta = new DALMulta();
 
-            return dalmulta.ActualizarMulta(multa);
+            return DalMulta.ActualizarMulta(multa);
         }
     }
 }
