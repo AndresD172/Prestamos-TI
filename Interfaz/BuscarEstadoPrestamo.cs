@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace InterfazGráfica
 {
-    public partial class BuscarEstado : Form
+    public partial class BuscarEstadoPrestamo : Form
     {
         private int Id { get; set; }
         private String Nombre { get; set; }
 
-        public BuscarEstado()
+        public BuscarEstadoPrestamo()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace InterfazGráfica
         private void BuscarEstado_Load(object sender, EventArgs e)
         {
             this.FormatearDataGrid();
-            dataGridViewEstado.DataSource = BLEstadoEquipo.ListarEstadoEquipo("%");
+            dataGridViewEstado.DataSource = BLEstadoPrestamo.ListarEstadoPrestamo("%");
         }
 
         private void SeleccionarItemActual()
@@ -65,7 +65,7 @@ namespace InterfazGráfica
             Respuesta respuesta;
             do
             {
-                respuesta = BLEstadoEquipo.EliminarEstadoEquipo(this.Id);
+                respuesta = BLEstadoPrestamo.EliminarEstadoPrestamo(this.Id);
 
                 if (respuesta.CódigoEstado != 0)
                 {
@@ -78,7 +78,7 @@ namespace InterfazGráfica
         private void btnEditarEstado_Click(object sender, EventArgs e)
         {
             this.SeleccionarItemActual();
-            EditarEstado editar = new EditarEstado(this.Id);
+            EditarEstadoPrestamo editar = new EditarEstadoPrestamo(this.Id);
             editar.Show();
         }
 
@@ -89,7 +89,7 @@ namespace InterfazGráfica
 
         private void btnBuscarEstado_Click(object sender, EventArgs e)
         {
-            Respuesta respuesta = BLEstadoEquipo.ListarEstadoEquipo(txtBusqueda.Text);
+            Respuesta respuesta = BLEstadoPrestamo.ListarEstadoPrestamo(txtBusqueda.Text);
 
             if (respuesta.CódigoEstado != 0)
             {
@@ -100,5 +100,6 @@ namespace InterfazGráfica
             dataGridViewEstado.DataSource = respuesta.Contenido;
             this.FormatearDataGrid();
         }
+    }
     }
 }
