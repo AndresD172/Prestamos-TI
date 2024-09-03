@@ -98,6 +98,7 @@
             btnGuardarSeccion.TabIndex = 7;
             btnGuardarSeccion.Text = "Nueva Sección";
             btnGuardarSeccion.UseVisualStyleBackColor = false;
+            btnGuardarSeccion.Click += btnGuardarSeccion_Click;
             // 
             // label2
             // 

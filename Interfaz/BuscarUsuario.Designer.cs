@@ -52,6 +52,7 @@
             txtNombreUsuario.Font = new Font("Baskerville Old Face", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtNombreUsuario.Location = new Point(1084, 33);
             txtNombreUsuario.Name = "txtNombreUsuario";
+            txtNombreUsuario.ReadOnly = true;
             txtNombreUsuario.Size = new Size(198, 31);
             txtNombreUsuario.TabIndex = 22;
             txtNombreUsuario.Text = "Nombre del usuario";
@@ -106,6 +107,7 @@
             btnAtrasLogo.TabIndex = 23;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // label3
             // 
@@ -144,6 +146,7 @@
             btnEditarUsuario.Size = new Size(99, 90);
             btnEditarUsuario.TabIndex = 27;
             btnEditarUsuario.UseVisualStyleBackColor = false;
+            btnEditarUsuario.Click += btnEditarUsuario_Click;
             // 
             // btnEliminarUsuario
             // 

@@ -81,9 +81,15 @@ namespace InterfazGráfica
 
         }
 
-        private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
+        private void btnHome_Click(object sender, EventArgs e)
         {
-            txtNombreUsuario.Clear();
+
+            OtrasOpciones opciones=new OtrasOpciones();
+            opciones.StartPosition = FormStartPosition.Manual;
+            opciones.Left = 1;
+            opciones.Top = 145;
+            opciones.ShowDialog();
+
         }
     }
 }

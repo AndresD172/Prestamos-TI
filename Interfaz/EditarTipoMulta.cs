@@ -16,5 +16,11 @@ namespace InterfazGráfica
         {
             InitializeComponent();
         }
+
+        private void btnEditarTipoMulta_Click(object sender, EventArgs e)
+        {
+            VerificacionEditar editar = new VerificacionEditar();
+            editar.ShowDialog();
+        }
     }
 }

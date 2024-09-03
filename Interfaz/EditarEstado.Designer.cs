@@ -98,6 +98,7 @@
             btnEditarEstado.TabIndex = 11;
             btnEditarEstado.Text = "Editar Estado";
             btnEditarEstado.UseVisualStyleBackColor = false;
+            btnEditarEstado.Click += btnEditarEstado_Click;
             // 
             // label2
             // 

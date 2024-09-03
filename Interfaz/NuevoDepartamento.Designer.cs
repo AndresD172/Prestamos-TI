@@ -98,6 +98,7 @@
             btnGuardarDepartamento.TabIndex = 7;
             btnGuardarDepartamento.Text = "Nuevo Departamento";
             btnGuardarDepartamento.UseVisualStyleBackColor = false;
+            btnGuardarDepartamento.Click += btnGuardarDepartamento_Click;
             // 
             // label2
             // 

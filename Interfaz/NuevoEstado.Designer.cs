@@ -98,6 +98,7 @@
             btnGuardarEstado.TabIndex = 7;
             btnGuardarEstado.Text = "Nuevo Estado";
             btnGuardarEstado.UseVisualStyleBackColor = false;
+            btnGuardarEstado.Click += btnGuardarEstado_Click;
             // 
             // label2
             // 

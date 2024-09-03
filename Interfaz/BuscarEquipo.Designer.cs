@@ -94,6 +94,7 @@
             btnEditarEquipo.Size = new Size(99, 90);
             btnEditarEquipo.TabIndex = 40;
             btnEditarEquipo.UseVisualStyleBackColor = false;
+            btnEditarEquipo.Click += btnEditarEquipo_Click;
             // 
             // btnEliminarEquipo
             // 
@@ -117,6 +118,7 @@
             btnAtrasLogo.TabIndex = 37;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
+            btnAtrasLogo.Click += btnAtrasLogo_Click;
             // 
             // Usuario
             // 

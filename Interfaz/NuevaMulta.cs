@@ -36,5 +36,10 @@ namespace InterfazGráfica
         {
 
         }
+
+        private void btnGuardarMulta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

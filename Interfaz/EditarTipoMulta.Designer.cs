@@ -98,6 +98,7 @@
             btnEditarTipoMulta.TabIndex = 11;
             btnEditarTipoMulta.Text = "Editar TipoMulta";
             btnEditarTipoMulta.UseVisualStyleBackColor = false;
+            btnEditarTipoMulta.Click += btnEditarTipoMulta_Click;
             // 
             // label2
             // 

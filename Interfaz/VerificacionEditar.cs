@@ -12,6 +12,8 @@ namespace InterfazGráfica
 {
     public partial class VerificacionEditar : Form
     {
+        public bool Seleccion {  get; set; }
+
         public VerificacionEditar()
         {
             InitializeComponent();
@@ -19,7 +21,14 @@ namespace InterfazGráfica
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            Seleccion = true;
+            this.Close();
+        }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Seleccion = false;
+            this.Close();
         }
     }
 }
