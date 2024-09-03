@@ -116,6 +116,7 @@
             btnEliminarDepartamento.Size = new Size(99, 90);
             btnEliminarDepartamento.TabIndex = 54;
             btnEliminarDepartamento.UseVisualStyleBackColor = false;
+            btnEliminarDepartamento.Click += btnEliminarDepartamento_Click;
             // 
             // btnAtrasLogo
             // 
