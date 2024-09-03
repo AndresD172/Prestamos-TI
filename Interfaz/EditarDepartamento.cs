@@ -17,10 +17,10 @@ namespace InterfazGráfica
 
         private int IdDepartamento { get; set; }
 
-        public EditarDepartamento()
+        public EditarDepartamento(int id)
         {
             InitializeComponent();
-            this.IdDepartamento = IdDepartamento;
+            this.IdDepartamento = id;
         }
 
         private void btnEditarDepartamento_Click(object sender, EventArgs e)
@@ -49,6 +49,7 @@ namespace InterfazGráfica
 
             } while (respuesta.CódigoEstado != 0);
 
+            MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

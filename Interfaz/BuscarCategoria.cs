@@ -61,22 +61,25 @@ namespace InterfazGráfica
             {
                 return;
             }
-
+            
             SeleccionarItemActual();
-
+            
             Respuesta respuesta;
             do
             {
                 respuesta = BLCategoria.EliminarCategoria(this.Id);
 
-                dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%").Contenido;
-
                 if (respuesta.CódigoEstado != 0)
                 {
                     MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    continue;
                 }
+                
+                dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%").Contenido;
 
             } while (respuesta.CódigoEstado != 0);
+
+            MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnEditarCategoria_Click(object sender, EventArgs e)
@@ -98,11 +101,6 @@ namespace InterfazGráfica
 
             dataGridViewCategoria.DataSource = respuesta.Contenido;
             this.FormatearDataGrid();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
