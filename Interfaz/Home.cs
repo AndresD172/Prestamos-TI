@@ -24,7 +24,7 @@ namespace InterfazGráfica
 
         private void btnUsuarioLogo_Click(object sender, EventArgs e)
         {
-            OpcionesTecnico formOpciones = new OpcionesTecnico();
+            Opciones formOpciones = new Opciones();
             formOpciones.StartPosition = FormStartPosition.Manual;
             formOpciones.Left = 125;
             formOpciones.Top = 140;
