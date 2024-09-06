@@ -1,6 +1,6 @@
 ﻿namespace InterfazGráfica
 {
-    partial class VerificarEliminar
+    partial class VerificacionEliminacion
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerificarEliminar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerificacionEliminacion));
             btnCancelar = new Button();
             btnEliminar = new Button();
             label2 = new Label();

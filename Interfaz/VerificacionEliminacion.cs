@@ -10,20 +10,22 @@ using System.Windows.Forms;
 
 namespace InterfazGráfica
 {
-    public partial class VerificarEliminar : Form
+    public partial class VerificacionEliminacion : Form
     {
-        public VerificarEliminar()
+        public VerificacionEliminacion()
         {
             InitializeComponent();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
     }
