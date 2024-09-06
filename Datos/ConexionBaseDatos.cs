@@ -14,7 +14,7 @@ namespace DAL
         private ConexionBaseDatos()
         {
             //Nombre de la BD
-            this._BaseDatos = "Sistema_Préstamos";
+            this._BaseDatos = "sistema_prestamos";
             //Nombre Servidor
             this._Server = "localhost";
             this._Seguridad = true;
@@ -28,7 +28,7 @@ namespace DAL
             try
             {
 
-                cadena.ConnectionString = "Server =" + this._Server + ";Database=" + this._BaseDatos + ";";
+                cadena.ConnectionString = "Server =" + this._Server + ";Database=" + this._BaseDatos + ";Encrypt=True;TrustServerCertificate=True;";
 
                 if (_Seguridad)
                 {

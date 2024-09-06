@@ -1,6 +1,6 @@
 ﻿namespace InterfazGráfica
 {
-    partial class FormNuevaMulta
+    partial class NuevaMulta
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevaMulta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaMulta));
             panel1 = new Panel();
             btnTecnico = new Button();
             btnTipoMulta = new Button();

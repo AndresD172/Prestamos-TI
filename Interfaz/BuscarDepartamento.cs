@@ -30,8 +30,8 @@ namespace InterfazGráfica
 
         private void BuscarDepartamento_Load(object sender, EventArgs e)
         {
-            this.FormatearDataGrid();
             dataGridViewDepartamento.DataSource = BLDepartamento.ListarDepartamento("%");
+            this.FormatearDataGrid();
         }
 
         private void SeleccionarItemActual()
@@ -48,7 +48,8 @@ namespace InterfazGráfica
 
         private void btnEditarDepartamento_Click(object sender, EventArgs e)
         {
-            EditarDepartamento editar = new EditarDepartamento();
+            this.SeleccionarItemActual();
+            EditarDepartamento editar = new EditarDepartamento(this.IdDepartamento);
             editar.ShowDialog();
         }
 
@@ -61,7 +62,7 @@ namespace InterfazGráfica
         {
 
             VerificarEliminar verificarEliminar = new VerificarEliminar();
-            verificarEliminar.Show();
+            verificarEliminar.ShowDialog();
 
             bool eliminarDato = verificarEliminar.Seleccion;
 
@@ -82,10 +83,14 @@ namespace InterfazGráfica
                 if (respuesta.CódigoEstado != 0)
                 {
                     MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    continue;
                 }
+                
+                dataGridViewDepartamento.DataSource = BLDepartamento.ListarDepartamento("%").Contenido;
 
             } while (respuesta.CódigoEstado != 0);
 
+            MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

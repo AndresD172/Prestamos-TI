@@ -25,14 +25,15 @@ namespace InterfazGráfica
 
         private void FormatearDataGrid()
         {
+            dataGridViewCategoria.Columns[0].Width = 80;
             dataGridViewCategoria.Columns[0].HeaderText = "Id";
             dataGridViewCategoria.Columns[1].HeaderText = "Nombre";
         }
 
         private void BuscarCategoria_Load(object sender, EventArgs e)
         {
+            dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%").Contenido;
             this.FormatearDataGrid();
-            dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%");
         }
 
         private void SeleccionarItemActual()
@@ -50,7 +51,7 @@ namespace InterfazGráfica
         private void btnEliminarCategoria_Click(object sender, EventArgs e)
         {
             VerificarEliminar verificarEliminar = new VerificarEliminar();
-            verificarEliminar.Show();
+            verificarEliminar.ShowDialog();
 
             bool eliminarDato = verificarEliminar.Seleccion;
 
@@ -60,9 +61,9 @@ namespace InterfazGráfica
             {
                 return;
             }
-
+            
             SeleccionarItemActual();
-
+            
             Respuesta respuesta;
             do
             {
@@ -71,9 +72,14 @@ namespace InterfazGráfica
                 if (respuesta.CódigoEstado != 0)
                 {
                     MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    continue;
                 }
+                
+                dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria("%").Contenido;
 
             } while (respuesta.CódigoEstado != 0);
+
+            MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnEditarCategoria_Click(object sender, EventArgs e)
@@ -96,7 +102,7 @@ namespace InterfazGráfica
             dataGridViewCategoria.DataSource = respuesta.Contenido;
             this.FormatearDataGrid();
         }
-
+        
         private void btnAtrasLogo_Click(object sender, EventArgs e)
         {
             Close();
