@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace InterfazGráfica
 {
-    public partial class FormNuevaMulta : Form
+    public partial class NuevaMulta : Form
     {
-        public FormNuevaMulta()
+        public NuevaMulta()
         {
             InitializeComponent();
         }

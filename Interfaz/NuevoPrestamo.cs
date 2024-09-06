@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace InterfazGráfica
 {
-    public partial class FormNuevoPréstamo : Form
+    public partial class NuevoPrestamo : Form
     {
-        public FormNuevoPréstamo()
+        public NuevoPrestamo()
         {
             InitializeComponent();
         }

@@ -22,7 +22,6 @@ namespace InterfazGráfica
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-
             this.Close();
 
             switch (opcion)
@@ -47,10 +46,9 @@ namespace InterfazGráfica
                     nuevoPrestamoOpcion.Show();
                     break;
 
-                case "Multas":
-                    Nuev
-                    nuevaMulta.Show();
-                    break;
+            }
+            if (opcion == "Prestatario")
+            {
 
                 case "TipoMulta":
                     NuevoTipoMulta nuevoTipoMulta = new NuevoTipoMulta();

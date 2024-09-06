@@ -1,6 +1,6 @@
 ﻿namespace InterfazGráfica
 {
-    partial class FormNuevoPréstamo
+    partial class NuevoPrestamo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevoPréstamo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPrestamo));
             panel1 = new Panel();
             btnEstado = new Button();
             btnPrestatario = new Button();
