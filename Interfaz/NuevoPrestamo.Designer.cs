@@ -183,6 +183,7 @@
             txEquipoPréstamo.Name = "txEquipoPréstamo";
             txEquipoPréstamo.Size = new Size(233, 29);
             txEquipoPréstamo.TabIndex = 6;
+            txEquipoPréstamo.TextChanged += txEquipoPréstamo_TextChanged;
             // 
             // label8
             // 

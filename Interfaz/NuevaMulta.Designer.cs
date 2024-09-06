@@ -146,6 +146,7 @@
             txtPrestatarioMulta.Name = "txtPrestatarioMulta";
             txtPrestatarioMulta.Size = new Size(233, 29);
             txtPrestatarioMulta.TabIndex = 6;
+            txtPrestatarioMulta.TextChanged += txtPrestatarioMulta_TextChanged;
             // 
             // label7
             // 
@@ -215,7 +216,7 @@
             btnGuardarMulta.TabIndex = 7;
             btnGuardarMulta.Text = "Nueva Multa";
             btnGuardarMulta.UseVisualStyleBackColor = false;
-            btnGuardarMulta.Click += btnGuardarMulta_Click;
+            btnGuardarMulta.Click += BtnGuardarMulta_Click;
             // 
             // label2
             // 
@@ -402,6 +403,11 @@
             panelTipoMulta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTipoMulta).EndInit();
             ResumeLayout(false);
+        }
+
+        private void BtnGuardarMulta_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
