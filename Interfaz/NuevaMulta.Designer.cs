@@ -146,6 +146,7 @@
             txtPrestatarioMulta.Name = "txtPrestatarioMulta";
             txtPrestatarioMulta.Size = new Size(233, 29);
             txtPrestatarioMulta.TabIndex = 6;
+            txtPrestatarioMulta.TextChanged += txtPrestatarioMulta_TextChanged;
             // 
             // label7
             // 
