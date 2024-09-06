@@ -46,9 +46,10 @@ namespace InterfazGráfica
                     nuevoPrestamoOpcion.Show();
                     break;
 
-
-
-
+                case "Multas":
+                    NuevaMulta nuevaMulta = new NuevaMulta();
+                    nuevaMulta.Show();
+                    break;
 
                 case "TipoMulta":
                     NuevoTipoMulta nuevoTipoMulta = new NuevoTipoMulta();
@@ -82,72 +83,72 @@ namespace InterfazGráfica
 
                 default:
                     break;
-                }
-            }
-
-            private void btnBuscar_Click(object sender, EventArgs e)
-            {
-                this.Close();
-                switch (opcion)
-                {
-                    case "Usuario":
-                        BuscarUsuario buscarUsuario = new BuscarUsuario();
-                        buscarUsuario.Show();
-                        break;
-
-                    case "Prestatario":
-                        BuscarPrestatarios buscarPrestatarios = new BuscarPrestatarios();
-                        buscarPrestatarios.Show();
-                        break;
-
-                    case "Equipo":
-                        BuscarEquipo buscarEquipo = new BuscarEquipo();
-                        buscarEquipo.Show();
-                        break;
-
-                    case "Prestamos":
-                        BuscarPrestamos buscarPrestamo = new BuscarPrestamos();
-                        buscarPrestamo.Show();
-                        break;
-
-                    case "Multas":
-                        BuscarMultas buscarMulta = new BuscarMultas();
-                        buscarMulta.Show();
-                        break;
-
-                    case "TipoMulta":
-                        BuscarTipoMulta buscarTipoMulta = new BuscarTipoMulta();
-                        buscarTipoMulta.Show();
-                        break;
-
-                    case "Categoria":
-                        BuscarCategoria buscarCategoria = new BuscarCategoria();
-                        buscarCategoria.Show();
-                        break;
-
-                    case "Especialidad":
-                        BuscarEspecialidad buscarEspecialidad = new BuscarEspecialidad();
-                        buscarEspecialidad.Show();
-                        break;
-
-                    case "Estado":
-                        BuscarEstado buscarEstado = new BuscarEstado();
-                        buscarEstado.Show();
-                        break;
-
-                    case "Seccion":
-                        BuscarSeccion buscarSeccion = new BuscarSeccion();
-                        buscarSeccion.Show();
-                        break;
-
-                    case "Departamento":
-                        BuscarDepartamento buscarDepartamento = new BuscarDepartamento();
-                        buscarDepartamento.Show();
-                        break;
-
-                    default:
-                        break;
-                }
             }
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            switch (opcion)
+            {
+                case "Usuario":
+                    BuscarUsuario buscarUsuario = new BuscarUsuario();
+                    buscarUsuario.Show();
+                    break;
+
+                case "Prestatario":
+                    BuscarPrestatarios buscarPrestatarios = new BuscarPrestatarios();
+                    buscarPrestatarios.Show();
+                    break;
+
+                case "Equipo":
+                    BuscarEquipo buscarEquipo = new BuscarEquipo();
+                    buscarEquipo.Show();
+                    break;
+
+                case "Prestamos":
+                    BuscarPrestamos buscarPrestamo = new BuscarPrestamos();
+                    buscarPrestamo.Show();
+                    break;
+
+                case "Multas":
+                    BuscarMultas buscarMulta = new BuscarMultas();
+                    buscarMulta.Show();
+                    break;
+
+                case "TipoMulta":
+                    BuscarTipoMulta buscarTipoMulta = new BuscarTipoMulta();
+                    buscarTipoMulta.Show();
+                    break;
+
+                case "Categoria":
+                    BuscarCategoria buscarCategoria = new BuscarCategoria();
+                    buscarCategoria.Show();
+                    break;
+
+                case "Especialidad":
+                    BuscarEspecialidad buscarEspecialidad = new BuscarEspecialidad();
+                    buscarEspecialidad.Show();
+                    break;
+
+                case "Estado":
+                    BuscarEstado buscarEstado = new BuscarEstado();
+                    buscarEstado.Show();
+                    break;
+
+                case "Seccion":
+                    BuscarSeccion buscarSeccion = new BuscarSeccion();
+                    buscarSeccion.Show();
+                    break;
+
+                case "Departamento":
+                    BuscarDepartamento buscarDepartamento = new BuscarDepartamento();
+                    buscarDepartamento.Show();
+                    break;
+
+                default:
+                    break;
+            }
+        }
+    }
 }
