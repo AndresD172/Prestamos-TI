@@ -265,5 +265,10 @@ namespace InterfazGráfica
                 }
             }
         }
+
+        private void txEquipoPréstamo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

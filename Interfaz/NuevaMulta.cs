@@ -37,7 +37,12 @@ namespace InterfazGráfica
 
         }
 
-        private void btnGuardarMulta_Click(object sender, EventArgs e)
+        private void btnNuevaMulta_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrestatarioMulta_TextChanged(object sender, EventArgs e)
         {
 
         }
