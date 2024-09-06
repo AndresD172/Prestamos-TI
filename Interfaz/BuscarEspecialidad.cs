@@ -53,7 +53,7 @@ namespace InterfazGráfica
         private void btnEditarEspecialidad_Click(object sender, EventArgs e)
         {
             this.SeleccionarItemActual();
-            EditarEspecialidad editarEspecialidad = new EditarEspecialidad(this.Id);
+            EditarEspecialidad editarEspecialidad = new EditarEspecialidad(/*this.Id*/);
             editarEspecialidad.Show();
         }
 
@@ -74,33 +74,33 @@ namespace InterfazGráfica
             this.Close();
         }
 
-        private void btnEliminarEspecialidad_Click(object sender, EventArgs e)
-        {
-            VerificarEliminar verificarEliminar = new VerificarEliminar();
-            verificarEliminar.Show();
+        //private void btnEliminarEspecialidad_Click(object sender, EventArgs e)
+        //{
+        //    VerificarEliminar verificarEliminar = new VerificarEliminar();
+        //    verificarEliminar.Show();
 
-            bool eliminarDato = verificarEliminar.Seleccion;
+        //    bool eliminarDato = verificarEliminar.Seleccion;
 
-            verificarEliminar.Close();
+        //    verificarEliminar.Close();
 
-            if (!eliminarDato)
-            {
-                return;
-            }
+        //    if (!eliminarDato)
+        //    {
+        //        return;
+        //    }
 
-            SeleccionarItemActual();
+        //    SeleccionarItemActual();
 
-            Respuesta respuesta;
-            do
-            {
-                respuesta = BLEspecialidad.EliminarEspecialidad(this.Id);
+        //    Respuesta respuesta;
+        //    do
+        //    {
+        //        respuesta = BLEspecialidad.EliminarEspecialidad(this.Id);
 
-                if (respuesta.CódigoEstado != 0)
-                {
-                    MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+        //        if (respuesta.CódigoEstado != 0)
+        //        {
+        //            MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
 
-            } while (respuesta.CódigoEstado != 0);
-        }
+        //    } while (respuesta.CódigoEstado != 0);
+        //}
     }
 }

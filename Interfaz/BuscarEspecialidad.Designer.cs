@@ -116,7 +116,7 @@
             btnEliminarEspecialidad.Size = new Size(99, 90);
             btnEliminarEspecialidad.TabIndex = 54;
             btnEliminarEspecialidad.UseVisualStyleBackColor = false;
-            btnEliminarEspecialidad.Click += btnEliminarEspecialidad_Click;
+            //btnEliminarEspecialidad.Click += btnEliminarEspecialidad_Click;
             // 
             // btnAtrasLogo
             // 
