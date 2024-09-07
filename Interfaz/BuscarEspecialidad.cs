@@ -53,7 +53,7 @@ namespace InterfazGráfica
         private void btnEditarEspecialidad_Click(object sender, EventArgs e)
         {
             this.SeleccionarItemActual();
-            EditarEspecialidad editarEspecialidad = new EditarEspecialidad(/*this.Id*/);
+            EditarEspecialidad editarEspecialidad = new EditarEspecialidad(this.Id);
             editarEspecialidad.Show();
         }
 
