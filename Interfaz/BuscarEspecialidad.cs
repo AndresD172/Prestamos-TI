@@ -76,31 +76,25 @@ namespace InterfazGráfica
 
         private void btnEliminarEspecialidad_Click(object sender, EventArgs e)
         {
-            VerificarEliminar verificarEliminar = new VerificarEliminar();
-            verificarEliminar.Show();
+            VerificacionEliminacion ventanaConfirmacion = new VerificacionEliminacion();
+            ventanaConfirmacion.ShowDialog();
 
-            bool eliminarDato = verificarEliminar.Seleccion;
-
-            verificarEliminar.Close();
-
-            if (!eliminarDato)
+            if (ventanaConfirmacion.DialogResult == DialogResult.Cancel)
             {
                 return;
             }
 
             SeleccionarItemActual();
 
-            Respuesta respuesta;
-            do
+            Respuesta respuesta = BLEspecialidad.EliminarEspecialidad(this.Id);
+
+            if (respuesta.CódigoEstado != 0)
             {
-                respuesta = BLEspecialidad.EliminarEspecialidad(this.Id);
+                MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-                if (respuesta.CódigoEstado != 0)
-                {
-                    MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            } while (respuesta.CódigoEstado != 0);
+            dataGridViewEspecialidad.DataSource = BLEspecialidad.ListarEspecialidad("%").Contenido;
         }
     }
 }
