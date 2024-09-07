@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoEquipo));
             panel1 = new Panel();
+            btnNuevaCategoria = new Button();
+            btnNuevoEstado = new Button();
             txtMarca = new TextBox();
             label3 = new Label();
             btnCategoria = new Button();
@@ -70,6 +72,8 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(btnNuevaCategoria);
+            panel1.Controls.Add(btnNuevoEstado);
             panel1.Controls.Add(txtMarca);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(btnCategoria);
@@ -89,6 +93,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
+            // 
+            // btnNuevaCategoria
+            // 
+            btnNuevaCategoria.BackgroundImage = (Image)resources.GetObject("btnNuevaCategoria.BackgroundImage");
+            btnNuevaCategoria.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevaCategoria.Location = new Point(690, 219);
+            btnNuevaCategoria.Name = "btnNuevaCategoria";
+            btnNuevaCategoria.Size = new Size(32, 28);
+            btnNuevaCategoria.TabIndex = 32;
+            btnNuevaCategoria.UseVisualStyleBackColor = true;
+            btnNuevaCategoria.Click += btnNuevaCategoria_Click;
+            // 
+            // btnNuevoEstado
+            // 
+            btnNuevoEstado.BackgroundImage = (Image)resources.GetObject("btnNuevoEstado.BackgroundImage");
+            btnNuevoEstado.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevoEstado.Location = new Point(13, 215);
+            btnNuevoEstado.Name = "btnNuevoEstado";
+            btnNuevoEstado.Size = new Size(32, 28);
+            btnNuevoEstado.TabIndex = 31;
+            btnNuevoEstado.UseVisualStyleBackColor = true;
+            btnNuevoEstado.Click += btnNuevoEstado_Click;
             // 
             // txtMarca
             // 
@@ -110,6 +136,8 @@
             // 
             // btnCategoria
             // 
+            btnCategoria.BackgroundImage = (Image)resources.GetObject("btnCategoria.BackgroundImage");
+            btnCategoria.BackgroundImageLayout = ImageLayout.Center;
             btnCategoria.Location = new Point(417, 222);
             btnCategoria.Name = "btnCategoria";
             btnCategoria.Size = new Size(28, 23);
@@ -119,6 +147,8 @@
             // 
             // btnEstadoEquipo
             // 
+            btnEstadoEquipo.BackgroundImage = (Image)resources.GetObject("btnEstadoEquipo.BackgroundImage");
+            btnEstadoEquipo.BackgroundImageLayout = ImageLayout.Center;
             btnEstadoEquipo.Location = new Point(290, 222);
             btnEstadoEquipo.Name = "btnEstadoEquipo";
             btnEstadoEquipo.Size = new Size(28, 23);
@@ -267,6 +297,7 @@
             panelEstadoEquipo.Name = "panelEstadoEquipo";
             panelEstadoEquipo.Size = new Size(276, 235);
             panelEstadoEquipo.TabIndex = 7;
+            panelEstadoEquipo.Visible = false;
             // 
             // btnCerrarEstadoEquipo
             // 
@@ -315,6 +346,7 @@
             panelCategoria.Name = "panelCategoria";
             panelCategoria.Size = new Size(276, 235);
             panelCategoria.TabIndex = 8;
+            panelCategoria.Visible = false;
             // 
             // btnCerrarCategoria
             // 
@@ -361,7 +393,7 @@
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(172, 50);
             btnCancelar.TabIndex = 30;
-            btnCancelar.Text = "Cancelar";
+            btnCancelar.Text = "Salir";
             btnCancelar.UseVisualStyleBackColor = false;
             btnCancelar.Click += btnCancelar_Click;
             // 
@@ -423,5 +455,7 @@
         private TextBox txtMarca;
         private Label label3;
         private Button btnCancelar;
+        private Button btnNuevaCategoria;
+        private Button btnNuevoEstado;
     }
 }

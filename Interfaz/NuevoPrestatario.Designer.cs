@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPrestatario));
             panel1 = new Panel();
+            btnNuevoDepartamento = new Button();
+            btnNuevaEspecialidad = new Button();
+            btnNuevaSeccion = new Button();
             btnEspecialidad = new Button();
             btnSeccion = new Button();
             btnDepartamento = new Button();
@@ -87,6 +90,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(btnNuevoDepartamento);
+            panel1.Controls.Add(btnNuevaEspecialidad);
+            panel1.Controls.Add(btnNuevaSeccion);
             panel1.Controls.Add(btnEspecialidad);
             panel1.Controls.Add(btnSeccion);
             panel1.Controls.Add(btnDepartamento);
@@ -110,8 +116,43 @@
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
             // 
+            // btnNuevoDepartamento
+            // 
+            btnNuevoDepartamento.BackgroundImage = (Image)resources.GetObject("btnNuevoDepartamento.BackgroundImage");
+            btnNuevoDepartamento.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevoDepartamento.Location = new Point(688, 260);
+            btnNuevoDepartamento.Name = "btnNuevoDepartamento";
+            btnNuevoDepartamento.Size = new Size(32, 28);
+            btnNuevoDepartamento.TabIndex = 26;
+            btnNuevoDepartamento.UseVisualStyleBackColor = true;
+            btnNuevoDepartamento.Click += btnNuevoDepartamento_Click;
+            // 
+            // btnNuevaEspecialidad
+            // 
+            btnNuevaEspecialidad.BackgroundImage = (Image)resources.GetObject("btnNuevaEspecialidad.BackgroundImage");
+            btnNuevaEspecialidad.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevaEspecialidad.Location = new Point(220, 322);
+            btnNuevaEspecialidad.Name = "btnNuevaEspecialidad";
+            btnNuevaEspecialidad.Size = new Size(32, 28);
+            btnNuevaEspecialidad.TabIndex = 25;
+            btnNuevaEspecialidad.UseVisualStyleBackColor = true;
+            btnNuevaEspecialidad.Click += btnNuevaEspecialidad_Click;
+            // 
+            // btnNuevaSeccion
+            // 
+            btnNuevaSeccion.BackgroundImage = (Image)resources.GetObject("btnNuevaSeccion.BackgroundImage");
+            btnNuevaSeccion.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevaSeccion.Location = new Point(11, 260);
+            btnNuevaSeccion.Name = "btnNuevaSeccion";
+            btnNuevaSeccion.Size = new Size(32, 28);
+            btnNuevaSeccion.TabIndex = 24;
+            btnNuevaSeccion.UseVisualStyleBackColor = true;
+            btnNuevaSeccion.Click += btnNuevaSeccion_Click;
+            // 
             // btnEspecialidad
             // 
+            btnEspecialidad.BackgroundImage = (Image)resources.GetObject("btnEspecialidad.BackgroundImage");
+            btnEspecialidad.BackgroundImageLayout = ImageLayout.Center;
             btnEspecialidad.Location = new Point(497, 328);
             btnEspecialidad.Name = "btnEspecialidad";
             btnEspecialidad.Size = new Size(25, 23);
@@ -121,18 +162,22 @@
             // 
             // btnSeccion
             // 
-            btnSeccion.Location = new Point(288, 264);
+            btnSeccion.BackgroundImage = (Image)resources.GetObject("btnSeccion.BackgroundImage");
+            btnSeccion.BackgroundImageLayout = ImageLayout.Center;
+            btnSeccion.Location = new Point(288, 261);
             btnSeccion.Name = "btnSeccion";
-            btnSeccion.Size = new Size(25, 23);
+            btnSeccion.Size = new Size(32, 28);
             btnSeccion.TabIndex = 22;
             btnSeccion.UseVisualStyleBackColor = true;
             btnSeccion.Click += btnSeccion_Click;
             // 
             // btnDepartamento
             // 
-            btnDepartamento.Location = new Point(418, 260);
+            btnDepartamento.BackgroundImage = (Image)resources.GetObject("btnDepartamento.BackgroundImage");
+            btnDepartamento.BackgroundImageLayout = ImageLayout.Center;
+            btnDepartamento.Location = new Point(413, 260);
             btnDepartamento.Name = "btnDepartamento";
-            btnDepartamento.Size = new Size(25, 23);
+            btnDepartamento.Size = new Size(30, 23);
             btnDepartamento.TabIndex = 21;
             btnDepartamento.UseVisualStyleBackColor = true;
             btnDepartamento.Click += btnDepartamento_Click;
@@ -313,6 +358,7 @@
             panelSeccion.Name = "panelSeccion";
             panelSeccion.Size = new Size(276, 235);
             panelSeccion.TabIndex = 17;
+            panelSeccion.Visible = false;
             // 
             // btnBuscarSeccion
             // 
@@ -363,6 +409,7 @@
             panelDepartamento.Name = "panelDepartamento";
             panelDepartamento.Size = new Size(276, 235);
             panelDepartamento.TabIndex = 21;
+            panelDepartamento.Visible = false;
             // 
             // panel3
             // 
@@ -458,6 +505,7 @@
             panelEspecialidad.Name = "panelEspecialidad";
             panelEspecialidad.Size = new Size(276, 235);
             panelEspecialidad.TabIndex = 22;
+            panelEspecialidad.Visible = false;
             // 
             // btnBuscarEspecialidad
             // 
@@ -505,8 +553,9 @@
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(172, 50);
             btnCancelar.TabIndex = 30;
-            btnCancelar.Text = "Cancelar";
+            btnCancelar.Text = "Salir";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // NuevoPrestatario
             // 
@@ -587,5 +636,9 @@
         private DataGridView dataGridViewEspecialidad;
         private TextBox txtBuscarEspecialidad;
         private Button btnCancelar;
+        private Button button3;
+        private Button btnNuevaEspecialidad;
+        private Button btnNuevaSeccion;
+        private Button btnNuevoDepartamento;
     }
 }

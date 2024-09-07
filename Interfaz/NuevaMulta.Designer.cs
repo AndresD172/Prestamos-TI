@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevaMulta));
             panel1 = new Panel();
+            btnNuevoTipoMulta = new Button();
+            btnNuevoPrestatario = new Button();
+            btnNuevoTecnico = new Button();
             btnTecnico = new Button();
             btnTipoMulta = new Button();
             btnPrestatario = new Button();
@@ -74,6 +77,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(btnNuevoTipoMulta);
+            panel1.Controls.Add(btnNuevoPrestatario);
+            panel1.Controls.Add(btnNuevoTecnico);
             panel1.Controls.Add(btnTecnico);
             panel1.Controls.Add(btnTipoMulta);
             panel1.Controls.Add(btnPrestatario);
@@ -91,8 +97,43 @@
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
             // 
+            // btnNuevoTipoMulta
+            // 
+            btnNuevoTipoMulta.BackgroundImage = (Image)resources.GetObject("btnNuevoTipoMulta.BackgroundImage");
+            btnNuevoTipoMulta.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevoTipoMulta.Location = new Point(14, 267);
+            btnNuevoTipoMulta.Name = "btnNuevoTipoMulta";
+            btnNuevoTipoMulta.Size = new Size(32, 28);
+            btnNuevoTipoMulta.TabIndex = 31;
+            btnNuevoTipoMulta.UseVisualStyleBackColor = true;
+            btnNuevoTipoMulta.Click += btnNuevoTipoMulta_Click;
+            // 
+            // btnNuevoPrestatario
+            // 
+            btnNuevoPrestatario.BackgroundImage = (Image)resources.GetObject("btnNuevoPrestatario.BackgroundImage");
+            btnNuevoPrestatario.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevoPrestatario.Location = new Point(14, 157);
+            btnNuevoPrestatario.Name = "btnNuevoPrestatario";
+            btnNuevoPrestatario.Size = new Size(32, 28);
+            btnNuevoPrestatario.TabIndex = 32;
+            btnNuevoPrestatario.UseVisualStyleBackColor = true;
+            btnNuevoPrestatario.Click += btnNuevoPrestatario_Click;
+            // 
+            // btnNuevoTecnico
+            // 
+            btnNuevoTecnico.BackgroundImage = (Image)resources.GetObject("btnNuevoTecnico.BackgroundImage");
+            btnNuevoTecnico.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevoTecnico.Location = new Point(691, 156);
+            btnNuevoTecnico.Name = "btnNuevoTecnico";
+            btnNuevoTecnico.Size = new Size(32, 28);
+            btnNuevoTecnico.TabIndex = 33;
+            btnNuevoTecnico.UseVisualStyleBackColor = true;
+            btnNuevoTecnico.Click += btnNuevoTecnico_Click;
+            // 
             // btnTecnico
             // 
+            btnTecnico.BackgroundImage = (Image)resources.GetObject("btnTecnico.BackgroundImage");
+            btnTecnico.BackgroundImageLayout = ImageLayout.Center;
             btnTecnico.Location = new Point(419, 161);
             btnTecnico.Name = "btnTecnico";
             btnTecnico.Size = new Size(27, 23);
@@ -101,6 +142,8 @@
             // 
             // btnTipoMulta
             // 
+            btnTipoMulta.BackgroundImage = (Image)resources.GetObject("btnTipoMulta.BackgroundImage");
+            btnTipoMulta.BackgroundImageLayout = ImageLayout.Center;
             btnTipoMulta.Location = new Point(291, 270);
             btnTipoMulta.Name = "btnTipoMulta";
             btnTipoMulta.Size = new Size(27, 23);
@@ -109,6 +152,8 @@
             // 
             // btnPrestatario
             // 
+            btnPrestatario.BackgroundImage = (Image)resources.GetObject("btnPrestatario.BackgroundImage");
+            btnPrestatario.BackgroundImageLayout = ImageLayout.Center;
             btnPrestatario.Location = new Point(291, 157);
             btnPrestatario.Name = "btnPrestatario";
             btnPrestatario.Size = new Size(27, 23);
@@ -259,6 +304,7 @@
             panelPrestatario.Name = "panelPrestatario";
             panelPrestatario.Size = new Size(276, 235);
             panelPrestatario.TabIndex = 7;
+            panelPrestatario.Visible = false;
             // 
             // btnCerrarPrestatarios
             // 
@@ -295,6 +341,7 @@
             panelTecnico.Name = "panelTecnico";
             panelTecnico.Size = new Size(276, 235);
             panelTecnico.TabIndex = 8;
+            panelTecnico.Visible = false;
             // 
             // btnBuscarTecnico
             // 
@@ -330,6 +377,7 @@
             panelTipoMulta.Name = "panelTipoMulta";
             panelTipoMulta.Size = new Size(276, 237);
             panelTipoMulta.TabIndex = 9;
+            panelTipoMulta.Visible = false;
             // 
             // btnBuscarTipoMulta
             // 
@@ -372,10 +420,11 @@
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(172, 50);
             btnCancelar.TabIndex = 30;
-            btnCancelar.Text = "Cancelar";
+            btnCancelar.Text = "Salir";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
-            // FormNuevaMulta
+            // NuevaMulta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -387,7 +436,7 @@
             Controls.Add(panelPrestatario);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Name = "FormNuevaMulta";
+            Name = "NuevaMulta";
             Text = "Nueva Multa";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -444,5 +493,8 @@
         private Button btnCerrarTecnico;
         private Button btnCerrarTipoMulta;
         private Button btnCancelar;
+        private Button btnNuevoTipoMulta;
+        private Button btnNuevoPrestatario;
+        private Button btnNuevoTecnico;
     }
 }

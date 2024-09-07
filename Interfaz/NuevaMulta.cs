@@ -46,5 +46,30 @@ namespace InterfazGráfica
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Home home = new Home();
+            home.Show();
+        }
+
+        private void btnNuevoPrestatario_Click(object sender, EventArgs e)
+        {
+            NuevoPrestatario prestatario = new NuevoPrestatario();
+            prestatario.Show();
+        }
+
+        private void btnNuevoTipoMulta_Click(object sender, EventArgs e)
+        {
+            NuevoTipoMulta tipoMulta = new NuevoTipoMulta();
+            tipoMulta.Show();
+        }
+
+        private void btnNuevoTecnico_Click(object sender, EventArgs e)
+        {
+            NuevoUsuario user = new NuevoUsuario();
+            user.Show();
+        }
     }
 }
