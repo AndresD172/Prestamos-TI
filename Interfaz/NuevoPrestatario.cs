@@ -269,5 +269,30 @@ namespace InterfazGráfica
                 }
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Home home = new Home();
+            home.Show();
+        }
+
+        private void btnNuevaSeccion_Click(object sender, EventArgs e)
+        {
+            NuevaSeccion seccion = new NuevaSeccion();
+            seccion.Show();
+        }
+
+        private void btnNuevaEspecialidad_Click(object sender, EventArgs e)
+        {
+            NuevaEspecialidad especialidad = new NuevaEspecialidad();
+            especialidad.Show();
+        }
+
+        private void btnNuevoDepartamento_Click(object sender, EventArgs e)
+        {
+            NuevoDepartamento departamento = new NuevoDepartamento();
+            departamento.Show();
+        }
     }
 }
