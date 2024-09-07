@@ -9,50 +9,52 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BL;
 using Entidades;
+using Windows.Graphics.Printing.PrintSupport;
 
 namespace InterfazGráfica
 {
     public partial class EditarEspecialidad : Form
     {
+        private int _id;
 
-        private int Id {  get; set; }
-
-        public EditarEspecialidad()
+        public EditarEspecialidad(int id)
         {
             InitializeComponent();
-            this.Id = Id;
+            this._id = id;
         }
 
         private void btnEditarEspecialidad_Click(object sender, EventArgs e)
         {
-            //VerificacionEditar verificacionEditar = new VerificacionEditar();
-            //verificacionEditar.ShowDialog();
+            VerificacionEditar ventanaConfirmacion = new VerificacionEditar();
+            ventanaConfirmacion.ShowDialog();
 
-            //bool ejecutarAccion = verificacionEditar.Seleccion;
+            if (ventanaConfirmacion.DialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
 
-            //if (!ejecutarAccion)
-            //{
-            //    return;
-            //}
+            EntidadEspecialidad entidadEspecialidad = new EntidadEspecialidad
+            {
+                IdEspecialidad = this._id,
+                Nombre = txtDescripcionEspecialidad.Text
+            };
 
-            //EntidadEspecialidad entidadEspecialidad = new EntidadEspecialidad { IdEspecialidad = Id, Nombre = txtDescripcionEspecialidad.Text };
+            Respuesta respuesta = BLEspecialidad.ActualizarEspecialidad(entidadEspecialidad).Contenido;
 
-            //Respuesta respuesta;
-            //do
-            //{
-            //    respuesta = BLEspecialidad.ActualizarEspecialidad(entidadEspecialidad);
+            if (respuesta.CódigoEstado != 0)
+            {
+                MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            //    if (respuesta.CódigoEstado != 0)
-            //    {
-            //        MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
+            MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-            //} while (respuesta.CódigoEstado != 0);
+            this.Close();
         }
-        private void txtDescripcionCategoria_TextChanged(object sender, EventArgs e)
+
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
-
     }
 }
