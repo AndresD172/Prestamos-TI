@@ -29,7 +29,7 @@ namespace InterfazGráfica
             formOpciones.Left = 125;
             formOpciones.Top = 140;
             formOpciones.ShowDialog();
-
+            this.Hide();
         }
 
         private void btnPrestatariosLogo_Click(object sender, EventArgs e)
@@ -40,6 +40,7 @@ namespace InterfazGráfica
             formOpciones.Left = 125;
             formOpciones.Top = 230;
             formOpciones.ShowDialog();
+            this.Hide();
 
         }
 
@@ -51,6 +52,7 @@ namespace InterfazGráfica
             formOpciones.Left = 125;
             formOpciones.Top = 330;
             formOpciones.ShowDialog();
+            this.Hide();
 
         }
 
@@ -62,6 +64,7 @@ namespace InterfazGráfica
             formOpciones.Left = 125;
             formOpciones.Top = 422;
             formOpciones.ShowDialog();
+            this.Hide();
 
         }
 
@@ -73,6 +76,7 @@ namespace InterfazGráfica
             formOpciones.Left = 125;
             formOpciones.Top = 520;
             formOpciones.ShowDialog();
+            this.Hide();
 
         }
 
@@ -83,12 +87,6 @@ namespace InterfazGráfica
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-
-            OtrasOpciones opciones=new OtrasOpciones();
-            opciones.StartPosition = FormStartPosition.Manual;
-            opciones.Left = 1;
-            opciones.Top = 145;
-            opciones.ShowDialog();
 
         }
     }

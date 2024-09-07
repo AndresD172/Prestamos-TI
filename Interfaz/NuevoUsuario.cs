@@ -23,7 +23,8 @@ namespace InterfazGráfica
         {
             //Comprueba que todos los campos de datos hayan sido ingresados
             if (txtNombreUsuario.Text == String.Empty || txtApellidosUsuario.Text == String.Empty || txtCorreoUsuario.Text == String.Empty ||
-            txtCarnetUsuario.Text == String.Empty || txtContraseñaUsuario.Text == String.Empty) {
+            txtCarnetUsuario.Text == String.Empty || txtContraseñaUsuario.Text == String.Empty)
+            {
                 MessageBox.Show("Ingrese todos los datos requeridos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
@@ -37,10 +38,10 @@ namespace InterfazGráfica
                 tecnico.NúmeroCarnet = txtCarnetUsuario.Text.Trim();
                 tecnico.Contraseña = txtContraseñaUsuario.Text.Trim();
 
-                respuesta=BLTécnico.RegistrarTécnico(tecnico);
+                respuesta = BLTécnico.RegistrarTécnico(tecnico);
 
                 //Detección de errores
-                if (respuesta.CódigoEstado==0)
+                if (respuesta.CódigoEstado == 0)
                 {
                     MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -49,6 +50,13 @@ namespace InterfazGráfica
                     MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Home home = new Home();
+            home.Show();
         }
     }
 }
