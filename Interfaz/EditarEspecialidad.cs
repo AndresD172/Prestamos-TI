@@ -15,7 +15,7 @@ namespace InterfazGráfica
     public partial class EditarEspecialidad : Form
     {
 
-        private int Id {  get; set; }
+        private int Id { get; set; }
 
         public EditarEspecialidad()
         {
@@ -54,5 +54,11 @@ namespace InterfazGráfica
 
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Home home = new Home();
+            home.Show();
+        }
     }
 }
