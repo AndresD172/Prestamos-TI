@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoEquipo));
             panel1 = new Panel();
+            txtMarca = new TextBox();
+            label3 = new Label();
             btnCategoria = new Button();
             btnEstadoEquipo = new Button();
             txtDescripciónEquipo = new TextBox();
@@ -56,8 +58,6 @@
             btnBuscarCategoria = new Button();
             txtBuscarCategoria = new TextBox();
             dataGridViewCategoria = new DataGridView();
-            txtMarca = new TextBox();
-            label3 = new Label();
             btnCancelar = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -89,6 +89,24 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
+            // 
+            // txtMarca
+            // 
+            txtMarca.Font = new Font("Segoe UI", 12F);
+            txtMarca.Location = new Point(51, 310);
+            txtMarca.Name = "txtMarca";
+            txtMarca.Size = new Size(233, 29);
+            txtMarca.TabIndex = 14;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Location = new Point(51, 266);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 28);
+            label3.TabIndex = 13;
+            label3.Text = "Marca";
             // 
             // btnCategoria
             // 
@@ -335,24 +353,6 @@
             dataGridViewCategoria.TabIndex = 18;
             dataGridViewCategoria.DoubleClick += dataGridViewCategoria_DoubleClick;
             // 
-            // txtMarca
-            // 
-            txtMarca.Font = new Font("Segoe UI", 12F);
-            txtMarca.Location = new Point(51, 310);
-            txtMarca.Name = "txtMarca";
-            txtMarca.Size = new Size(233, 29);
-            txtMarca.TabIndex = 14;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(51, 266);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 28);
-            label3.TabIndex = 13;
-            label3.Text = "Marca";
-            // 
             // btnCancelar
             // 
             btnCancelar.BackColor = Color.Thistle;
@@ -363,6 +363,7 @@
             btnCancelar.TabIndex = 30;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // NuevoEquipo
             // 
