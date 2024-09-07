@@ -270,5 +270,30 @@ namespace InterfazGráfica
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Home home = new Home();
+            home.Show();
+        }
+
+        private void btnNuevoPrestamista_Click(object sender, EventArgs e)
+        {
+            NuevoUsuario user = new NuevoUsuario();
+            user.Show();
+        }
+
+        private void btnNuevoEstado_Click(object sender, EventArgs e)
+        {
+            NuevoEstado estado = new NuevoEstado();
+            estado.Show();
+        }
+
+        private void btnNuevoPrestatario_Click(object sender, EventArgs e)
+        {
+            NuevoPrestatario prestatario = new NuevoPrestatario();
+            prestatario.Show();
+        }
     }
 }

@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoPrestamo));
             panel1 = new Panel();
+            btnNuevoEstado = new Button();
+            btnNuevoPrestatario = new Button();
+            btnNuevoPrestamista = new Button();
             btnEstado = new Button();
             btnPrestatario = new Button();
             btnPrestamista = new Button();
@@ -78,6 +81,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
+            panel1.Controls.Add(btnNuevoEstado);
+            panel1.Controls.Add(btnNuevoPrestatario);
+            panel1.Controls.Add(btnNuevoPrestamista);
             panel1.Controls.Add(btnEstado);
             panel1.Controls.Add(btnPrestatario);
             panel1.Controls.Add(btnPrestamista);
@@ -99,8 +105,43 @@
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 6;
             // 
+            // btnNuevoEstado
+            // 
+            btnNuevoEstado.BackgroundImage = (Image)resources.GetObject("btnNuevoEstado.BackgroundImage");
+            btnNuevoEstado.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevoEstado.Location = new Point(690, 300);
+            btnNuevoEstado.Name = "btnNuevoEstado";
+            btnNuevoEstado.Size = new Size(32, 28);
+            btnNuevoEstado.TabIndex = 33;
+            btnNuevoEstado.UseVisualStyleBackColor = true;
+            btnNuevoEstado.Click += btnNuevoEstado_Click;
+            // 
+            // btnNuevoPrestatario
+            // 
+            btnNuevoPrestatario.BackgroundImage = (Image)resources.GetObject("btnNuevoPrestatario.BackgroundImage");
+            btnNuevoPrestatario.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevoPrestatario.Location = new Point(690, 143);
+            btnNuevoPrestatario.Name = "btnNuevoPrestatario";
+            btnNuevoPrestatario.Size = new Size(32, 28);
+            btnNuevoPrestatario.TabIndex = 32;
+            btnNuevoPrestatario.UseVisualStyleBackColor = true;
+            btnNuevoPrestatario.Click += btnNuevoPrestatario_Click;
+            // 
+            // btnNuevoPrestamista
+            // 
+            btnNuevoPrestamista.BackgroundImage = (Image)resources.GetObject("btnNuevoPrestamista.BackgroundImage");
+            btnNuevoPrestamista.BackgroundImageLayout = ImageLayout.Center;
+            btnNuevoPrestamista.Location = new Point(13, 300);
+            btnNuevoPrestamista.Name = "btnNuevoPrestamista";
+            btnNuevoPrestamista.Size = new Size(32, 28);
+            btnNuevoPrestamista.TabIndex = 31;
+            btnNuevoPrestamista.UseVisualStyleBackColor = true;
+            btnNuevoPrestamista.Click += btnNuevoPrestamista_Click;
+            // 
             // btnEstado
             // 
+            btnEstado.BackgroundImage = (Image)resources.GetObject("btnEstado.BackgroundImage");
+            btnEstado.BackgroundImageLayout = ImageLayout.Center;
             btnEstado.Location = new Point(420, 305);
             btnEstado.Name = "btnEstado";
             btnEstado.Size = new Size(25, 23);
@@ -110,6 +151,8 @@
             // 
             // btnPrestatario
             // 
+            btnPrestatario.BackgroundImage = (Image)resources.GetObject("btnPrestatario.BackgroundImage");
+            btnPrestatario.BackgroundImageLayout = ImageLayout.Center;
             btnPrestatario.Location = new Point(420, 143);
             btnPrestatario.Name = "btnPrestatario";
             btnPrestatario.Size = new Size(25, 23);
@@ -119,6 +162,8 @@
             // 
             // btnPrestamista
             // 
+            btnPrestamista.BackgroundImage = (Image)resources.GetObject("btnPrestamista.BackgroundImage");
+            btnPrestamista.BackgroundImageLayout = ImageLayout.Center;
             btnPrestamista.Location = new Point(290, 305);
             btnPrestamista.Name = "btnPrestamista";
             btnPrestamista.Size = new Size(25, 23);
@@ -302,6 +347,7 @@
             panelPrestatario.Name = "panelPrestatario";
             panelPrestatario.Size = new Size(276, 235);
             panelPrestatario.TabIndex = 16;
+            panelPrestatario.Visible = false;
             // 
             // btnCerrarPrestatario
             // 
@@ -334,6 +380,7 @@
             panelPrestamista.Name = "panelPrestamista";
             panelPrestamista.Size = new Size(276, 235);
             panelPrestamista.TabIndex = 21;
+            panelPrestamista.Visible = false;
             // 
             // btnBuscarPrestamista
             // 
@@ -383,6 +430,7 @@
             panelEstado.Name = "panelEstado";
             panelEstado.Size = new Size(276, 235);
             panelEstado.TabIndex = 21;
+            panelEstado.Visible = false;
             // 
             // btnBuscarEstado
             // 
@@ -430,10 +478,11 @@
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(172, 50);
             btnCancelar.TabIndex = 30;
-            btnCancelar.Text = "Cancelar";
+            btnCancelar.Text = "Salir";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
-            // FormNuevoPréstamo
+            // NuevoPrestamo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -445,7 +494,7 @@
             Controls.Add(panelPrestatario);
             Controls.Add(panel1);
             Controls.Add(panel2);
-            Name = "FormNuevoPréstamo";
+            Name = "NuevoPrestamo";
             Text = "NuevoPréstamo";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -501,5 +550,8 @@
         private DataGridView dataGridViewEstado;
         private TextBox txtBuscarEstado;
         private Button btnCancelar;
+        private Button btnNuevoEstado;
+        private Button btnNuevoPrestatario;
+        private Button btnNuevoPrestamista;
     }
 }
