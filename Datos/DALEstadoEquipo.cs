@@ -51,7 +51,7 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Parámetros
-                comando.Parameters.Add("@cTexto", SqlDbType.NVarChar).Value = cTexto;
+                comando.Parameters.Add("@criterio_busqueda", SqlDbType.NVarChar).Value = cTexto;
 
                 // Abrir conexión y ejecutar comando
                 SqlCon.Open();

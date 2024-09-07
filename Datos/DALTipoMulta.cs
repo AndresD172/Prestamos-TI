@@ -50,7 +50,7 @@ namespace DAL
                 SqlCommand comando = new SqlCommand("usp_listar_tipo_multas", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
-                comando.Parameters.Add("@cTexto", SqlDbType.NVarChar).Value = cTexto;
+                comando.Parameters.Add("@criterio_busqueda", SqlDbType.NVarChar).Value = cTexto;
 
                 SqlCon.Open();
 
