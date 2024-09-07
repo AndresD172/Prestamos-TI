@@ -53,7 +53,7 @@ namespace InterfazGráfica
         private void btnEditarEspecialidad_Click(object sender, EventArgs e)
         {
             this.SeleccionarItemActual();
-            EditarEspecialidad editarEspecialidad = new EditarEspecialidad(this.Id);
+            EditarEspecialidad editarEspecialidad = new EditarEspecialidad(/*this.Id*/);
             editarEspecialidad.Show();
         }
 
@@ -74,27 +74,33 @@ namespace InterfazGráfica
             this.Close();
         }
 
-        private void btnEliminarEspecialidad_Click(object sender, EventArgs e)
-        {
-            VerificacionEliminacion ventanaConfirmacion = new VerificacionEliminacion();
-            ventanaConfirmacion.ShowDialog();
+        //private void btnEliminarEspecialidad_Click(object sender, EventArgs e)
+        //{
+        //    VerificarEliminar verificarEliminar = new VerificarEliminar();
+        //    verificarEliminar.Show();
 
-            if (ventanaConfirmacion.DialogResult == DialogResult.Cancel)
-            {
-                return;
-            }
+        //    bool eliminarDato = verificarEliminar.Seleccion;
 
-            SeleccionarItemActual();
+        //    verificarEliminar.Close();
 
-            Respuesta respuesta = BLEspecialidad.EliminarEspecialidad(this.Id);
+        //    if (!eliminarDato)
+        //    {
+        //        return;
+        //    }
 
-            if (respuesta.CódigoEstado != 0)
-            {
-                MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+        //    SeleccionarItemActual();
 
-            dataGridViewEspecialidad.DataSource = BLEspecialidad.ListarEspecialidad("%").Contenido;
-        }
+        //    Respuesta respuesta;
+        //    do
+        //    {
+        //        respuesta = BLEspecialidad.EliminarEspecialidad(this.Id);
+
+        //        if (respuesta.CódigoEstado != 0)
+        //        {
+        //            MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //        }
+
+        //    } while (respuesta.CódigoEstado != 0);
+        //}
     }
 }

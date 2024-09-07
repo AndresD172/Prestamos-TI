@@ -25,29 +25,29 @@ namespace InterfazGráfica
 
         private void btnEditarEspecialidad_Click(object sender, EventArgs e)
         {
-            VerificacionEditar verificacionEditar = new VerificacionEditar();
-            verificacionEditar.ShowDialog();
+            //VerificacionEditar verificacionEditar = new VerificacionEditar();
+            //verificacionEditar.ShowDialog();
 
-            bool ejecutarAccion = verificacionEditar.Seleccion;
+            //bool ejecutarAccion = verificacionEditar.Seleccion;
 
-            if (!ejecutarAccion)
-            {
-                return;
-            }
+            //if (!ejecutarAccion)
+            //{
+            //    return;
+            //}
 
-            EntidadEspecialidad entidadEspecialidad = new EntidadEspecialidad { IdEspecialidad = Id, Nombre = txtDescripcionEspecialidad.Text };
+            //EntidadEspecialidad entidadEspecialidad = new EntidadEspecialidad { IdEspecialidad = Id, Nombre = txtDescripcionEspecialidad.Text };
 
-            Respuesta respuesta;
-            do
-            {
-                respuesta = BLEspecialidad.ActualizarEspecialidad(entidadEspecialidad);
+            //Respuesta respuesta;
+            //do
+            //{
+            //    respuesta = BLEspecialidad.ActualizarEspecialidad(entidadEspecialidad);
 
-                if (respuesta.CódigoEstado != 0)
-                {
-                    MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+            //    if (respuesta.CódigoEstado != 0)
+            //    {
+            //        MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
 
-            } while (respuesta.CódigoEstado != 0);
+            //} while (respuesta.CódigoEstado != 0);
         }
         private void txtDescripcionCategoria_TextChanged(object sender, EventArgs e)
         {
