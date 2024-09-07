@@ -207,5 +207,24 @@ namespace InterfazGráfica
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Home home = new Home();
+            home.Show();
+        }
+
+        private void btnNuevoEstado_Click(object sender, EventArgs e)
+        {
+            NuevoEstado estado = new NuevoEstado();
+            estado.Show();
+        }
+
+        private void btnNuevaCategoria_Click(object sender, EventArgs e)
+        {
+            NuevaCategoria categoria = new NuevaCategoria();    
+            categoria.Show();
+        }
     }
 }

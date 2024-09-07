@@ -12,17 +12,24 @@ namespace InterfazGráfica
 {
     public partial class Opciones : Form
     {
+
+        Home home = new Home();
+        private Home homeWindow;
         private string opcion;
 
         public Opciones(string opcion)
         {
             InitializeComponent();
+            this.homeWindow = home;
             this.opcion = opcion;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            homeWindow.Close();
+            homeWindow.Hide();
             this.Close();
+            
 
             switch (opcion)
             {
