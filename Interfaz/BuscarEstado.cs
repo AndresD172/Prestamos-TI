@@ -12,9 +12,20 @@ namespace InterfazGráfica
 {
     public partial class BuscarEstado : Form
     {
+        private int _id;
+        private string _nombre;
+        private string _descripcion;
+
         public BuscarEstado()
         {
             InitializeComponent();
+        }
+
+        private void FormatearDataGrid()
+        {
+            dataGridViewEstado.Columns[0].HeaderText = "Id";
+            dataGridViewEstado.Columns[1].HeaderText = "Nombre";
+            dataGridViewEstado.Columns[2].HeaderText = "Descripcion";
         }
 
         private void btnEditarEstado_Click(object sender, EventArgs e)
