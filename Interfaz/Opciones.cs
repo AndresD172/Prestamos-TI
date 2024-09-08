@@ -23,6 +23,12 @@ namespace InterfazGráfica
             this.homeWindow = home;
             this.opcion = opcion;
         }
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+            // Remueve el botón de cerrar (X)
+            this.ControlBox = false;
+        }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {

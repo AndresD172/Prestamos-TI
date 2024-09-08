@@ -30,15 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NuevoUsuario));
             panel1 = new Panel();
-            txtContraseñaUsuario = new TextBox();
+            btnUsuario = new Button();
             txtCarnetUsuario = new TextBox();
             txtCorreoUsuario = new TextBox();
-            txtApellidosUsuario = new TextBox();
             txtNombreUsuario = new TextBox();
-            label8 = new Label();
             label7 = new Label();
             label1 = new Label();
-            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             panel2 = new Panel();
@@ -52,15 +49,12 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
-            panel1.Controls.Add(txtContraseñaUsuario);
+            panel1.Controls.Add(btnUsuario);
             panel1.Controls.Add(txtCarnetUsuario);
             panel1.Controls.Add(txtCorreoUsuario);
-            panel1.Controls.Add(txtApellidosUsuario);
             panel1.Controls.Add(txtNombreUsuario);
-            panel1.Controls.Add(label8);
             panel1.Controls.Add(label7);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
             panel1.Location = new Point(311, 140);
@@ -68,18 +62,20 @@
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 4;
             // 
-            // txtContraseñaUsuario
+            // btnPrestamista
             // 
-            txtContraseñaUsuario.Font = new Font("Segoe UI", 12F);
-            txtContraseñaUsuario.Location = new Point(258, 288);
-            txtContraseñaUsuario.Name = "txtContraseñaUsuario";
-            txtContraseñaUsuario.Size = new Size(233, 29);
-            txtContraseñaUsuario.TabIndex = 10;
+            btnUsuario.BackgroundImage = (Image)resources.GetObject("btnPrestamista.BackgroundImage");
+            btnUsuario.BackgroundImageLayout = ImageLayout.Center;
+            btnUsuario.Location = new Point(290, 143);
+            btnUsuario.Name = "btnPrestamista";
+            btnUsuario.Size = new Size(25, 23);
+            btnUsuario.TabIndex = 33;
+            btnUsuario.UseVisualStyleBackColor = true;
             // 
             // txtCarnetUsuario
             // 
             txtCarnetUsuario.Font = new Font("Segoe UI", 12F);
-            txtCarnetUsuario.Location = new Point(451, 218);
+            txtCarnetUsuario.Location = new Point(267, 291);
             txtCarnetUsuario.Name = "txtCarnetUsuario";
             txtCarnetUsuario.Size = new Size(233, 29);
             txtCarnetUsuario.TabIndex = 9;
@@ -87,18 +83,10 @@
             // txtCorreoUsuario
             // 
             txtCorreoUsuario.Font = new Font("Segoe UI", 12F);
-            txtCorreoUsuario.Location = new Point(51, 218);
+            txtCorreoUsuario.Location = new Point(451, 143);
             txtCorreoUsuario.Name = "txtCorreoUsuario";
             txtCorreoUsuario.Size = new Size(233, 29);
             txtCorreoUsuario.TabIndex = 8;
-            // 
-            // txtApellidosUsuario
-            // 
-            txtApellidosUsuario.Font = new Font("Segoe UI", 12F);
-            txtApellidosUsuario.Location = new Point(451, 139);
-            txtApellidosUsuario.Name = "txtApellidosUsuario";
-            txtApellidosUsuario.Size = new Size(233, 29);
-            txtApellidosUsuario.TabIndex = 7;
             // 
             // txtNombreUsuario
             // 
@@ -108,21 +96,11 @@
             txtNombreUsuario.Size = new Size(233, 29);
             txtNombreUsuario.TabIndex = 6;
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(295, 248);
-            label8.Name = "label8";
-            label8.Size = new Size(146, 28);
-            label8.TabIndex = 5;
-            label8.Text = "Contraseña";
-            // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label7.Location = new Point(451, 173);
+            label7.Location = new Point(267, 244);
             label7.Name = "label7";
             label7.Size = new Size(224, 28);
             label7.TabIndex = 4;
@@ -132,21 +110,11 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(51, 173);
+            label1.Location = new Point(451, 100);
             label1.Name = "label1";
             label1.Size = new Size(233, 28);
             label1.TabIndex = 3;
             label1.Text = "Correo Electronico";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label6.Location = new Point(451, 100);
-            label6.Name = "label6";
-            label6.Size = new Size(121, 28);
-            label6.TabIndex = 2;
-            label6.Text = "Apellidos";
             // 
             // label5
             // 
@@ -233,18 +201,15 @@
         private Panel panel1;
         private Label label7;
         private Label label1;
-        private Label label6;
         private Label label5;
         private Label label4;
         private Panel panel2;
         private Label label2;
-        private TextBox txtContraseñaUsuario;
         private TextBox txtCarnetUsuario;
         private TextBox txtCorreoUsuario;
-        private TextBox txtApellidosUsuario;
         private TextBox txtNombreUsuario;
-        private Label label8;
         private Button btnGuardarUsuario;
         private Button btnCancelar;
+        private Button btnUsuario;
     }
 }

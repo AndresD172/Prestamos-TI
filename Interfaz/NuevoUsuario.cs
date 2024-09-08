@@ -22,8 +22,8 @@ namespace InterfazGráfica
         private void btnGuardarUsuario_Click(object sender, EventArgs e)
         {
             //Comprueba que todos los campos de datos hayan sido ingresados
-            if (txtNombreUsuario.Text == String.Empty || txtApellidosUsuario.Text == String.Empty || txtCorreoUsuario.Text == String.Empty ||
-            txtCarnetUsuario.Text == String.Empty || txtContraseñaUsuario.Text == String.Empty)
+            if (txtNombreUsuario.Text == String.Empty || txtCorreoUsuario.Text == String.Empty ||
+            txtCarnetUsuario.Text == String.Empty)
             {
                 MessageBox.Show("Ingrese todos los datos requeridos", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -33,10 +33,8 @@ namespace InterfazGráfica
                 Respuesta respuesta;
                 //Asigna los datos que se ingresaron
                 tecnico.Nombre = txtNombreUsuario.Text.Trim();
-                tecnico.Apellidos = txtApellidosUsuario.Text.Trim();
                 tecnico.CorreoElectrónico = txtCorreoUsuario.Text.Trim();
                 tecnico.NúmeroCarnet = txtCarnetUsuario.Text.Trim();
-                tecnico.Contraseña = txtContraseñaUsuario.Text.Trim();
 
                 respuesta = BLTécnico.RegistrarTécnico(tecnico);
 
@@ -58,5 +56,7 @@ namespace InterfazGráfica
             Home home = new Home();
             home.Show();
         }
+
+        
     }
 }
