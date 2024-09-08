@@ -14,7 +14,7 @@ namespace DAL
         private ConexionBaseDatos()
         {
             //Nombre de la BD
-            this._baseDatos = "sistema_prestamos";
+            this._baseDatos = "Sistema_Préstamos";
             //Nombre Servidor
             this._server = "localhost";
             this._seguridad = true;

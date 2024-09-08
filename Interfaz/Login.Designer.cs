@@ -33,11 +33,14 @@
             btnLogin = new Button();
             label2 = new Label();
             panel1 = new Panel();
-            texContraseña = new TextBox();
+            txtContraseña = new TextBox();
             txtUsuario = new TextBox();
-            label6 = new Label();
-            label5 = new Label();
+            mostradorContraseña = new Label();
+            mostardorUser = new Label();
             label4 = new Label();
+            label7 = new Label();
+            btnAtrasLogo = new Button();
+            btnSalir = new Button();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -45,6 +48,9 @@
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(242, 225, 255);
+            panel2.Controls.Add(label7);
+            panel2.Controls.Add(btnSalir);
+            panel2.Controls.Add(btnAtrasLogo);
             panel2.Controls.Add(btnLogin);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(308, 336);
@@ -78,25 +84,25 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(247, 238, 255);
-            panel1.Controls.Add(texContraseña);
+            panel1.Controls.Add(txtContraseña);
             panel1.Controls.Add(txtUsuario);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label5);
+            panel1.Controls.Add(mostradorContraseña);
+            panel1.Controls.Add(mostardorUser);
             panel1.Controls.Add(label4);
             panel1.Location = new Point(277, 121);
             panel1.Name = "panel1";
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 2;
             // 
-            // texContraseña
+            // txtContraseña
             // 
-            texContraseña.Anchor = AnchorStyles.None;
-            texContraseña.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            texContraseña.Location = new Point(181, 272);
-            texContraseña.Name = "texContraseña";
-            texContraseña.Size = new Size(380, 35);
-            texContraseña.TabIndex = 4;
-            texContraseña.TextAlign = HorizontalAlignment.Center;
+            txtContraseña.Anchor = AnchorStyles.None;
+            txtContraseña.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtContraseña.Location = new Point(181, 272);
+            txtContraseña.Name = "txtContraseña";
+            txtContraseña.Size = new Size(380, 35);
+            txtContraseña.TabIndex = 4;
+            txtContraseña.TextAlign = HorizontalAlignment.Center;
             // 
             // txtUsuario
             // 
@@ -107,26 +113,27 @@
             txtUsuario.Size = new Size(380, 35);
             txtUsuario.TabIndex = 3;
             txtUsuario.TextAlign = HorizontalAlignment.Center;
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
-            // label6
+            // mostradorContraseña
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label6.Location = new Point(303, 215);
-            label6.Name = "label6";
-            label6.Size = new Size(146, 28);
-            label6.TabIndex = 2;
-            label6.Text = "Contraseña";
+            mostradorContraseña.AutoSize = true;
+            mostradorContraseña.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            mostradorContraseña.Location = new Point(303, 215);
+            mostradorContraseña.Name = "mostradorContraseña";
+            mostradorContraseña.Size = new Size(146, 28);
+            mostradorContraseña.TabIndex = 2;
+            mostradorContraseña.Text = "Contraseña";
             // 
-            // label5
+            // mostardorUser
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(248, 116);
-            label5.Name = "label5";
-            label5.Size = new Size(233, 28);
-            label5.TabIndex = 1;
-            label5.Text = "Nombre de usuario";
+            mostardorUser.AutoSize = true;
+            mostardorUser.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            mostardorUser.Location = new Point(248, 116);
+            mostardorUser.Name = "mostardorUser";
+            mostardorUser.Size = new Size(233, 28);
+            mostardorUser.TabIndex = 1;
+            mostardorUser.Text = "Nombre de usuario";
             // 
             // label4
             // 
@@ -135,6 +142,42 @@
             label4.Name = "label4";
             label4.Size = new Size(126, 95);
             label4.TabIndex = 0;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
+            label7.Location = new Point(357, 98);
+            label7.Name = "label7";
+            label7.RightToLeft = RightToLeft.Yes;
+            label7.Size = new Size(90, 43);
+            label7.TabIndex = 19;
+            label7.Text = "Salir";
+            // 
+            // btnAtrasLogo
+            // 
+            btnAtrasLogo.BackColor = Color.FromArgb(239, 221, 254);
+            btnAtrasLogo.Image = (Image)resources.GetObject("btnAtrasLogo.Image");
+            btnAtrasLogo.Location = new Point(225, 85);
+            btnAtrasLogo.Margin = new Padding(0);
+            btnAtrasLogo.Name = "btnAtrasLogo";
+            btnAtrasLogo.Size = new Size(120, 65);
+            btnAtrasLogo.TabIndex = 18;
+            btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAtrasLogo.UseVisualStyleBackColor = false;
+            // 
+            // btnSalir
+            // 
+            btnSalir.BackColor = Color.FromArgb(239, 221, 254);
+            btnSalir.Image = (Image)resources.GetObject("btnSalir.Image");
+            btnSalir.Location = new Point(11, 164);
+            btnSalir.Margin = new Padding(0);
+            btnSalir.Name = "btnSalir";
+            btnSalir.Size = new Size(120, 65);
+            btnSalir.TabIndex = 18;
+            btnSalir.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnSalir.UseVisualStyleBackColor = false;
+            btnSalir.Click += btnSalir_Click;
             // 
             // Login
             // 
@@ -146,7 +189,6 @@
             Controls.Add(panel2);
             Name = "Login";
             Text = "Login";
-            Load += Form2_Load;
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel1.ResumeLayout(false);
@@ -159,10 +201,13 @@
         private Panel panel1;
         private Label label2;
         private Label label4;
-        private TextBox texContraseña;
+        private TextBox txtContraseña;
         private TextBox txtUsuario;
-        private Label label6;
-        private Label label5;
+        private Label mostradorContraseña;
+        private Label mostardorUser;
         private Button btnLogin;
+        private Label label7;
+        private Button btnSalir;
+        private Button btnAtrasLogo;
     }
 }

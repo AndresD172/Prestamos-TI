@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class EntidadTécnico : EntidadPersona
+    public class EntidadLogin : EntidadTécnico
     {
-        public int IdTécnico {  get; set; }
-        public string Contraseña { get; set; }
+
+        public int IdLogin { get; set; }
+        public string Usuario { get; set; }
+
     }
 }
