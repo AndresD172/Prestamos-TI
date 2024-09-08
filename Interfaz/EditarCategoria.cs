@@ -44,6 +44,7 @@ namespace InterfazGráfica
             if (respuesta.CódigoEstado != 0)
             {
                 MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);

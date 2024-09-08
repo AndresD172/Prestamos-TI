@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BL;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,15 +14,41 @@ namespace InterfazGráfica
 {
     public partial class EditarTipoMulta : Form
     {
-        public EditarTipoMulta()
+        private int _id;
+
+        public EditarTipoMulta(int id)
         {
             InitializeComponent();
+            this._id = id;
         }
 
         private void btnEditarTipoMulta_Click(object sender, EventArgs e)
         {
-            VerificacionEditar editar = new VerificacionEditar();
-            editar.ShowDialog();
+            VerificacionEditar ventanaConfirmacion = new VerificacionEditar();
+            ventanaConfirmacion.ShowDialog();
+
+            if (ventanaConfirmacion.DialogResult == DialogResult.Cancel)
+            {
+                return;
+            }
+
+            EntidadTipoMulta entidadTipoMulta = new EntidadTipoMulta
+            {
+                IdTipoMulta = this._id,
+                Nombre = txtDescripcionTipoMulta.Text
+            };
+
+            Respuesta respuesta = BLTipoMulta.ActualizarMulta(entidadTipoMulta);
+
+            if (respuesta.CódigoEstado != 0)
+            {
+                MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
