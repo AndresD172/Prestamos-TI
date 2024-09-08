@@ -28,7 +28,7 @@ namespace InterfazGráfica
             VerificacionEditar ventanaConfirmacion = new VerificacionEditar();
             ventanaConfirmacion.ShowDialog();
 
-            if(ventanaConfirmacion.DialogResult == DialogResult.Cancel)
+            if (ventanaConfirmacion.DialogResult == DialogResult.Cancel)
             {
                 return;
             }
@@ -48,8 +48,15 @@ namespace InterfazGráfica
             }
 
             MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            
+
             this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Home home = new Home();
+            home.Show();
         }
     }
 }

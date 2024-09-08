@@ -36,14 +36,12 @@
             btnPrestatariosLogo = new Button();
             btnPrestamosLogo = new Button();
             btnEquipoLogo = new Button();
-            btnMultasLogo = new Button();
             btnAtrasLogo = new Button();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
-            label6 = new Label();
             Usuario = new Label();
             txtNombreUsuario = new TextBox();
             label7 = new Label();
@@ -127,18 +125,6 @@
             btnEquipoLogo.UseVisualStyleBackColor = false;
             btnEquipoLogo.Click += btnEquipoLogo_Click;
             // 
-            // btnMultasLogo
-            // 
-            btnMultasLogo.BackColor = Color.FromArgb(251, 246, 255);
-            btnMultasLogo.Image = (Image)resources.GetObject("btnMultasLogo.Image");
-            btnMultasLogo.Location = new Point(12, 530);
-            btnMultasLogo.Margin = new Padding(0);
-            btnMultasLogo.Name = "btnMultasLogo";
-            btnMultasLogo.Size = new Size(99, 90);
-            btnMultasLogo.TabIndex = 7;
-            btnMultasLogo.UseVisualStyleBackColor = false;
-            btnMultasLogo.Click += btnMultasLogo_Click;
-            // 
             // btnAtrasLogo
             // 
             btnAtrasLogo.BackColor = Color.FromArgb(239, 221, 254);
@@ -202,16 +188,6 @@
             label5.TabIndex = 13;
             label5.Text = "Prestamos";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Franklin Gothic Medium Cond", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(133, 554);
-            label6.Name = "label6";
-            label6.Size = new Size(112, 43);
-            label6.TabIndex = 14;
-            label6.Text = "Multas";
-            // 
             // Usuario
             // 
             Usuario.Image = (Image)resources.GetObject("Usuario.Image");
@@ -252,14 +228,12 @@
             Controls.Add(label7);
             Controls.Add(txtNombreUsuario);
             Controls.Add(Usuario);
-            Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(btnAtrasLogo);
-            Controls.Add(btnMultasLogo);
             Controls.Add(btnPrestamosLogo);
             Controls.Add(btnEquipoLogo);
             Controls.Add(btnPrestatariosLogo);
@@ -284,14 +258,12 @@
         private Button btnPrestatariosLogo;
         private Button btnPrestamosLogo;
         private Button btnEquipoLogo;
-        private Button btnMultasLogo;
         private Button btnAtrasLogo;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
         private Label label5;
-        private Label label6;
         private Label Usuario;
         private TextBox txtNombreUsuario;
         private Label label7;

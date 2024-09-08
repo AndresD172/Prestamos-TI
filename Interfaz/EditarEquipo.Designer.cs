@@ -30,8 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarEquipo));
             panel1 = new Panel();
+            btnEquipo = new Button();
+            txtMarca = new TextBox();
+            label3 = new Label();
             btnCategoria = new Button();
+            txtDescripciónEquipo = new TextBox();
             btnModelo = new Button();
+            label8 = new Label();
             txtCategoríaEquipo = new TextBox();
             txtEstadoEquipo = new TextBox();
             txtModeloEquipo = new TextBox();
@@ -54,11 +59,6 @@
             btnBuscarModelo = new Button();
             txtBuscarModelo = new TextBox();
             dataGridViewModelo = new DataGridView();
-            txtMarca = new TextBox();
-            label3 = new Label();
-            txtDescripciónEquipo = new TextBox();
-            label8 = new Label();
-            btnEquipo = new Button();
             panelEquipo = new Panel();
             btnBuscarEquipo = new Button();
             btnCerrarEquipo = new Button();
@@ -99,6 +99,32 @@
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 8;
             // 
+            // btnEquipo
+            // 
+            btnEquipo.Location = new Point(290, 147);
+            btnEquipo.Name = "btnEquipo";
+            btnEquipo.Size = new Size(25, 23);
+            btnEquipo.TabIndex = 27;
+            btnEquipo.UseVisualStyleBackColor = true;
+            // 
+            // txtMarca
+            // 
+            txtMarca.Font = new Font("Segoe UI", 12F);
+            txtMarca.Location = new Point(51, 310);
+            txtMarca.Name = "txtMarca";
+            txtMarca.Size = new Size(233, 29);
+            txtMarca.TabIndex = 18;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label3.Location = new Point(51, 266);
+            label3.Name = "label3";
+            label3.Size = new Size(85, 28);
+            label3.TabIndex = 17;
+            label3.Text = "Marca";
+            // 
             // btnCategoria
             // 
             btnCategoria.Location = new Point(417, 220);
@@ -107,6 +133,14 @@
             btnCategoria.TabIndex = 16;
             btnCategoria.UseVisualStyleBackColor = true;
             // 
+            // txtDescripciónEquipo
+            // 
+            txtDescripciónEquipo.Font = new Font("Segoe UI", 12F);
+            txtDescripciónEquipo.Location = new Point(451, 310);
+            txtDescripciónEquipo.Name = "txtDescripciónEquipo";
+            txtDescripciónEquipo.Size = new Size(233, 29);
+            txtDescripciónEquipo.TabIndex = 16;
+            // 
             // btnModelo
             // 
             btnModelo.Location = new Point(417, 141);
@@ -114,6 +148,16 @@
             btnModelo.Size = new Size(28, 23);
             btnModelo.TabIndex = 15;
             btnModelo.UseVisualStyleBackColor = true;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            label8.Location = new Point(451, 266);
+            label8.Name = "label8";
+            label8.Size = new Size(153, 28);
+            label8.TabIndex = 15;
+            label8.Text = "Descripción";
             // 
             // txtCategoríaEquipo
             // 
@@ -237,6 +281,7 @@
             panelCategoria.Name = "panelCategoria";
             panelCategoria.Size = new Size(276, 235);
             panelCategoria.TabIndex = 14;
+            panelCategoria.Visible = false;
             // 
             // btnCerrarCategoria
             // 
@@ -282,6 +327,7 @@
             panelModelo.Name = "panelModelo";
             panelModelo.Size = new Size(276, 235);
             panelModelo.TabIndex = 13;
+            panelModelo.Visible = false;
             // 
             // btnCerrarModelo
             // 
@@ -317,50 +363,6 @@
             dataGridViewModelo.Size = new Size(276, 177);
             dataGridViewModelo.TabIndex = 17;
             // 
-            // txtMarca
-            // 
-            txtMarca.Font = new Font("Segoe UI", 12F);
-            txtMarca.Location = new Point(51, 310);
-            txtMarca.Name = "txtMarca";
-            txtMarca.Size = new Size(233, 29);
-            txtMarca.TabIndex = 18;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(51, 266);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 28);
-            label3.TabIndex = 17;
-            label3.Text = "Marca";
-            // 
-            // txtDescripciónEquipo
-            // 
-            txtDescripciónEquipo.Font = new Font("Segoe UI", 12F);
-            txtDescripciónEquipo.Location = new Point(451, 310);
-            txtDescripciónEquipo.Name = "txtDescripciónEquipo";
-            txtDescripciónEquipo.Size = new Size(233, 29);
-            txtDescripciónEquipo.TabIndex = 16;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Arial Rounded MT Bold", 18F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(451, 266);
-            label8.Name = "label8";
-            label8.Size = new Size(153, 28);
-            label8.TabIndex = 15;
-            label8.Text = "Descripción";
-            // 
-            // btnEquipo
-            // 
-            btnEquipo.Location = new Point(290, 147);
-            btnEquipo.Name = "btnEquipo";
-            btnEquipo.Size = new Size(25, 23);
-            btnEquipo.TabIndex = 27;
-            btnEquipo.UseVisualStyleBackColor = true;
-            // 
             // panelEquipo
             // 
             panelEquipo.Controls.Add(btnBuscarEquipo);
@@ -371,6 +373,7 @@
             panelEquipo.Name = "panelEquipo";
             panelEquipo.Size = new Size(276, 235);
             panelEquipo.TabIndex = 28;
+            panelEquipo.Visible = false;
             // 
             // btnBuscarEquipo
             // 
@@ -417,6 +420,7 @@
             btnCancelar.TabIndex = 29;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // ModificarEquipo
             // 

@@ -311,6 +311,7 @@
             panelEspecialidad.Name = "panelEspecialidad";
             panelEspecialidad.Size = new Size(276, 235);
             panelEspecialidad.TabIndex = 27;
+            panelEspecialidad.Visible = false;
             // 
             // btnBuscarEspecialidad
             // 
@@ -358,6 +359,7 @@
             panelDepartamento.Name = "panelDepartamento";
             panelDepartamento.Size = new Size(276, 235);
             panelDepartamento.TabIndex = 25;
+            panelDepartamento.Visible = false;
             // 
             // panel3
             // 
@@ -450,6 +452,7 @@
             panelSeccion.Name = "panelSeccion";
             panelSeccion.Size = new Size(276, 235);
             panelSeccion.TabIndex = 24;
+            panelSeccion.Visible = false;
             // 
             // btnBuscarSeccion
             // 
@@ -496,6 +499,7 @@
             btnCancelar.TabIndex = 30;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // EditarPrestatario
             // 

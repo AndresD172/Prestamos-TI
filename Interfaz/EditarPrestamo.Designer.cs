@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarPrestamo));
             panel1 = new Panel();
+            btnEquipo = new Button();
             btnPrestatario = new Button();
             btnEstado = new Button();
             txtEstadoPréstamo = new TextBox();
@@ -64,7 +65,6 @@
             btnCerrarPrestatario = new Button();
             dataGridViewPrestatario = new DataGridView();
             txtBuscarPrestatario = new TextBox();
-            btnEquipo = new Button();
             panelEquipo = new Panel();
             btnBuscarEquipo = new Button();
             btnCerrarEquipo = new Button();
@@ -107,6 +107,14 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(728, 376);
             panel1.TabIndex = 8;
+            // 
+            // btnEquipo
+            // 
+            btnEquipo.Location = new Point(290, 143);
+            btnEquipo.Name = "btnEquipo";
+            btnEquipo.Size = new Size(25, 23);
+            btnEquipo.TabIndex = 25;
+            btnEquipo.UseVisualStyleBackColor = true;
             // 
             // btnPrestatario
             // 
@@ -290,6 +298,7 @@
             panelEstado.Name = "panelEstado";
             panelEstado.Size = new Size(276, 235);
             panelEstado.TabIndex = 26;
+            panelEstado.Visible = false;
             // 
             // btnBuscarEstado
             // 
@@ -336,6 +345,7 @@
             panelPrestamista.Name = "panelPrestamista";
             panelPrestamista.Size = new Size(276, 235);
             panelPrestamista.TabIndex = 27;
+            panelPrestamista.Visible = false;
             // 
             // btnBuscarPrestamista
             // 
@@ -382,6 +392,7 @@
             panelPrestatario.Name = "panelPrestatario";
             panelPrestatario.Size = new Size(276, 235);
             panelPrestatario.TabIndex = 25;
+            panelPrestatario.Visible = false;
             // 
             // btnBuscarPrestatario
             // 
@@ -418,14 +429,6 @@
             txtBuscarPrestatario.Size = new Size(202, 29);
             txtBuscarPrestatario.TabIndex = 11;
             // 
-            // btnEquipo
-            // 
-            btnEquipo.Location = new Point(290, 143);
-            btnEquipo.Name = "btnEquipo";
-            btnEquipo.Size = new Size(25, 23);
-            btnEquipo.TabIndex = 25;
-            btnEquipo.UseVisualStyleBackColor = true;
-            // 
             // panelEquipo
             // 
             panelEquipo.Controls.Add(btnBuscarEquipo);
@@ -436,6 +439,7 @@
             panelEquipo.Name = "panelEquipo";
             panelEquipo.Size = new Size(276, 235);
             panelEquipo.TabIndex = 26;
+            panelEquipo.Visible = false;
             // 
             // btnBuscarEquipo
             // 
@@ -482,6 +486,7 @@
             btnCancelar.TabIndex = 30;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // ModificarPrestamo
             // 
