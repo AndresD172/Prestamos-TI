@@ -22,5 +22,10 @@ namespace InterfazGráfica
             VerificacionEditar verificar = new VerificacionEditar();
             verificar.ShowDialog();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

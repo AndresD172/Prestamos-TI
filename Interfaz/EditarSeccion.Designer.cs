@@ -120,6 +120,7 @@
             btnCancelar.TabIndex = 30;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // EditarSeccion
             // 

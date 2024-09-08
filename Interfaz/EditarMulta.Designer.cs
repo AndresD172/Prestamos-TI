@@ -237,6 +237,7 @@
             panelTipoMulta.Name = "panelTipoMulta";
             panelTipoMulta.Size = new Size(276, 237);
             panelTipoMulta.TabIndex = 18;
+            panelTipoMulta.Visible = false;
             panelTipoMulta.Paint += panelTipoMulta_Paint;
             // 
             // btnBuscarTipoMulta
@@ -281,6 +282,7 @@
             panelTecnico.Name = "panelTecnico";
             panelTecnico.Size = new Size(276, 235);
             panelTecnico.TabIndex = 17;
+            panelTecnico.Visible = false;
             // 
             // btnBuscarTecnico
             // 
@@ -327,6 +329,7 @@
             panelPrestatario.Name = "panelPrestatario";
             panelPrestatario.Size = new Size(276, 235);
             panelPrestatario.TabIndex = 16;
+            panelPrestatario.Visible = false;
             // 
             // btnCerrarPrestatarios
             // 
@@ -370,6 +373,7 @@
             btnCancelar.TabIndex = 30;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // EditarMulta
             // 

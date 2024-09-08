@@ -12,7 +12,11 @@ namespace InterfazGráfica
 {
     public partial class Opciones : Form
     {
-
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnActivated(e);
+            this.ControlBox = false;
+        }
         Home home = new Home();
         private Home homeWindow;
         private string opcion;
@@ -35,7 +39,7 @@ namespace InterfazGráfica
             homeWindow.Close();
             homeWindow.Hide();
             this.Close();
-            
+
 
             switch (opcion)
             {
@@ -162,6 +166,13 @@ namespace InterfazGráfica
                 default:
                     break;
             }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.Show();
         }
     }
 }
