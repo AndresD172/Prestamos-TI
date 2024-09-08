@@ -32,6 +32,7 @@ namespace InterfazGráfica
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Opciones));
             btnBuscar = new Button();
             btnNuevo = new Button();
+            btnCancelar = new Button();
             SuspendLayout();
             // 
             // btnBuscar
@@ -64,11 +65,27 @@ namespace InterfazGráfica
             btnNuevo.UseVisualStyleBackColor = false;
             btnNuevo.Click += btnNuevo_Click;
             // 
+            // btnCancelar
+            // 
+            btnCancelar.BackColor = Color.Thistle;
+            btnCancelar.Font = new Font("Franklin Gothic Book", 27.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCancelar.ForeColor = Color.Black;
+            btnCancelar.Image = (Image)resources.GetObject("btnCancelar.Image");
+            btnCancelar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCancelar.Location = new Point(0, 159);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(264, 78);
+            btnCancelar.TabIndex = 57;
+            btnCancelar.Text = "Salir";
+            btnCancelar.UseVisualStyleBackColor = false;
+            btnCancelar.Click += btnCancelar_Click;
+            // 
             // Opciones
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(266, 158);
+            ClientSize = new Size(266, 238);
+            Controls.Add(btnCancelar);
             Controls.Add(btnNuevo);
             Controls.Add(btnBuscar);
             Name = "Opciones";
@@ -82,5 +99,6 @@ namespace InterfazGráfica
 
         private Button btnBuscar;
         private Button btnNuevo;
+        private Button btnCancelar;
     }
 }
