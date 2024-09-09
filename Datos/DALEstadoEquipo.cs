@@ -47,7 +47,7 @@ namespace DAL
             try
             {
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
-                SqlCommand comando = new SqlCommand("usp_listar_estados_equipo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_listar_estados_equipos", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Parámetros

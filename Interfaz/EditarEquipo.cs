@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace InterfazGráfica
 {
-    public partial class ModificarEquipo : Form
+    public partial class EditarEquipo : Form
     {
-        public ModificarEquipo()
+        private int _id;
+
+        public EditarEquipo(int id)
         {
             InitializeComponent();
+            this._id = id;
         }
 
         private void btnEditarEquipo_Click(object sender, EventArgs e)

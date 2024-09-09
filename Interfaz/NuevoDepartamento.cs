@@ -54,5 +54,6 @@ namespace InterfazGráfica
                     MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
     }
 }

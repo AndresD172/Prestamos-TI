@@ -29,85 +29,71 @@ namespace InterfazGráfica
         //Metodos para el formato de los data grid view
         private void FormatoEstado()
         {
-            dataGridViewEstadoEquipo.Columns[0].Width = 215;
-            dataGridViewEstadoEquipo.Columns[0].HeaderText = "Estado";
-            dataGridViewEstadoEquipo.Columns[1].Visible = false;
+            dataGridViewEstadoEquipo.Columns[0].Visible = false;
+            dataGridViewEstadoEquipo.Columns[1].HeaderText = "Estado";
+            dataGridViewEstadoEquipo.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void FormatoCategoria()
         {
-            dataGridViewCategoria.Columns[0].Width = 215;
-            dataGridViewCategoria.Columns[0].HeaderText = "Categoria";
-            dataGridViewCategoria.Columns[1].Visible = false;
+            dataGridViewCategoria.Columns[0].Visible = false;
+            dataGridViewCategoria.Columns[1].HeaderText = "Categoria";
+            dataGridViewCategoria.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         //Metodos para cargar los listados en los data grid view 
 
         private void ListadoEstado(string cTexto)
         {
-            try
-            {
-                dataGridViewEstadoEquipo.DataSource = BLEstadoEquipo.ListarEstadoEquipo(cTexto);
-                this.FormatoEstado();
+            Respuesta respuesta = BLEstadoEquipo.ListarEstadoEquipo(cTexto);
 
-            }
-            catch (Exception ex)
+            if (respuesta.CódigoEstado != 0)
             {
-                Respuesta respuesta;
-                respuesta = BLEstadoEquipo.ListarEstadoEquipo(cTexto);
                 MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dataGridViewEstadoEquipo.DataSource = respuesta.Contenido;
+            this.FormatoEstado();
         }
 
         private void ListadoCategoria(string cTexto)
         {
-            try
-            {
-                dataGridViewCategoria.DataSource = BLCategoria.ListarCategoria(cTexto);
-                this.FormatoCategoria();
+            Respuesta respuesta = BLCategoria.ListarCategoria(cTexto);
 
-            }
-            catch (Exception ex)
+            if (respuesta.CódigoEstado != 0)
             {
-                Respuesta respuesta;
-                respuesta = BLCategoria.ListarCategoria(cTexto);
                 MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dataGridViewCategoria.DataSource = respuesta.Contenido;
+            this.FormatoCategoria();
         }
 
         //Metodos para seleccionar un dato
 
         private void SeleccionarEstado()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewEstadoEquipo.CurrentRow.Cells["IdEstadoEquipo"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewEstadoEquipo.CurrentRow.Cells["id"].Value)))
             {
-
                 MessageBox.Show("No hay datos para mostrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
             }
-            else
-            {
 
-                this.IdEstado = Convert.ToInt32(dataGridViewEstadoEquipo.CurrentRow.Cells["IdEstadoEquipo"].Value);
-                txtEstadoEquipo.Text = Convert.ToString(dataGridViewEstadoEquipo.CurrentRow.Cells["Nombre"].Value);
-
-            }
+            this.IdEstado = Convert.ToInt32(dataGridViewEstadoEquipo.CurrentRow.Cells["id"].Value);
+            txtEstadoEquipo.Text = Convert.ToString(dataGridViewEstadoEquipo.CurrentRow.Cells["nombre"].Value);
         }
 
         private void SeleccionarCategoria()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewCategoria.CurrentRow.Cells["IdCategoría"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewCategoria.CurrentRow.Cells["id"].Value)))
             {
-
                 MessageBox.Show("No hay datos para mostrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
             }
-            else
-            {
 
-                this.IdCategoria = Convert.ToInt32(dataGridViewCategoria.CurrentRow.Cells["IdCategoría"].Value);
-                txtCategoríaEquipo.Text = Convert.ToString(dataGridViewCategoria.CurrentRow.Cells["Nombre"].Value);
-
-            }
+            this.IdCategoria = Convert.ToInt32(dataGridViewCategoria.CurrentRow.Cells["id"].Value);
+            txtCategoríaEquipo.Text = Convert.ToString(dataGridViewCategoria.CurrentRow.Cells["nombre"].Value);
         }
         #endregion
 
@@ -124,12 +110,14 @@ namespace InterfazGráfica
         {
             this.panelEstadoEquipo.Location = btnEstadoEquipo.Location;
             this.panelEstadoEquipo.Visible = true;
+            this.ListadoEstado("%");
         }
 
         private void btnCategoria_Click(object sender, EventArgs e)
         {
             this.panelCategoria.Location = btnCategoria.Location;
             this.panelCategoria.Visible = true;
+            this.ListadoCategoria("%");
         }
 
         //Botones para cerrar los panel
@@ -223,7 +211,7 @@ namespace InterfazGráfica
 
         private void btnNuevaCategoria_Click(object sender, EventArgs e)
         {
-            NuevaCategoria categoria = new NuevaCategoria();    
+            NuevaCategoria categoria = new NuevaCategoria();
             categoria.Show();
         }
     }

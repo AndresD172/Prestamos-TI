@@ -121,21 +121,21 @@
   <data name="btnNuevaCategoria.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAEZJREFUOE9joCnoUswvAmEol3TQpZS3GoShXNLBSDIAHNpQxShYMf8xGGOXQ8QO
+        DgAACw4BQL7hQQAAAEZJREFUOE9joCnoUswvAmEol3TQpZS3GoShXNLBSDIAHNpQxShYMf8xGGOXQ8QO
         xQbgAjDFUC7pYNQAoAGg2CEmtMkHDAwAD1FbHfF7eI0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnNuevoEstado.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAAEZJREFUOE9joCnoUswvAmEol3TQpZS3GoShXNLBSDIAHNpQxShYMf8xGGOXQ8QO
+        DgAACw4BQL7hQQAAAEZJREFUOE9joCnoUswvAmEol3TQpZS3GoShXNLBSDIAHNpQxShYMf8xGGOXQ8QO
         xQbgAjDFUC7pYNQAoAGg2CEmtMkHDAwAD1FbHfF7eI0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnCategoria.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAXJJREFUOE+lkr0vxVAYxg9hMviKWHz0tCUSo8GGhcUuEbtEpD3tNWCQTq729IrJ
+        DwAACw8BkvkDpQAAAXJJREFUOE+lkr0vxVAYxg9hMviKWHz0tCUSo8GGhcUuEbtEpD3tNWCQTq729IrJ
         wGIyCAaTj8GOxGgQA3+DSMRXPW/zXjc37ZUrfsmb9Dw95+nzvqeiFoEIGvmxfopDi52RqWLUozZVgnqJ
         pDqNLTXBW2pTkoVBHHjCgYdIun4o3cnYcGZgdqBN9xO1wluz7IzMN2PDHQwu4u6lFpZ/gMks6iM2vWmW
         qomkN6elel63nS6WMkSmuwuTa15Wg8h7WrrHvMwlNtQYDL62+lUbSxUQ/wTxt3mZC88o0bZjsVSBDlP/
@@ -147,7 +147,7 @@
   <data name="btnEstadoEquipo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EAAACxABrSO9dQAAAXJJREFUOE+lkr0vxVAYxg9hMviKWHz0tCUSo8GGhcUuEbtEpD3tNWCQTq729IrJ
+        DwAACw8BkvkDpQAAAXJJREFUOE+lkr0vxVAYxg9hMviKWHz0tCUSo8GGhcUuEbtEpD3tNWCQTq729IrJ
         wGIyCAaTj8GOxGgQA3+DSMRXPW/zXjc37ZUrfsmb9Dw95+nzvqeiFoEIGvmxfopDi52RqWLUozZVgnqJ
         pDqNLTXBW2pTkoVBHHjCgYdIun4o3cnYcGZgdqBN9xO1wluz7IzMN2PDHQwu4u6lFpZ/gMks6iM2vWmW
         qomkN6elel63nS6WMkSmuwuTa15Wg8h7WrrHvMwlNtQYDL62+lUbSxUQ/wTxt3mZC88o0bZjsVSBDlP/

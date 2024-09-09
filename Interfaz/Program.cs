@@ -13,7 +13,7 @@ namespace InterfazGráfica
             ApplicationConfiguration.Initialize();
 
            
-            Application.Run(new Login());
+            Application.Run(new Home());
             
             
             

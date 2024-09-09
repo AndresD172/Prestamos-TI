@@ -27,12 +27,12 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
-                comando.Parameters.Add("@id_categoría", SqlDbType.Int).Value = equipo.IdCategoría;
+                comando.Parameters.Add("@id_categoria", SqlDbType.Int).Value = equipo.IdCategoría;
                 comando.Parameters.Add("@id_estado_equipo", SqlDbType.Int).Value = equipo.IdEstadoEquipo;
                 comando.Parameters.Add("@marca", SqlDbType.NVarChar).Value = equipo.Marca;
                 comando.Parameters.Add("@modelo", SqlDbType.NVarChar).Value = equipo.Modelo;
-                comando.Parameters.Add("@número_serie", SqlDbType.NVarChar).Value = equipo.NúmeroSerie;
-                comando.Parameters.Add("@descripción", SqlDbType.NVarChar).Value = equipo.Descripción;
+                comando.Parameters.Add("@numero_serie", SqlDbType.NVarChar).Value = equipo.NúmeroSerie;
+                comando.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = equipo.Descripción;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();

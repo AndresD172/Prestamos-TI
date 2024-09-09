@@ -1,6 +1,6 @@
 ﻿namespace InterfazGráfica
 {
-    partial class ModificarEquipo
+    partial class EditarEquipo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModificarEquipo));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarEquipo));
             panel1 = new Panel();
             btnEquipo = new Button();
             txtMarca = new TextBox();
