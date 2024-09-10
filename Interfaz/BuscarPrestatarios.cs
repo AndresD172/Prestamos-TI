@@ -8,13 +8,6 @@ namespace InterfazGráfica
     public partial class BuscarPrestatarios : Form
     {
         private int _id;
-        private string _nombre;
-        private string _apellidos;
-        private string _correo_electronico;
-        private string _numero_carnet;
-        private int _id_seccion;
-        private int _id_departamento;
-        private int _id_especialidad;
 
         public BuscarPrestatarios()
         {
@@ -36,29 +29,15 @@ namespace InterfazGráfica
 
         private void SeleccionarItemActual()
         {
+            string idSeleccionado = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["id"].Value);
+
             if (dataGridViewPrestatario.CurrentRow == null)
             {
                 MessageBox.Show("No hay datos por seleccionar", "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            string idSeleccionado = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["Id"].Value);
-            string nombrePrestatario = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["Nombre"].Value);
-            string apellidosPrestatario = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["Apellidos"].Value);
-            string correoElectronico = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["Correo Electrónico"].Value);
-            string numeroCarnet = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["Número de Carnet"].Value);
-            string seccion = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["Sección"].Value);
-            string departamento = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["Departamento"].Value);
-            string especialidad = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["Especialidad"].Value);
-
             this._id = Convert.ToInt32(idSeleccionado);
-            this._nombre = nombrePrestatario;
-            this._apellidos = apellidosPrestatario;
-            this._correo_electronico = correoElectronico;
-            this._numero_carnet = numeroCarnet;
-            this._id_seccion = Convert.ToInt32(seccion);
-            this._id_departamento = Convert.ToInt32(departamento);
-            this._id_especialidad = Convert.ToInt32(especialidad);
         }
 
         private void BuscarPrestatario_Load(object sender, EventArgs e)
