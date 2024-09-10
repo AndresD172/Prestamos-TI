@@ -64,7 +64,7 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 // Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_listar_equipo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_listar_equipos", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros

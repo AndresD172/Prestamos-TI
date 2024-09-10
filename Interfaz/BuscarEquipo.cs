@@ -24,17 +24,20 @@ namespace InterfazGráfica
         private void FormatearDataGrid()
         {
             dataGridViewEquipos.Columns[0].HeaderText = "Id";
-            dataGridViewEquipos.Columns[1].HeaderText = "Categoría";
-            dataGridViewEquipos.Columns[2].HeaderText = "Marca";
-            dataGridViewEquipos.Columns[3].HeaderText = "Modelo";
-            dataGridViewEquipos.Columns[4].HeaderText = "Número de serie";
-            dataGridViewEquipos.Columns[5].HeaderText = "Descripción";
+            dataGridViewEquipos.Columns[1].Visible = false;
+            dataGridViewEquipos.Columns[2].Visible = false;
+            dataGridViewEquipos.Columns[3].HeaderText = "Categoría";
+            dataGridViewEquipos.Columns[4].HeaderText = "Marca";
+            dataGridViewEquipos.Columns[5].HeaderText = "Modelo";
+            dataGridViewEquipos.Columns[6].HeaderText = "Número de serie";
+            dataGridViewEquipos.Columns[7].HeaderText = "Descripción";
+            dataGridViewEquipos.Columns[8].Visible = false;
             dataGridViewEquipos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void SeleccionarItemActual()
         {
-            string idSeleccionado = Convert.ToString(dataGridViewEquipos.CurrentRow.Cells["id"].Value);
+            string idSeleccionado = Convert.ToString(dataGridViewEquipos.CurrentRow.Cells["id_equipo"].Value);
 
             if (String.IsNullOrEmpty(idSeleccionado))
             {
