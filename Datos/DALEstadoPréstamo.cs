@@ -26,7 +26,6 @@ namespace DAL
 
                 //Paramentros
                 comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = estadoPrestamo.Nombre;
-                comando.Parameters.Add("@descripcion", SqlDbType.NVarChar).Value = estadoPrestamo.Descripción;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
@@ -58,7 +57,7 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_listar_estados_prestamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_listar_estados_prestamos", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros

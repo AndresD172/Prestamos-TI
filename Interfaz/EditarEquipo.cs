@@ -58,10 +58,10 @@ namespace InterfazGráfica
 
         private void btnEditarEquipo_Click(object sender, EventArgs e)
         {
-            VerificacionEditar verificacion = new VerificacionEditar();
-            verificacion.ShowDialog();
+            VerificacionEditar ventanaConfirmacion = new VerificacionEditar();
+            ventanaConfirmacion.ShowDialog();
 
-            if (verificacion.DialogResult == DialogResult.Cancel)
+            if (ventanaConfirmacion.DialogResult == DialogResult.Cancel)
             {
                 return;
             }
@@ -69,11 +69,10 @@ namespace InterfazGráfica
             EntidadEquipo entidadEquipo = new EntidadEquipo
             {
                 IdEquipo = _id,
-                IdCategoría = this._idCategoria,
-                Marca = txtMarca.Text,
-                Modelo = txtModeloEquipo.Text,
+                IdCategoría = _idCategoria,
                 NúmeroSerie = txSerieEquipo.Text,
-                Descripción = txtDescripciónEquipo.Text,
+                Modelo = txtMarca.Text,
+                Descripción = txtDescripciónEquipo.Text
             };
 
             Respuesta respuesta = BLEquipo.ActualizarEquipo(entidadEquipo);

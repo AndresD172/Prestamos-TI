@@ -14,6 +14,11 @@ namespace InterfazGráfica
 {
     public partial class NuevoPrestamo : Form
     {
+        private int _idEquipo;
+        private int _idPrestamista;
+        private int _idPrestatario;
+        private int _idEstado;
+
         public NuevoPrestamo()
         {
             InitializeComponent();
@@ -29,126 +34,116 @@ namespace InterfazGráfica
         //Metodos para el formato de los data grid view
         private void FormatoPrestatario()
         {
-            dataGridViewPrestatario.Columns[0].Width = 215;
-            dataGridViewPrestatario.Columns[0].HeaderText = "Prestatario";
-            dataGridViewPrestatario.Columns[1].Visible = false;
+            dataGridViewPrestatario.Columns[0].Visible = false;
+            dataGridViewPrestatario.Columns[1].HeaderText = "Nombre";
+            dataGridViewPrestatario.Columns[2].HeaderText = "Apellidos";
+            dataGridViewPrestatario.Columns[3].Visible = false;
+            dataGridViewPrestatario.Columns[4].Visible = false;
+            dataGridViewPrestatario.Columns[5].Visible = false;
+            dataGridViewPrestatario.Columns[6].Visible = false;
+            dataGridViewPrestatario.Columns[7].Visible = false;
+            dataGridViewPrestatario.Columns[8].Visible = false;
+            dataGridViewPrestatario.Columns[9].Visible = false;
+            dataGridViewPrestatario.Columns[10].Visible = false;
+            dataGridViewPrestatario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        private void ListadoPrestatario(string cTexto)
+        {
+            Respuesta respuesta = BLPrestatario.ListarPrestatario(cTexto);
+
+            if (respuesta.CódigoEstado != 0)
+            {
+                MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            dataGridViewPrestatario.DataSource = respuesta.Contenido;
+            this.FormatoPrestatario();
         }
 
         private void FormatoPrestamista()
         {
-            dataGridViewPrestamista.Columns[0].Width = 215;
-            dataGridViewPrestamista.Columns[0].HeaderText = "Prestamista";
-            dataGridViewPrestamista.Columns[1].Visible = false;
-        }
-
-        private void FormatoEstado()
-        {
-            dataGridViewEstado.Columns[0].Width = 215;
-            dataGridViewEstado.Columns[0].HeaderText = "Estado";
-            dataGridViewEstado.Columns[1].Visible = false;
-        }
-
-        //Metodos para cargar los listados en los data grid view 
-
-        private void ListadoPrestatario(string cTexto)
-        {
-            try
-            {
-                dataGridViewPrestatario.DataSource = BLPrestatario.ListarPrestatario(cTexto);
-                this.FormatoPrestatario();
-
-            }
-            catch (Exception ex)
-            {
-                Respuesta respuesta;
-                respuesta = BLPrestatario.ListarPrestatario(cTexto);
-                MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            dataGridViewPrestamista.Columns[0].Visible = false;
+            dataGridViewPrestamista.Columns[1].HeaderText = "Nombre";
+            dataGridViewPrestamista.Columns[2].HeaderText = "Apellidos";
+            dataGridViewPrestamista.Columns[3].Visible = false;
+            dataGridViewPrestamista.Columns[4].Visible = false;
+            dataGridViewPrestamista.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void ListadoPrestamista(string cTexto)
         {
-            try
-            {
-                dataGridViewPrestamista.DataSource = BLTécnico.ListarTécnico(cTexto);
-                this.FormatoPrestamista();
+            Respuesta respuesta = BLTécnico.ListarTécnico(cTexto);
 
-            }
-            catch (Exception ex)
+            if (respuesta.CódigoEstado != 0)
             {
-                Respuesta respuesta;
-                respuesta = BLTécnico.ListarTécnico(cTexto);
                 MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dataGridViewPrestamista.DataSource = respuesta.Contenido;
+            this.FormatoPrestamista();
+        }
+
+        private void FormatoEstado()
+        {
+            dataGridViewEstado.Columns[0].Visible = false;
+            dataGridViewEstado.Columns[1].HeaderText = "Estado";
+            dataGridViewEstado.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void ListadoEstado(string cTexto)
         {
-            try
-            {
-                dataGridViewEstado.DataSource = BLEstadoPrestamo.ListarEstadoPrestamo(cTexto);
-                this.FormatoEstado();
+            Respuesta respuesta = BLEstadoPrestamo.ListarEstadoPrestamo(cTexto);
 
-            }
-            catch (Exception ex)
+            if (respuesta.CódigoEstado != 0)
             {
-                Respuesta respuesta;
-                respuesta = BLEstadoPrestamo.ListarEstadoPrestamo(cTexto);
                 MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dataGridViewEstado.DataSource = respuesta.Contenido;
+            this.FormatoEstado();
         }
 
+
+
         //Metodos para seleccionar un dato
+        private void SeleccionarPrestamista()
+        {
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewPrestamista.CurrentRow.Cells["id"].Value)))
+            {
+                MessageBox.Show("No hay datos para mostrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            this._idPrestamista = Convert.ToInt32(dataGridViewPrestamista.CurrentRow.Cells["id"].Value);
+            txtPrestamistaPréstamo.Text = $"{Convert.ToString(dataGridViewPrestamista.CurrentRow.Cells["nombre"].Value)} + {Convert.ToString(dataGridViewPrestamista.CurrentRow.Cells["apellidos"].Value)}";
+        }
 
         private void SeleccionarPrestatario()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["IdPrestatario"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["id_prestatario"].Value)))
             {
-
                 MessageBox.Show("No hay datos para mostrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
             }
-            else
-            {
 
-                this.IdPrestatario = Convert.ToInt32(dataGridViewPrestatario.CurrentRow.Cells["IdPrestatario"].Value);
-                txtPrestatarioPréstamo.Text = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["Nombre"].Value);
-
-            }
-        }
-
-        private void SeleccionarPrestamista()
-        {
-            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewPrestamista.CurrentRow.Cells["IdTecnico"].Value)))
-            {
-
-                MessageBox.Show("No hay datos para mostrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-
-                this.IdPrestamista = Convert.ToInt32(dataGridViewPrestamista.CurrentRow.Cells["IdTecnico"].Value);
-                txtPrestamistaPréstamo.Text = Convert.ToString(dataGridViewPrestamista.CurrentRow.Cells["Nombre"].Value);
-
-            }
+            this._idPrestatario = Convert.ToInt32(dataGridViewPrestatario.CurrentRow.Cells["id_prestatario"].Value);
+            txtPrestatarioPréstamo.Text = $"{Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["nombre"].Value)} {Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["apellidos"].Value)}";
         }
 
         private void SeleccionarEstado()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewEstado.CurrentRow.Cells["IdEstadosPréstamo"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewEstado.CurrentRow.Cells["id"].Value)))
             {
-
                 MessageBox.Show("No hay datos para mostrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                return;
             }
-            else
-            {
 
-                this.IdEstado = Convert.ToInt32(dataGridViewEstado.CurrentRow.Cells["IdEstadosPréstamo"].Value);
-                txtEstadoPréstamo.Text = Convert.ToString(dataGridViewEstado.CurrentRow.Cells["Nombre"].Value);
-
-            }
+            this._idEstado = Convert.ToInt32(dataGridViewEstado.CurrentRow.Cells["id"].Value);
+            txtEstadoPréstamo.Text = Convert.ToString(dataGridViewEstado.CurrentRow.Cells["nombre"].Value);
         }
         #endregion
 
@@ -165,18 +160,21 @@ namespace InterfazGráfica
         {
             this.panelPrestatario.Location = btnPrestatario.Location;
             this.panelPrestatario.Visible = true;
+            this.ListadoPrestatario("%");
         }
 
         private void btnPrestamista_Click(object sender, EventArgs e)
         {
             this.panelPrestamista.Location = btnPrestamista.Location;
             this.panelPrestamista.Visible = true;
+            this.ListadoPrestamista("%");
         }
 
         private void btnEstado_Click(object sender, EventArgs e)
         {
             this.panelEstado.Location = btnEstado.Location;
             this.panelEstado.Visible = true;
+            this.ListadoEstado("%");
         }
 
         //Botones para cerrar los panel
@@ -246,11 +244,12 @@ namespace InterfazGráfica
                 //Asigna los datos que se ingresaron
 
                 //Equipo¿?
-                prestamo.FechaCreación = Convert.ToDateTime(txtFechaPréstamo);
-                prestamo.FechaDevolución = Convert.ToDateTime(txtDevolucionPréstamo);
-                prestamo.IdPrestatario = this.IdPrestatario;
-                prestamo.IdTécnico = this.IdPrestamista;
-                prestamo.IdEstadoCreación = this.IdEstado;
+                prestamo.IdEquipo = Convert.ToInt32(txEquipoPréstamo.Text);
+                prestamo.FechaCreación = Convert.ToDateTime(txtFechaPréstamo.Text);
+                prestamo.FechaDevolución = Convert.ToDateTime(txtDevolucionPréstamo.Text);
+                prestamo.IdPrestatario = this._idPrestatario;
+                prestamo.IdTécnico = this._idPrestamista;
+                prestamo.IdEstadoCreación = this._idEstado;
 
                 respuesta = BLPrestamo.RegistrarPrestamo(prestamo);
 

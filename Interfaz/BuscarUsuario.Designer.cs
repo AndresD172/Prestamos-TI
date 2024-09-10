@@ -49,11 +49,12 @@
             // txtNombreUsuario
             // 
             txtNombreUsuario.BackColor = Color.FromArgb(251, 246, 255);
-            txtNombreUsuario.Font = new Font("Baskerville Old Face", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtNombreUsuario.Location = new Point(1084, 33);
+            txtNombreUsuario.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtNombreUsuario.Location = new Point(1239, 44);
+            txtNombreUsuario.Margin = new Padding(3, 4, 3, 4);
             txtNombreUsuario.Name = "txtNombreUsuario";
             txtNombreUsuario.ReadOnly = true;
-            txtNombreUsuario.Size = new Size(198, 31);
+            txtNombreUsuario.Size = new Size(226, 37);
             txtNombreUsuario.TabIndex = 22;
             txtNombreUsuario.Text = "Nombre del usuario";
             txtNombreUsuario.TextAlign = HorizontalAlignment.Center;
@@ -61,49 +62,49 @@
             // Usuario
             // 
             Usuario.Image = (Image)resources.GetObject("Usuario.Image");
-            Usuario.Location = new Point(1288, 21);
+            Usuario.Location = new Point(1472, 28);
             Usuario.Name = "Usuario";
-            Usuario.Size = new Size(50, 43);
+            Usuario.Size = new Size(57, 57);
             Usuario.TabIndex = 21;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
-            label1.Location = new Point(117, 22);
+            label1.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
+            label1.Location = new Point(134, 29);
             label1.Name = "label1";
-            label1.Size = new Size(126, 43);
+            label1.Size = new Size(176, 54);
             label1.TabIndex = 20;
             label1.Text = "Buscar";
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(224, 224, 224);
-            panel2.Location = new Point(337, 92);
+            panel2.Location = new Point(385, 123);
             panel2.Margin = new Padding(0);
             panel2.MinimumSize = new Size(1, 1);
             panel2.Name = "panel2";
-            panel2.Size = new Size(10, 623);
+            panel2.Size = new Size(11, 831);
             panel2.TabIndex = 18;
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(224, 224, 224);
-            panel1.Location = new Point(-1, 82);
+            panel1.Location = new Point(-1, 109);
             panel1.Margin = new Padding(0);
             panel1.MinimumSize = new Size(1, 1);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1352, 10);
+            panel1.Size = new Size(1545, 13);
             panel1.TabIndex = 17;
             // 
             // btnAtrasLogo
             // 
             btnAtrasLogo.BackColor = Color.FromArgb(239, 221, 254);
             btnAtrasLogo.Image = (Image)resources.GetObject("btnAtrasLogo.Image");
-            btnAtrasLogo.Location = new Point(9, 651);
+            btnAtrasLogo.Location = new Point(10, 868);
             btnAtrasLogo.Margin = new Padding(0);
             btnAtrasLogo.Name = "btnAtrasLogo";
-            btnAtrasLogo.Size = new Size(137, 69);
+            btnAtrasLogo.Size = new Size(157, 92);
             btnAtrasLogo.TabIndex = 23;
             btnAtrasLogo.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAtrasLogo.UseVisualStyleBackColor = false;
@@ -112,28 +113,28 @@
             // label3
             // 
             label3.Image = (Image)resources.GetObject("label3.Image");
-            label3.Location = new Point(2, 3);
+            label3.Location = new Point(2, 4);
             label3.Name = "label3";
-            label3.Size = new Size(141, 89);
+            label3.Size = new Size(161, 119);
             label3.TabIndex = 25;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
-            label2.Location = new Point(133, 280);
+            label2.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
+            label2.Location = new Point(152, 373);
             label2.Name = "label2";
-            label2.Size = new Size(115, 43);
+            label2.Size = new Size(151, 54);
             label2.TabIndex = 29;
             label2.Text = "Editar";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Baskerville Old Face", 27.75F, FontStyle.Bold);
-            label4.Location = new Point(133, 183);
+            label4.Font = new Font("Microsoft Sans Serif", 27.75F, FontStyle.Bold);
+            label4.Location = new Point(152, 244);
             label4.Name = "label4";
-            label4.Size = new Size(155, 43);
+            label4.Size = new Size(199, 54);
             label4.TabIndex = 28;
             label4.Text = "Eliminar";
             // 
@@ -141,9 +142,10 @@
             // 
             btnEditarUsuario.BackColor = Color.FromArgb(251, 246, 255);
             btnEditarUsuario.Image = (Image)resources.GetObject("btnEditarUsuario.Image");
-            btnEditarUsuario.Location = new Point(12, 253);
+            btnEditarUsuario.Location = new Point(14, 337);
+            btnEditarUsuario.Margin = new Padding(3, 4, 3, 4);
             btnEditarUsuario.Name = "btnEditarUsuario";
-            btnEditarUsuario.Size = new Size(99, 90);
+            btnEditarUsuario.Size = new Size(113, 120);
             btnEditarUsuario.TabIndex = 27;
             btnEditarUsuario.UseVisualStyleBackColor = false;
             btnEditarUsuario.Click += btnEditarUsuario_Click;
@@ -153,47 +155,53 @@
             btnEliminarUsuario.BackColor = Color.FromArgb(251, 246, 255);
             btnEliminarUsuario.ForeColor = Color.FromArgb(251, 246, 255);
             btnEliminarUsuario.Image = (Image)resources.GetObject("btnEliminarUsuario.Image");
-            btnEliminarUsuario.Location = new Point(12, 157);
+            btnEliminarUsuario.Location = new Point(14, 209);
+            btnEliminarUsuario.Margin = new Padding(3, 4, 3, 4);
             btnEliminarUsuario.Name = "btnEliminarUsuario";
-            btnEliminarUsuario.Size = new Size(99, 90);
+            btnEliminarUsuario.Size = new Size(113, 120);
             btnEliminarUsuario.TabIndex = 26;
             btnEliminarUsuario.UseVisualStyleBackColor = false;
+            btnEliminarUsuario.Click += btnEliminarUsuario_Click;
             // 
             // dataGridViewUsuarios
             // 
             dataGridViewUsuarios.BackgroundColor = Color.FromArgb(246, 236, 255);
             dataGridViewUsuarios.BorderStyle = BorderStyle.Fixed3D;
             dataGridViewUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewUsuarios.Location = new Point(350, 219);
+            dataGridViewUsuarios.Location = new Point(400, 292);
+            dataGridViewUsuarios.Margin = new Padding(3, 4, 3, 4);
             dataGridViewUsuarios.Name = "dataGridViewUsuarios";
-            dataGridViewUsuarios.Size = new Size(998, 501);
+            dataGridViewUsuarios.RowHeadersWidth = 51;
+            dataGridViewUsuarios.Size = new Size(1141, 668);
             dataGridViewUsuarios.TabIndex = 30;
             // 
             // txtBusqueda
             // 
             txtBusqueda.BackColor = Color.FromArgb(229, 220, 252);
-            txtBusqueda.Font = new Font("Baskerville Old Face", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBusqueda.Location = new Point(350, 123);
+            txtBusqueda.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBusqueda.Location = new Point(400, 164);
+            txtBusqueda.Margin = new Padding(3, 4, 3, 4);
             txtBusqueda.Name = "txtBusqueda";
-            txtBusqueda.Size = new Size(911, 35);
+            txtBusqueda.Size = new Size(1041, 41);
             txtBusqueda.TabIndex = 31;
             // 
             // btnBuscarUsuario
             // 
             btnBuscarUsuario.BackColor = Color.FromArgb(255, 192, 255);
             btnBuscarUsuario.ForeColor = Color.FromArgb(251, 246, 255);
-            btnBuscarUsuario.Location = new Point(1267, 126);
+            btnBuscarUsuario.Location = new Point(1448, 168);
+            btnBuscarUsuario.Margin = new Padding(3, 4, 3, 4);
             btnBuscarUsuario.Name = "btnBuscarUsuario";
-            btnBuscarUsuario.Size = new Size(71, 33);
+            btnBuscarUsuario.Size = new Size(81, 44);
             btnBuscarUsuario.TabIndex = 46;
             btnBuscarUsuario.UseVisualStyleBackColor = false;
             // 
             // BuscarUsuario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(251, 246, 255);
-            ClientSize = new Size(1350, 729);
+            ClientSize = new Size(1543, 972);
             Controls.Add(btnBuscarUsuario);
             Controls.Add(txtBusqueda);
             Controls.Add(dataGridViewUsuarios);
@@ -208,8 +216,10 @@
             Controls.Add(panel1);
             Controls.Add(txtNombreUsuario);
             Controls.Add(label3);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "BuscarUsuario";
             Text = "Buscar Usuario";
+            Load += BuscarUsuario_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewUsuarios).EndInit();
             ResumeLayout(false);
             PerformLayout();

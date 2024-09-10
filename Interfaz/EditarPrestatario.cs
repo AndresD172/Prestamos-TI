@@ -16,13 +16,9 @@ namespace InterfazGráfica
     public partial class EditarPrestatario : Form
     {
         private int _id;
-        private string _nombre;
-        private string _apellidos;
-        private string _correo_electronico;
-        private string _numero_carnet;
-        private int _id_seccion;
-        private int _id_departamento;
-        private int _id_especialidad;
+        private int _idSeccion;
+        private int _idDepartamento;
+        private int _idEspecialidad;
 
         #region Variables
 
@@ -36,80 +32,76 @@ namespace InterfazGráfica
         //Metodos para el formato de los data grid view
         private void FormatoSeccion()
         {
-            dataGridViewSeccion.Columns[0].Width = 215;
-            dataGridViewSeccion.Columns[0].HeaderText = "Sección";
-            dataGridViewSeccion.Columns[1].Visible = false;
+            dataGridViewSeccion.Columns[1].HeaderText = "Sección";
+            dataGridViewSeccion.Columns[0].Visible = false;
+            dataGridViewSeccion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         private void FormatoDepartamento()
         {
-            dataGridViewDepartamento.Columns[0].Width = 215;
-            dataGridViewDepartamento.Columns[0].HeaderText = "Departamento";
-            dataGridViewDepartamento.Columns[1].Visible = false;
+            dataGridViewDepartamento.Columns[1].HeaderText = "Departamento";
+            dataGridViewDepartamento.Columns[0].Visible = false;
+            dataGridViewSeccion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void FormatoEspecialidad()
         {
-            dataGridViewEspecialidad.Columns[0].Width = 215;
-            dataGridViewEspecialidad.Columns[0].HeaderText = "Especialidad";
-            dataGridViewEspecialidad.Columns[1].Visible = false;
+            dataGridViewEspecialidad.Columns[1].HeaderText = "Especialidad";
+            dataGridViewEspecialidad.Columns[0].Visible = false;
+            dataGridViewSeccion.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         //Metodos para cargar los listados en los data grid view 
 
         private void ListadoSeccion(string cTexto)
         {
-            try
-            {
-                dataGridViewSeccion.DataSource = BLSeccion.ListarSeccion(cTexto);
-                this.FormatoSeccion();
+            Respuesta respuesta = BLSeccion.ListarSeccion(cTexto);
 
-            }
-            catch (Exception ex)
+            if (respuesta.CódigoEstado != 0)
             {
-                Respuesta respuesta;
-                respuesta = BLSeccion.ListarSeccion(cTexto);
                 MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dataGridViewSeccion.DataSource = respuesta.Contenido;
+            this.FormatoSeccion();
         }
 
         private void ListadoDepartamento(string cTexto)
         {
-            try
-            {
-                dataGridViewDepartamento.DataSource = BLDepartamento.ListarDepartamento(cTexto);
-                this.FormatoDepartamento();
+            Respuesta respuesta = BLDepartamento.ListarDepartamento(cTexto);
 
-            }
-            catch (Exception ex)
+            if (respuesta.CódigoEstado != 0)
             {
-                Respuesta respuesta;
-                respuesta = BLDepartamento.ListarDepartamento(cTexto);
                 MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dataGridViewDepartamento.DataSource = respuesta.Contenido;
+            this.FormatoDepartamento();
         }
 
         private void ListadoEspecialidad(string cTexto)
         {
-            try
-            {
-                dataGridViewEspecialidad.DataSource = BLEspecialidad.ListarEspecialidad(cTexto);
-                this.FormatoEspecialidad();
+            Respuesta respuesta = BLEspecialidad.ListarEspecialidad(cTexto);
 
-            }
-            catch (Exception ex)
+            if (respuesta.CódigoEstado != 0)
             {
-                Respuesta respuesta;
-                respuesta = BLEspecialidad.ListarEspecialidad(cTexto);
                 MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+
+            dataGridViewEspecialidad.DataSource = respuesta.Contenido;
+            this.FormatoEspecialidad();
         }
 
         //Metodos para seleccionar un dato
 
         private void SeleccionarSeccion()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewSeccion.CurrentRow.Cells["IdSeccion"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewSeccion.CurrentRow.Cells["id"].Value)))
             {
 
                 MessageBox.Show("No hay datos para mostrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -118,15 +110,15 @@ namespace InterfazGráfica
             else
             {
 
-                this.IdSeccion = Convert.ToInt32(dataGridViewSeccion.CurrentRow.Cells["IdSeccion"].Value);
-                txtSecciónPrestatario.Text = Convert.ToString(dataGridViewSeccion.CurrentRow.Cells["Nombre"].Value);
+                this._idSeccion = Convert.ToInt32(dataGridViewSeccion.CurrentRow.Cells["id"].Value);
+                txtSecciónPrestatario.Text = Convert.ToString(dataGridViewSeccion.CurrentRow.Cells["nombre"].Value);
 
             }
         }
 
         private void SeleccionarDepartamento()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewDepartamento.CurrentRow.Cells["IdDepartamento"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewDepartamento.CurrentRow.Cells["id"].Value)))
             {
 
                 MessageBox.Show("No hay datos para mostrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -135,15 +127,15 @@ namespace InterfazGráfica
             else
             {
 
-                this.IdDepartamento = Convert.ToInt32(dataGridViewDepartamento.CurrentRow.Cells["IdDepartamento"].Value);
-                txtDepartamentoPrestatario.Text = Convert.ToString(dataGridViewDepartamento.CurrentRow.Cells["Nombre"].Value);
+                this.IdDepartamento = Convert.ToInt32(dataGridViewDepartamento.CurrentRow.Cells["id"].Value);
+                txtDepartamentoPrestatario.Text = Convert.ToString(dataGridViewDepartamento.CurrentRow.Cells["nombre"].Value);
 
             }
         }
 
         private void SeleccionarEspecialidad()
         {
-            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewEspecialidad.CurrentRow.Cells["IdEspecialidad"].Value)))
+            if (string.IsNullOrEmpty(Convert.ToString(dataGridViewEspecialidad.CurrentRow.Cells["id"].Value)))
             {
 
                 MessageBox.Show("No hay datos para mostrar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -152,8 +144,8 @@ namespace InterfazGráfica
             else
             {
 
-                this.IdEspecialidad = Convert.ToInt32(dataGridViewEspecialidad.CurrentRow.Cells["IdEspecialidad"].Value);
-                txtEspecialidadPrestatario.Text = Convert.ToString(dataGridViewEspecialidad.CurrentRow.Cells["Nombre"].Value);
+                this.IdEspecialidad = Convert.ToInt32(dataGridViewEspecialidad.CurrentRow.Cells["id"].Value);
+                txtEspecialidadPrestatario.Text = Convert.ToString(dataGridViewEspecialidad.CurrentRow.Cells["nombre"].Value);
 
             }
         }
@@ -184,12 +176,12 @@ namespace InterfazGráfica
                 Apellidos = txtApellidosPrestatario.Text,
                 CorreoElectrónico = txtCorreoPrestatario.Text,
                 NúmeroCarnet = txtCarnetPrestatario.Text,
-                IdSección = Convert.ToInt32(txtSecciónPrestatario.Text),
-                IdDepartamento = Convert.ToInt32(txtDepartamentoPrestatario.Text),
-                IdEspecialidad = Convert.ToInt32(txtEspecialidadPrestatario.Text)
+                IdSección = _idSeccion,
+                IdDepartamento = _idSeccion,
+                IdEspecialidad = _idEspecialidad
             };
 
-            Respuesta respuesta = BLPrestatario.ActualizarPrestatario(entidadPrestatario).Contenido;
+            Respuesta respuesta = BLPrestatario.ActualizarPrestatario(entidadPrestatario);
 
             if (respuesta.CódigoEstado != 0)
             {
@@ -221,18 +213,21 @@ namespace InterfazGráfica
         {
             this.panelSeccion.Location = btnSeccion.Location;
             this.panelSeccion.Visible = true;
+            ListadoSeccion("%");
         }
 
         private void btnDepartamento_Click(object sender, EventArgs e)
         {
             this.panelDepartamento.Location = btnDepartamento.Location;
             this.panelDepartamento.Visible = true;
+            ListadoDepartamento("%");
         }
 
         private void btnEspecialidad_Click(object sender, EventArgs e)
         {
             this.panelEspecialidad.Location = btnEspecialidad.Location;
             this.panelEspecialidad.Visible = true;
+            ListadoEspecialidad("%");
         }
 
         //Botones para cerrar los panel

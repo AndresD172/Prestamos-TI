@@ -26,8 +26,8 @@ namespace InterfazGráfica
             dataGridViewUsuarios.Columns[0].HeaderText = "Id";
             dataGridViewUsuarios.Columns[1].HeaderText = "Nombre";
             dataGridViewUsuarios.Columns[2].HeaderText = "Apellidos";
-            dataGridViewUsuarios.Columns[3].HeaderText = "Correo Electrónico";
-            dataGridViewUsuarios.Columns[4].HeaderText = "Número de Carnet";
+            dataGridViewUsuarios.Columns[3].HeaderText = "Número de Carnet";
+            dataGridViewUsuarios.Columns[4].HeaderText = "Correo Electrónico";
             dataGridViewUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -46,7 +46,15 @@ namespace InterfazGráfica
 
         private void BuscarUsuario_Load(object sender, EventArgs e)
         {
-            dataGridViewUsuarios.DataSource = BLTécnico.ListarTécnico("%").Contenido;
+            Respuesta respuesta = BLTécnico.ListarTécnico("%");
+
+            if (respuesta.CódigoEstado != 0)
+            {
+                MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            dataGridViewUsuarios.DataSource = respuesta.Contenido;
             FormatearDataGrid();
         }
 
@@ -81,6 +89,7 @@ namespace InterfazGráfica
             ventanaEdicion.Show();
 
             dataGridViewUsuarios.DataSource = BLTécnico.ListarTécnico("%").Contenido;
+            FormatearDataGrid();
         }
 
         private void btnAtrasLogo_Click(object sender, EventArgs e)

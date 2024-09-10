@@ -25,10 +25,15 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
-               
-                comando.Parameters.Add("@id_sección", SqlDbType.Int).Value = prestatario.IdSección ?? (object)DBNull.Value;
+
+                comando.Parameters.Add("@id_seccion", SqlDbType.Int).Value = prestatario.IdSección ?? (object)DBNull.Value;
                 comando.Parameters.Add("@id_departamento", SqlDbType.Int).Value = prestatario.IdDepartamento ?? (object)DBNull.Value;
                 comando.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = prestatario.IdEspecialidad;
+                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = prestatario.Nombre;
+                comando.Parameters.Add("@apellidos", SqlDbType.NVarChar).Value = prestatario.Apellidos;
+                comando.Parameters.Add("@numero_carnet", SqlDbType.NVarChar).Value = prestatario.NúmeroCarnet;
+                comando.Parameters.Add("@correo_electronico", SqlDbType.NVarChar).Value = prestatario.CorreoElectrónico;
+
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();
@@ -135,16 +140,21 @@ namespace DAL
                 comando.CommandType = CommandType.StoredProcedure;
 
                 // Paramentros
+
                 comando.Parameters.Add("@id", SqlDbType.Int).Value = prestatario.IdPrestatario;
-                comando.Parameters.Add("@id_sección", SqlDbType.Int).Value = prestatario.IdSección ?? (object)DBNull.Value;
-                comando.Parameters.Add("@id_departamento", SqlDbType.Int).Value = prestatario.IdDepartamento ?? (object)DBNull.Value;
+                comando.Parameters.Add("@id_seccion", SqlDbType.Int).Value = prestatario.IdSección;
+                comando.Parameters.Add("@id_departamento", SqlDbType.Int).Value = prestatario.IdDepartamento;
                 comando.Parameters.Add("@id_especialidad", SqlDbType.Int).Value = prestatario.IdEspecialidad;
+                comando.Parameters.Add("@nombre", SqlDbType.NVarChar).Value = prestatario.Nombre;
+                comando.Parameters.Add("@apellidos", SqlDbType.NVarChar).Value = prestatario.Apellidos;
+                comando.Parameters.Add("@numero_carnet", SqlDbType.NVarChar).Value = prestatario.NúmeroCarnet;
+                comando.Parameters.Add("@correo_electronico", SqlDbType.NVarChar).Value = prestatario.CorreoElectrónico;
 
                 // Se abre la conexion con la BD
                 SqlCon.Open();
 
                 // Si la ejecucion del comando es 1 indica que se guardo el dato, sino no
-                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
+                return comando.ExecuteNonQuery() > 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
             }
             catch (Exception ex)
             {

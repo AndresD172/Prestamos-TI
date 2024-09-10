@@ -22,23 +22,22 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_registrar_préstamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_registrar_prestamo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
                 //metodo get
-                comando.Parameters.Add("@id_técnico", SqlDbType.Int).Value = prestamo.IdTécnico;
+                comando.Parameters.Add("@id_equipo", SqlDbType.Int).Value = prestamo.IdEquipo;
+                comando.Parameters.Add("@id_tecnico", SqlDbType.Int).Value = prestamo.IdTécnico;
                 comando.Parameters.Add("@id_prestatario", SqlDbType.Int).Value = prestamo.IdPrestatario;
-                comando.Parameters.Add("@fecha_creación", SqlDbType.DateTime).Value = prestamo.FechaCreación;
-                comando.Parameters.Add("@fecha_devolución", SqlDbType.DateTime).Value = prestamo.FechaDevolución;
+                comando.Parameters.Add("@fecha_creacion", SqlDbType.DateTime).Value = prestamo.FechaCreación;
+                comando.Parameters.Add("@fecha_devolucion", SqlDbType.DateTime).Value = prestamo.FechaDevolución;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
 
                 //Si la ejecucion del comando es 1 indica que se guardo el dato, sino no
-                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
-
-
+                return comando.ExecuteNonQuery() > 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
             }
             catch (Exception ex)
             {
@@ -70,7 +69,7 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_listar_préstamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_listar_prestamos", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
@@ -155,7 +154,7 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_eliminar_préstamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_eliminar_prestamo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
@@ -191,22 +190,22 @@ namespace DAL
                 SqlCon = ConexionBaseDatos.GetInstancia().CrearConexion();
 
                 //Se indica el SP a usar y el tipo de comando
-                SqlCommand comando = new SqlCommand("usp_actualizar_préstamo", SqlCon);
+                SqlCommand comando = new SqlCommand("usp_actualizar_prestamo", SqlCon);
                 comando.CommandType = CommandType.StoredProcedure;
 
                 //Paramentros
                 //metodo get
-                comando.Parameters.Add("@id_préstamo", SqlDbType.Int).Value = préstamo.IdPréstamo;
-                comando.Parameters.Add("@id_técnico", SqlDbType.Int).Value = préstamo.IdTécnico;
+                comando.Parameters.Add("@id", SqlDbType.Int).Value = préstamo.IdPréstamo;
+                comando.Parameters.Add("@id_tecnico", SqlDbType.Int).Value = préstamo.IdTécnico;
                 comando.Parameters.Add("@id_prestatario", SqlDbType.Int).Value = préstamo.IdPrestatario;
-                comando.Parameters.Add("@id_estado_préstamo", SqlDbType.Int).Value = préstamo.IdEstadoCreación;
-                comando.Parameters.Add("@fecha_devolución", SqlDbType.NVarChar).Value = préstamo.FechaDevolución;
+                comando.Parameters.Add("@id_estado_prestamo", SqlDbType.Int).Value = préstamo.IdEstadoCreación;
+                comando.Parameters.Add("@fecha_devolucion", SqlDbType.NVarChar).Value = préstamo.FechaDevolución;
 
                 //Se abre la conexion con la BD
                 SqlCon.Open();
 
                 //Si la ejecucion del comando es 1 indica que se guardo el dato, sino no
-                return comando.ExecuteNonQuery() == 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
+                return comando.ExecuteNonQuery() > 1 ? new Respuesta(0, "Operación exitosa.") : new Respuesta(1, "Error al almacenar los datos.");
 
 
             }

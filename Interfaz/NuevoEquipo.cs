@@ -170,6 +170,7 @@ namespace InterfazGráfica
                 Respuesta respuesta;
                 //Asigna los datos que se ingresaron
                 //Marca¿?
+                equipo.Marca = txtMarca.Text;
                 equipo.Modelo = txtModeloEquipo.Text.Trim();
                 equipo.NúmeroSerie = txSerieEquipo.Text.Trim();
                 equipo.Descripción = txtDescripciónEquipo.Text.Trim();

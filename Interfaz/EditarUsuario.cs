@@ -47,7 +47,7 @@ namespace InterfazGráfica
                 NúmeroCarnet = txtCarnetUsuario.Text,
             };
 
-            Respuesta respuesta = BLTécnico.ActualizarTécnico(entidadUsuario).Contenido;
+            Respuesta respuesta = BLTécnico.ActualizarTécnico(entidadUsuario);
 
             if (respuesta.CódigoEstado != 0)
             {

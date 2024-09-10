@@ -29,7 +29,7 @@ namespace InterfazGráfica
 
         private void SeleccionarItemActual()
         {
-            string idSeleccionado = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["id"].Value);
+            string idSeleccionado = Convert.ToString(dataGridViewPrestatario.CurrentRow.Cells["id_prestatario"].Value);
 
             if (dataGridViewPrestatario.CurrentRow == null)
             {

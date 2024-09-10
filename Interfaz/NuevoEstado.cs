@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BL;
+using Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +21,25 @@ namespace InterfazGráfica
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void btnGuardarEstado_Click(object sender, EventArgs e)
+        {
+            EntidadEstadoPréstamo nuevoEstado = new EntidadEstadoPréstamo
+            {
+                Nombre = txtDescripciónEstado.Text
+            };
+
+            Respuesta respuesta = BLEstadoPrestamo.RegistrarEstadoPrestamo(nuevoEstado);
+
+            if (respuesta.CódigoEstado != 0)
+            {
+                MessageBox.Show(respuesta.Contenido, "Aviso del sistema", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            MessageBox.Show(respuesta.Contenido, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
         }
     }
